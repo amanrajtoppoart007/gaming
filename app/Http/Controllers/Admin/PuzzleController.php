@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Puzzle;
 use Illuminate\Http\Request;
 
 class PuzzleController extends Controller
@@ -14,7 +15,8 @@ class PuzzleController extends Controller
      */
     public function index()
     {
-        return view("admin.puzzle.index");
+        $puzzles = Puzzle::paginate(10);
+        return view("admin.puzzle.index",compact('puzzles'));
     }
 
     /**

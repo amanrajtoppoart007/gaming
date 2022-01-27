@@ -9,7 +9,7 @@
 <div class="d-flex flex-stack mb-5">
     <!--begin::Search-->
     <div class="d-flex align-items-center position-relative my-1">
-        <input type="text" data-kt-docs-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Customers"/>
+        <input type="text" data-kt-docs-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Puzzle"/>
     </div>
     <!--end::Search-->
 
@@ -23,7 +23,7 @@
 
         <!--begin::Add customer-->
         <button type="button" class="btn btn-primary">
-            Add Customer
+            Add Level
         </button>
         <!--end::Add customer-->
     </div>
@@ -41,19 +41,19 @@
                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_datatable_example_1 .form-check-input" value="1"/>
             </div>
         </th>
-        <th>Customer Name</th>
-        <th>Email</th>
+        <th>Level</th>
+        <th>Image</th>
         <th>Created Date</th>
         <th>Actions</th>
     </tr>
     </thead>
     <tbody class="text-gray-600 fw-bold">
-     @foreach ($users as $user)
+     @foreach ($puzzles as $puzzle)
          <tr>
              <th>#</th>
-             <th>{{$user->name}}</th>
-             <th>{{$user->email}}</th>
-             <th>{{$user->created_at->format('dd-mm-yy')}}</th>
+             <th>{{$puzzle->level}}</th>
+             <th></th>
+             <th>{{$puzzle->created_at->format('dd-mm-yy')}}</th>
              <th>
                  <a href="#" class="btn btn-primary">View</a>
              </th>

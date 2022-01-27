@@ -16,13 +16,13 @@
     <!--begin::Toolbar-->
     <div class="d-flex justify-content-end" data-kt-docs-table-toolbar="base">
         <!--begin::Filter-->
-        <button type="button" class="btn btn-light-primary me-3">
+        <button type="button" class="btn btn-light-primary me-3" >
             Filter
         </button>
         <!--end::Filter-->
 
         <!--begin::Add customer-->
-        <button type="button" class="btn btn-primary">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_1">
             Add Level
         </button>
         <!--end::Add customer-->
@@ -67,5 +67,86 @@
             Footer
         </div>
     </div>
+
+
+<div class="modal fade" tabindex="-1" id="kt_modal_1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Level</h5>
+
+                <!--begin::Close-->
+                <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="svg-icon svg-icon-2x"></span>
+                </div>
+                <!--end::Close-->
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <div class="input-group mb-5">
+                            <span class="input-group-text" id="level-section">Level</span>
+                            <input type="text" class="form-control" id="level" name="level" placeholder=""
+                                   aria-label="level-section"
+                                   aria-describedby="level-section"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="fv-row">
+                            <!--begin::Dropzone-->
+                            <div class="dropzone" id="kt_dropzonejs_example_1">
+                                <!--begin::Message-->
+                                <div class="dz-message needsclick">
+                                    <!--begin::Icon-->
+                                    <i class="bi bi-file-earmark-arrow-up text-primary fs-3x"></i>
+                                    <!--end::Icon-->
+
+                                    <!--begin::Info-->
+                                    <div class="ms-4">
+                                        <h3 class="fs-5 fw-bolder text-gray-900 mb-1">Drop file here to upload Puzzle Image
+                                            upload.</h3>
+                                        <span class="fs-7 fw-bold text-gray-400">Upload only 1 file</span>
+                                    </div>
+                                    <!--end::Info-->
+                                </div>
+                            </div>
+                            <!--end::Dropzone-->
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="fv-row">
+                            <!--begin::Dropzone-->
+                            <div class="dropzone" id="kt_dropzonejs_example_1">
+                                <!--begin::Message-->
+                                <div class="dz-message needsclick">
+                                    <!--begin::Icon-->
+                                    <i class="bi bi-file-earmark-arrow-up text-primary fs-3x"></i>
+                                    <!--end::Icon-->
+
+                                    <!--begin::Info-->
+                                    <div class="ms-4">
+                                        <h3 class="fs-5 fw-bolder text-gray-900 mb-1">Drop file here to upload Puzzle Solution
+                                            upload.</h3>
+                                        <span class="fs-7 fw-bold text-gray-400">Upload only 1 file</span>
+                                    </div>
+                                    <!--end::Info-->
+                                </div>
+                            </div>
+                            <!--end::Dropzone-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 

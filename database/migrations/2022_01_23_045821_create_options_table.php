@@ -15,6 +15,8 @@ class CreateOptionsTable extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("puzzle_id");
+            $table->integer("key")->nullable();
             $table->string('option')->nullable();
             $table->timestamps();
         });

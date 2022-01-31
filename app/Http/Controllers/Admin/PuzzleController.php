@@ -3,15 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\StorePuzzleRequest;
+use App\Models\Option;
 use App\Models\Puzzle;
+use App\Models\Solution;
 use Illuminate\Http\Request;
 
 class PuzzleController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
@@ -26,18 +27,46 @@ class PuzzleController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param StorePuzzleRequest $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function store(Request $request)
+    public function store(StorePuzzleRequest $request)
     {
-        //
+        try {
+            $puzzle = Puzzle::create([
+                'level'=>$request->input('level'),
+
+            ]);
+            foreach($request->input('option') as $key=>$value)
+            {
+                $option['puzzle_id'] = $puzzle->id;
+                $option['key']    = $key;
+                $option['option'] = $value;
+                Option::create($option);
+            }
+            $answer = Option::where(['key'=>$request->input('correct_answer')])->first();
+            Solution::create(["puzzle_id"=>$puzzle->id,"option_id"=>$answer->id]);
+
+             if ($request->input('question', false)) {
+                $puzzle->addMedia(storage_path('tmp/uploads/' . $request->input('question')))->toMediaCollection('questions');
+            }
+
+             if ($request->input('solution', false)) {
+                $puzzle->addMedia(storage_path('tmp/uploads/' . $request->input('solution')))->toMediaCollection('solutions');
+            }
+            $result = ["status"=>1,"response"=>"success","message"=>"Puzzle created successfully"];
+
+        }
+        catch (\Exception $exception)
+        {
+           $result = ["status"=>0,"response"=>"exception_error","message"=>$exception->getMessage()];
+        }
+
+        return response()->json($result,200);
     }
 
     /**

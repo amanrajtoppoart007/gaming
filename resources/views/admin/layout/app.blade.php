@@ -48,6 +48,7 @@
 		<script src="{{asset('assets/js/custom/intro.js')}}"></script>
 		<!--end::Page Custom Javascript-->
 		<!--end::Javascript-->
+       @yield("script")
 	</body>
 	<!--end::Body-->
 </html>

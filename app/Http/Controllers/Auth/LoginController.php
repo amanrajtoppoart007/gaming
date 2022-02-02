@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -35,14 +37,36 @@ class LoginController extends Controller
      */
 
 
-
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
 
-      public function showLoginForm()
+    public function showLoginForm()
     {
-        return view("user.auth.login");
+        return view("guest.auth.login");
+    }
+
+    public function login(LoginRequest $request)
+    {
+
+        if (Auth::guard()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $request->input('remember'))) {
+            if ($request->ajax()) {
+                $result = ["status" => 1, "response" => "success", "message" => "User logged in successfully"];
+                return response()->json($result,200);
+            } else {
+                return redirect()->route('dashboard');
+            }
+        } else {
+
+            if ($request->ajax()) {
+                $result = ["status" => 0, "response" => "error", "message" => "Incorrect email or password"];
+                 return response()->json($result,200);
+            } else {
+                return redirect()->back()->with('message', 'Invalid credentials')->withInput($request->only('email', 'remember'));
+            }
+
+        }
+
     }
 }

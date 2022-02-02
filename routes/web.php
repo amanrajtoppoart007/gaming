@@ -21,6 +21,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::prefix('puzzle')->as('puzzle.')->group(function () {
+   Route::get('/view/{id}', [App\Http\Controllers\User\PuzzleController::class, 'view'])->name('view');
+   Route::post('/check', [App\Http\Controllers\User\PuzzleController::class, 'check'])->name('check');
+});
+
+
+
 
 Route::get('/admin/login', [App\Http\Controllers\AdminAuth\LoginController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [App\Http\Controllers\AdminAuth\LoginController::class, 'login'])->name('submit.login');

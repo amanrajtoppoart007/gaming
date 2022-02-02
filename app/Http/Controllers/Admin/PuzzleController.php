@@ -37,10 +37,7 @@ class PuzzleController extends Controller
     public function store(StorePuzzleRequest $request)
     {
         try {
-            $puzzle = Puzzle::create([
-                'level'=>$request->input('level'),
-
-            ]);
+            $puzzle = Puzzle::create(['level'=>$request->input('level')]);
             foreach($request->input('option') as $key=>$value)
             {
                 $option['puzzle_id'] = $puzzle->id;

@@ -134,19 +134,6 @@ var KTLogin = function() {
                         }
                     });
 
-                    /*
-                    swal.fire({
-		                text: "All is cool! Now you submit this form",
-		                icon: "success",
-		                buttonsStyling: false,
-		                confirmButtonText: "Ok, got it!",
-                        customClass: {
-    						confirmButton: "btn fw-bold btn-light-primary"
-    					}
-		            }).then(function() {
-						KTUtil.scrollTop();
-					});
-                    */
 				} else {
 					swal.fire({
 		                text: "Sorry, looks like there are some errors detected, please try again.",
@@ -189,7 +176,7 @@ var KTLogin = function() {
 			_signupForm,
 			{
 				fields: {
-					fullname: {
+					name: {
 						validators: {
 							notEmpty: {
 								message: 'Username is required'
@@ -213,7 +200,7 @@ var KTLogin = function() {
                             }
                         }
                     },
-                    cpassword: {
+                    password_confirmation: {
                         validators: {
                             notEmpty: {
                                 message: 'The password confirmation is required'
@@ -236,6 +223,7 @@ var KTLogin = function() {
 				},
 				plugins: {
 					trigger: new FormValidation.plugins.Trigger(),
+                     submitButton: new FormValidation.plugins.SubmitButton(),
 					bootstrap: new FormValidation.plugins.Bootstrap5({
                         rowSelector: '.fv-row'
                     })
@@ -247,18 +235,64 @@ var KTLogin = function() {
             e.preventDefault();
 
             validation.validate().then(function(status) {
-		        if (status == 'Valid') {
-                    swal.fire({
-		                text: "All is cool! Now you submit this form",
-		                icon: "success",
-		                buttonsStyling: false,
-		                confirmButtonText: "Ok, got it!",
-                        customClass: {
-    						confirmButton: "btn fw-bold btn-light-primary"
-    					}
-		            }).then(function() {
-						KTUtil.scrollTop();
-					});
+		        if (status === 'Valid') {
+		            const REGISTER_URL = _signupForm.getAttribute('data-register-url');
+
+                   const CSRF_TOKEN = _signupForm.getAttribute('data-csrf_token');
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': CSRF_TOKEN
+                        }
+                    });
+
+                    $.ajax({
+                        url: REGISTER_URL,
+                        method: 'POST',
+                        data: new FormData(document.getElementById('kt_login_signup_form')),
+                        cache: false,
+                        processData: false,
+                        contentType: false,
+                        success: function (result) {
+                            if (result?.status === 1) {
+                                Swal.fire({
+                                    title: 'Success!',
+                                    text: result?.message,
+                                    icon: "success",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Ok,Got it",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                });
+                                window.location.href = window.location.href;
+                            } else {
+                                Swal.fire({
+                                    title: 'Validation Error',
+                                    text: result?.message,
+                                    icon: "error",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Ok, got it!",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                });
+
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            Swal.fire({
+                                text: textStatus,
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary"
+                                }
+                            });
+
+                        }
+                    });
+
 				} else {
 					swal.fire({
 		                text: "Sorry, looks like there are some errors detected, please try again.",
@@ -319,7 +353,7 @@ var KTLogin = function() {
             e.preventDefault();
 
             validation.validate().then(function(status) {
-		        if (status == 'Valid') {
+		        if (status === 'Valid') {
                     swal.fire({
 		                text: "Sent password reset. Please check your email",
 		                icon: "success",

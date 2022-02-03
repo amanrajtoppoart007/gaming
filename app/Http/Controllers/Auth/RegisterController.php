@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RegisterRequest;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -41,21 +44,43 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
+    public function register(RegisterRequest $request)
     {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-    }
+        try {
+            if ($this->create($request->validated())) {
+                Auth::guard()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')], $request->input('remember'));
+                if ($request->ajax()) {
+                    $result = ["status" => 1, "response" => "success", "message" => "User created successfully"];
+                    return response()->json($result, 200);
+                } else {
+                    return redirect()->route('dashboard');
+                }
+            } else {
 
+                if ($request->ajax()) {
+                    $result = ["status" => 0, "response" => "error", "message" => "Account creation failed,please try again"];
+                    return response()->json($result, 200);
+                } else {
+                    return redirect()->back()->with('message', 'Invalid credentials')->withInput($request->only('email', 'remember'));
+                }
+
+            }
+        }
+        catch (\Exception $exception)
+        {
+            if($request->ajax())
+            {
+                $result = ["status" => 0, "response" => "exception_error", "message" =>$exception->getMessage()];
+                return response()->json($result, 200);
+            }
+            else
+            {
+                 return redirect()->back()->with('message', $exception->getMessage())->withInput($request->only('email', 'remember'));
+            }
+
+        }
+
+    }
     /**
      * Create a new user instance after a valid registration.
      *

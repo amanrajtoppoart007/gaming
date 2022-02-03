@@ -61,7 +61,7 @@
 						</form>
 						<!--end::Signin Form-->
 						<!--begin::Signup Form-->
-						<form class="form d-none w-100" novalidate="novalidate" id="kt_login_signup_form">
+						<form class="form d-none w-100" novalidate="novalidate" data-csrf_token="{{csrf_token()}}" data-register-url="{{route('register')}}" id="kt_login_signup_form">
 							<!--begin::Title-->
 							<div class="pb-5 pb-lg-15">
 								<h3 class="fw-bolder text-dark display-6">Sign Up</h3>
@@ -71,7 +71,7 @@
 							<!--begin::Form group-->
 							<div class="fv-row mb-5">
 								<label class="form-label fs-6 fw-bolder text-dark pt-5">Name</label>
-								<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="fullname" autocomplete="off" />
+								<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="name" autocomplete="off" />
 							</div>
 							<!--end::Form group-->
 							<!--begin::Form group-->
@@ -89,7 +89,7 @@
 							<!--begin::Form group-->
 							<div class="fv-row mb-10">
 								<label class="form-label fs-6 fw-bolder text-dark pt-5">Confirm Password</label>
-								<input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="cpassword" autocomplete="off" />
+								<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="password_confirmation" autocomplete="off" />
 							</div>
 							<!--end::Form group-->
 							<!--begin::Form group-->

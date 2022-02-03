@@ -16,6 +16,8 @@ class CreatePuzzlesTable extends Migration
         Schema::create('puzzles', function (Blueprint $table) {
             $table->id();
             $table->integer('level');
+            $table->longText('description')->nullable();
+            $table->integer('time_limit');
             $table->timestamps();
         });
     }

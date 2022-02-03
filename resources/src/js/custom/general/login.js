@@ -43,10 +43,10 @@ var KTLogin = function() {
 			_signinForm,
 			{
 				fields: {
-					username: {
+					email: {
 						validators: {
 							notEmpty: {
-								message: 'Username is required'
+								message: 'Email is required'
 							},
                             emailAddress: {
 								message: 'The value is not a valid email address'
@@ -76,10 +76,63 @@ var KTLogin = function() {
             e.preventDefault();
 
             validation.validate().then(function(status) {
-		        if (status == 'Valid') {
-                    console.log('test!');
+		        if (status ==='Valid') {
+                   const LOGIN_URL = _signinForm.getAttribute('data-login-url');
 
-                    window.location.href = _signinForm.getAttribute('data-after-login-url');
+                   const CSRF_TOKEN = _signinForm.getAttribute('data-csrf_token');
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': CSRF_TOKEN
+                        }
+                    });
+
+                    $.ajax({
+                        url: LOGIN_URL,
+                        method: 'POST',
+                        data: new FormData(document.getElementById('kt_login_signin_form')),
+                        cache: false,
+                        processData: false,
+                        contentType: false,
+                        success: function (result) {
+                            if (result?.status === 1) {
+                                Swal.fire({
+                                    title: 'Success!',
+                                    text: result?.message,
+                                    icon: "success",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Ok,Got it",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                });
+                                window.location.href = window.location.href;
+                            } else {
+                                Swal.fire({
+                                    title: 'Validation Error',
+                                    text: result?.message,
+                                    icon: "error",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Ok, got it!",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                });
+
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            Swal.fire({
+                                text: textStatus,
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary"
+                                }
+                            });
+
+                        }
+                    });
 
                     /*
                     swal.fire({

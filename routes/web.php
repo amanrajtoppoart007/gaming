@@ -26,6 +26,10 @@ Route::prefix('puzzle')->as('puzzle.')->group(function () {
 
 
 
+Route::prefix('admin')->as('admin.')->group(function(){
+Route::get('/login', [App\Http\Controllers\AdminAuth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [App\Http\Controllers\AdminAuth\LoginController::class, 'login'])->name('login.submit');
+Route::post('/logout', [App\Http\Controllers\AdminAuth\LoginController::class, 'logout'])->name('logout');
+});
 
-Route::get('/admin/login', [App\Http\Controllers\AdminAuth\LoginController::class, 'showLoginForm'])->name('admin.login');
-Route::post('/admin/login', [App\Http\Controllers\AdminAuth\LoginController::class, 'login'])->name('submit.login');
+

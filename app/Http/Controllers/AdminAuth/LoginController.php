@@ -36,7 +36,6 @@ class LoginController extends Controller
             }
             else
             {
-                dd("password error");
                 return redirect()->back()->with('message','Invalid credentials')->withInput($request->only('email', 'remember'));
             }
         }
@@ -46,4 +45,15 @@ class LoginController extends Controller
         }
 
     }
+
+    /**
+     * @return \Illuminate\Http\RedirectResponse
+     */
+
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect()->route('admin.login');
+    }
+
 }

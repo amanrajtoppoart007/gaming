@@ -104,6 +104,7 @@ var extendedFiles = [];
 
 // Copy media folder
 mix.copyDirectory("resources/src/media", "public/assets/media");
+mix.copyDirectory("resources/src/library", "public/assets/library");
 
 (glob.sync("resources/src/sass/themes/**/!(_)*.scss") || []).forEach((file) => {
     file = file.replace(/[\\/]+/g, "/");

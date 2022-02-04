@@ -17,12 +17,12 @@ class CreateUserPuzzleTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('puzzle_id');
-            $table->unsignedBigInteger('option_id');
-            $table->integer('attempts');
+            $table->unsignedBigInteger('option_id')->nullable();
+            $table->integer('attempts')->nullable();
             $table->timestamp("started_at");
-            $table->timestamp("completed_at");
-            $table->float('time_taken');
-            $table->enum("is_solved",[1,0]);
+            $table->timestamp("completed_at")->nullable();
+            $table->float('time_taken')->nullable();
+            $table->enum("is_solved",[1,0])->nullable();
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@
                                 <div class="col-md-6">
                                     <div>
                                          <label for="level" class="required form-label">Level</label>
-                                        <input type="text" class="form-control" id="level" name="level" placeholder=""/>
+                                        <input type="text" class="form-control" id="level" name="level" value="{{$level}}" placeholder="" readonly/>
                                     </div>
                                 </div>
                             </div>

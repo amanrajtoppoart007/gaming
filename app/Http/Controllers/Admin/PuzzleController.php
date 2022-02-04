@@ -25,7 +25,13 @@ class PuzzleController extends Controller
      */
     public function create()
     {
-        return view("admin.puzzle.create");
+        $puzzle = Puzzle::orderBy('level', 'DESC')->first();
+        $level = 1;
+        if ($puzzle) {
+            $level = $puzzle->level + 1;
+        }
+
+        return view("admin.puzzle.create",compact('level'));
     }
 
     /**

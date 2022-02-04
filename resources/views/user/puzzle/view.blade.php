@@ -14,6 +14,9 @@
                             <div class="col-md-6">
                                 <img src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
                                      class="mw-500 w-500px"/>
+                                <span>
+                                    {{$puzzle->description}}
+                                </span>
                             </div>
 
                             <div class="card shadow-none w-auto  w-lg-auto ml-auto">
@@ -64,6 +67,9 @@
                         <div class="row my-5 justify-content-end">
                             <div class="col-md-8">
                                 <button id="check_answer" class="btn btn-lg btn-primary btn-hover-scale me-5">Check Answer</button>
+                            </div>
+                            <div class="col-md-4">
+                                <span id="timer_section">{{3*1000*60}}</span>
                             </div>
                         </div>
 
@@ -155,7 +161,16 @@
                      }
                  });
              })
-         })
+         });
+            let TIME = 1000*3*60;
+            setInterval(()=>{
+                if(TIME>0)
+                {
+                    TIME = TIME-1000;
+                    document.getElementById('timer_section').innerHTML = TIME/60;
+                }
+            },1000);
         });
+
     </script>
 @endsection

@@ -188,11 +188,11 @@ var KTWidgets = function () {
 
         var init = false;
         var tab = document.querySelector(tabSelector);
-        
+
         if (initByDefault === true) {
             chart.render();
             init = true;
-        }        
+        }
 
         tab.addEventListener('shown.bs.tab', function (event) {
             if (init == false) {
@@ -200,7 +200,7 @@ var KTWidgets = function () {
                 init = true;
             }
         })
-    }    
+    }
 
     // Form Widgets
     var initFormWidget1 = function() {
@@ -229,7 +229,7 @@ var KTWidgets = function () {
         // Init editor
         var editorObj = new Quill('#' + editorId, options);
     }
-    
+
     // Mixed widgets
     var initMixedWidget1 = function() {
         var element = document.querySelector("#kt_mixed_widget_1_chart");
@@ -265,10 +265,6 @@ var KTWidgets = function () {
             dataLabels: {
                 enabled: false
             },
-            fill: {
-                type: 'solid',
-                opacity: 1
-            },
             stroke: {
                 curve: 'smooth',
                 show: true,
@@ -288,7 +284,7 @@ var KTWidgets = function () {
                     style: {
                         colors: '#A1A5B7',
                         fontSize: '12px',
-                        
+
                     }
                 },
                 crosshairs: {
@@ -306,7 +302,7 @@ var KTWidgets = function () {
                     offsetY: 0,
                     style: {
                         fontSize: '12px',
-                        
+
                     }
                 }
             },
@@ -318,7 +314,7 @@ var KTWidgets = function () {
                     style: {
                         colors: '#A1A5B7',
                         fontSize: '12px',
-                        
+
                     }
                 }
             },
@@ -346,7 +342,7 @@ var KTWidgets = function () {
             tooltip: {
                 style: {
                     fontSize: '12px',
-                    
+
                 },
                 y: {
                     formatter: function(val) {
@@ -408,10 +404,6 @@ var KTWidgets = function () {
             },
             dataLabels: {
                 enabled: false
-            },
-            fill: {
-                type: 'solid',
-                opacity: 1
             },
             stroke: {
                 curve: 'smooth',
@@ -485,7 +477,7 @@ var KTWidgets = function () {
             tooltip: {
                 style: {
                     fontSize: '12px',
-                    
+
                 },
                 y: {
                     formatter: function(val) {
@@ -512,7 +504,7 @@ var KTWidgets = function () {
 
         var chart = new ApexCharts(element, options);
         chart.render();
-    }    
+    }
 
     // Public methods
     return {
@@ -524,7 +516,7 @@ var KTWidgets = function () {
             initStatsWidget2('#kt_stats_widget_2_tab_1', '#kt_stats_widget_2_chart_1', [44, 55, 57, 56, 61, 58], [76, 85, 101, 98, 87, 105], true);
             initStatsWidget2('#kt_stats_widget_2_tab_2', '#kt_stats_widget_2_chart_2', [35, 60, 35, 50, 45, 30], [65, 80, 50, 80, 75, 105], false);
             initStatsWidget2('#kt_stats_widget_2_tab_3', '#kt_stats_widget_2_chart_3', [25, 40, 45, 50, 40, 60], [76, 85, 101, 98, 87, 105], false);
-            initStatsWidget2('#kt_stats_widget_2_tab_4', '#kt_stats_widget_2_chart_4', [50, 35, 45, 55, 30, 40], [76, 85, 101, 98, 87, 105], false);               
+            initStatsWidget2('#kt_stats_widget_2_tab_4', '#kt_stats_widget_2_chart_4', [50, 35, 45, 55, 30, 40], [76, 85, 101, 98, 87, 105], false);
 
             // Init Mixed Widgets
             initMixedWidget1();

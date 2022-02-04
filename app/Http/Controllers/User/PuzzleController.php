@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Puzzle;
 use App\Models\Solution;
+use App\Models\UserPuzzle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -23,6 +24,28 @@ class PuzzleController extends Controller
     public function view($id):\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
     {
         $puzzle = Puzzle::with('options')->find($id);
+
+        $check = UserPuzzle::where([
+            'user_id'=>auth()->user()->id,
+            'puzzle_id'=>$id
+        ])->first();
+
+        if ($check) {
+            $check->update([
+                'started_at' => now(),
+                'attempts' => $check->attempts + 1,
+            ]);
+        } else {
+            UserPuzzle::create([
+                'user_id' => auth()->user()->id,
+                'puzzle_id' => $id,
+                'attempts' => 1,
+                'started_at' => now(),
+                'is_solved' => 0
+            ]);
+        }
+
+
         return view("user.puzzle.view",compact('puzzle'));
     }
 
@@ -41,6 +64,7 @@ class PuzzleController extends Controller
         {
               if(Solution::where(['puzzle_id'=>$request->input('puzzle_id'),'option_id'=>$request->input('option_id')])->first())
               {
+
                   $result = ["status" => 1, "response" => "success", "message" => "Yah! It is correct answer"];
                   $puzzle = Puzzle::find($request->input('puzzle_id'));
                   $next_level = $puzzle->level + 1;

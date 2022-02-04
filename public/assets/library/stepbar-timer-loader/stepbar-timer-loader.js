@@ -6,4 +6,4 @@ function progress(timeleft, timetotal, $element) {
             progress(timeleft - 1, timetotal, $element);
         }, 1000);
     }
-};
+}

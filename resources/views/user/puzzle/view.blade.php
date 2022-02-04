@@ -1,4 +1,7 @@
 @extends("user.layout.app")
+@section("css")
+    <link href="{{asset('assets/library/stepbar-timer-loader/stepbar-timer-loader.css')}}" rel="stylesheet" type="text/css"/>
+    @endsection
 @section("content")
     <div class="content fs-6 d-flex flex-column-fluid" id="kt_content">
 
@@ -69,7 +72,9 @@
                                 <button id="check_answer" class="btn btn-lg btn-primary btn-hover-scale me-5">Check Answer</button>
                             </div>
                             <div class="col-md-4">
-                                <span id="timer_section">{{3*1000*60}}</span>
+                                <div id="timerProgressBar" class="timer-progress-bar">
+                                    <div class="bar"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -82,8 +87,9 @@
     </div>
 @endsection
 @section("script")
+    <script src="{{asset('assets/library/stepbar-timer-loader/stepbar-timer-loader.js')}}"></script>
     <script>
-        $(document).ready(function(){
+
             $(document).ready(function(){
              $.ajaxSetup({
                  headers: {
@@ -160,17 +166,11 @@
 
                      }
                  });
-             })
+             });
+             progress(360, 360, $('#timerProgressBar'));
          });
-            let TIME = 1000*3*60;
-            setInterval(()=>{
-                if(TIME>0)
-                {
-                    TIME = TIME-1000;
-                    document.getElementById('timer_section').innerHTML = TIME/60;
-                }
-            },1000);
-        });
+
+
 
     </script>
 @endsection

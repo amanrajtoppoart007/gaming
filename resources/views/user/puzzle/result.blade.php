@@ -1,15 +1,4 @@
 @extends("user.layout.app")
-@section("css")
-    <style>
-        #social-links>ul>li {
-            display:inline;
-            margin-right: 10px;
-            width: auto;
-            height: 50px;
-            background-color:white
-        }
-    </style>
-@endsection
 @section("content")
     <div class="d-flex flex-column flex-root">
 			<!--begin::Page-->

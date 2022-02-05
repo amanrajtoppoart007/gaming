@@ -29,6 +29,11 @@ class Puzzle extends Model implements HasMedia
         return $this->hasOne(Solution::class);
     }
 
+     public function users()
+    {
+        return $this->belongsToMany(User::class)->using(UserPuzzle::class);
+    }
+
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')->fit('crop', 50, 50)->keepOriginalImageFormat();

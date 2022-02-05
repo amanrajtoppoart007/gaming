@@ -86,6 +86,66 @@
         </div>
     </div>
 @endsection
+@section("modal")
+<div class="modal fade" tabindex="-1" id="answer_view_modal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 id="answer_title_view" class="modal-title text-white fw-bold">Success !</h5>
+
+                <!--begin::Close-->
+                <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="svg-icon svg-icon-2x"></span>
+                </div>
+                <!--end::Close-->
+            </div>
+
+            <div class="modal-body">
+
+                <div id="answer_message_view">Modal body text goes here.</div>
+                <div class="row">
+                    <div class="col text-center">
+                        <img id="solutionImageView" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
+                                     class="mw-250 w-250px"/>
+                    </div>
+                    <div class="col">
+                         <table id="puzzle_answer_response_view" class="table table-row-dashed">
+                    <tbody>
+                      <tr>
+                          <th>Score</th>
+                          <td id="user_score">0</td>
+                      </tr>
+                    <tr>
+                          <th>Started At</th>
+                          <td id="started_at">0</td>
+                      </tr>
+                    <tr>
+                          <th>Completed At</th>
+                          <td id="completed_at">0</td>
+                      </tr>
+                        <tr>
+                          <th>Time Taken</th>
+                          <td id="time_taken">0</td>
+                      </tr>
+                    <tr>
+                          <th>Over All Attempts</th>
+                          <td id="over_all_attempts">0</td>
+                      </tr>
+                    </tbody>
+                </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer">
+                <a id="nextPuzzleUrl" href="javascript:void(0)"  class="btn btn-primary">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
 @section("script")
     <script src="{{asset('assets/library/stepbar-timer-loader/stepbar-timer-loader.js')}}"></script>
     <script>
@@ -98,6 +158,9 @@
              });
              $("#check_answer").on("click",function(e){
                  e.preventDefault();
+                 $("#nextPuzzleUrl").hide();
+                 $("#solutionImageView").hide();
+                 //$("#puzzle_answer_response_view").hide();
                  const form = new FormData();
                  form.append('puzzle_id',{{$puzzle->id}});
                  form.append('option_id',$('input[name=answer]:checked').val());
@@ -112,30 +175,26 @@
                      {
                         if(result?.status===1)
                         {
-
-                            let html = '';
-
-                            if(result?.next_url)
-                            {
-                                html = `<span class="text-primary">${result?.message}</span></br> <a class="btn btn-success btn-lg" href="${result?.next_url}">Next Puzzle</a>`
-                            }
-                            else
-                            {
-                                html = `<span class="text-primary">${result?.message}</span>`;
-                            }
+                               const {data} = result;
 
 
-                            Swal.fire({
-                                title: 'Success!',
-                                html: html,
-                                text: result?.message,
-                                icon: "success",
-                                buttonsStyling: false,
-                                confirmButtonText: "Ok,Got it",
-                                customClass: {
-                                    confirmButton: "btn btn-primary"
-                                }
-                            });
+
+                            $("#answer_message_view").text(result?.message);
+
+                            $("#nextPuzzleUrl").attr({href:data?.nextPuzzleUrl});
+                            $("#solutionImageView").attr({src:data?.image});
+
+                            $("#user_score").html(data?.rating);
+                            $("#started_at").text(data?.startedAt)
+                            $("#completed_at").text(data?.completedAt);
+                            $("#time_taken").text(data?.timeTaken);
+                            $("#over_all_attempts").text(data?.overallAttempts);
+                            $("#nextPuzzleUrl").show();
+                            $("#solutionImageView").show();
+                            $("#puzzle_answer_response_view").show();
+                            $("#answer_view_modal").modal("show");
+
+
                         }
                         else
                         {

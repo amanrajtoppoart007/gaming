@@ -10,10 +10,11 @@ use App\Models\UserPuzzle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Traits\ScoreCalculationTrait;
+use App\Http\Controllers\Traits\UserPuzzleTrait;
 
 class PuzzleController extends Controller
 {
-    use ScoreCalculationTrait;
+    use ScoreCalculationTrait,UserPuzzleTrait;
     public function __construct()
     {
         $this->middleware("auth");
@@ -44,7 +45,7 @@ class PuzzleController extends Controller
                 'puzzle_id' => $id,
                 'attempts' => 1,
                 'started_at' => now(),
-                'is_solved' => 0
+                'is_solved' => '0'
             ]);
         }
 
@@ -73,7 +74,8 @@ class PuzzleController extends Controller
             if($userPuzzle)
             {
                 $userPuzzle->update([
-                    'completed_at' => now()
+                    'completed_at' => now(),
+                    'option_id'=>$request->input('option_id')
                 ]);
                 if (Solution::where(['puzzle_id' => $request->input('puzzle_id'), 'option_id' => $request->input('option_id')])->first()) {
 
@@ -103,15 +105,8 @@ class PuzzleController extends Controller
                             'score'=>$score,
                         ]);
                     }
+                    $result = ["status" => 1, "response" => "success","data"=>$this->formatResponse(), "message" => "Yah! It is correct answer"];
 
-
-                    $result = ["status" => 1, "response" => "success", "message" => "Yah! It is correct answer"];
-                    $puzzle = Puzzle::find($request->input('puzzle_id'));
-                    $next_level = $puzzle->level + 1;
-                    $nextPuzzle = Puzzle::where(['level' => $next_level])->first();
-                    if ($nextPuzzle) {
-                        $result['next_url'] = route('puzzle.view', $nextPuzzle->id);
-                    }
                 } else {
                     $result = ["status" => 0, "response" => "error", "message" => "Oops! Wrong answer, please try again"];
                 }
@@ -132,5 +127,26 @@ class PuzzleController extends Controller
               $result = ["status"=>0,"response"=>"validation_error","message"=>$msg];
         }
         return response()->json($result,200);
+    }
+
+    public function result()
+    {
+        $score = Score::where([
+            'user_id'=>auth()->user()->id,
+        ])->sum('score');
+        $count = Score::where([
+            'user_id'=>auth()->user()->id,
+        ])->count();
+        $timeTaken = UserPuzzle::where([
+            'user_id'=>auth()->user()->id,
+            'is_solved'=>1,
+        ])->sum('time_taken');
+        $rating = $score/$count;
+        $maxScore = $count * 3;
+        $user = auth()->user();
+        $ratingHtml = $this->formatScore($rating);
+
+        //$ranking = Score::where('')->sum();
+        return view("user.puzzle.result",compact('rating','score','maxScore','user','ratingHtml','timeTaken'));
     }
 }

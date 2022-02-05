@@ -18,7 +18,7 @@ trait ScoreCalculationTrait
         }
         catch (\Exception $exception)
         {
-            $minutes = 0;
+            $minutes = false;
         }
         return $minutes;
 
@@ -28,7 +28,7 @@ trait ScoreCalculationTrait
     {
          $score =0;
          $minutes = $this->getTimeDifference($to,$from);
-        if($minutes>0 && $minutes<=2)
+        if($minutes>=0 && $minutes<=2)
         {
             $score = 3;
         }

@@ -9,12 +9,12 @@
 					<div class="d-flex flex-row-fluid flex-center flex-column-auto flex-column text-center mb-5">
 						<!--begin::Aside Logo-->
 						<a href="{{URL::to('/')}}" class="mb-6">
-							<img alt="Logo" src="{{asset('assets/media/logos/logo-default.svg')}}" class="h-50px h-lg-75px" />
+							<img alt="Logo" src="{{asset('assets/media/logos/logo.png')}}" class="h-50px h-lg-75px" />
 						</a>
 						<!--end::Aside Logo-->
 						<!--begin::Aside Subtitle-->
-						<h3 class="fw-bolder fs-2x text-white lh-lg">Discover Start
-						<br />with great build tools</h3>
+						<h3 class="fw-bolder fs-2x text-white lh-lg">Play a fun game
+						<br />with us</h3>
 						<!--end::Aside Subtitle-->
 					</div>
 					<!--end::Aside Top-->
@@ -31,7 +31,7 @@
 						<form class="form w-100" novalidate="novalidate" id="kt_login_signin_form" method="post" data-csrf_token="{{csrf_token()}}" data-login-url="{{route('login')}}">
 							<!--begin::Title-->
 							<div class="pb-5 pb-lg-15">
-								<h3 class="fw-bolder text-dark display-6">Welcome to Start</h3>
+								<h3 class="fw-bolder text-dark display-6">Welcome to {{trans('common.game_title')}}</h3>
 								<div class="text-muted fw-bold fs-3">New Here?
 								<a href="#" class="text-primary fw-bolder" id="kt_login_signin_form_singup_button">Create Account</a></div>
 							</div>
@@ -132,18 +132,8 @@
 						</form>
 						<!--end::Password Reset Form-->
 					</div>
-					<!--end::Wrapper-->
-					<!--begin::Footer-->
-					<div class="d-flex justify-content-lg-start justify-content-center align-items-center py-2 py-lg-7 py-lg-0 fs-5 fw-bolder">
-						<a href="https://keenthemes.com" target="_blank" class="text-gray-600 text-hover-primary">About</a>
-						<a href="https://keenthemes.com/support" target="_blank" class="text-gray-600 text-hover-primary ms-10">Support</a>
-						<a href="https://keenthemes.com/products/start-html-pro" target="_blank" class="text-gray-600 text-hover-primary ms-10">Purchase</a>
-					</div>
-					<!--end::Footer-->
 				</div>
-				<!--end::Content-->
 			</div>
-			<!--end::Login-->
 		</div>
 @endsection
 

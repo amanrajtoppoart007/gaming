@@ -24,7 +24,7 @@
 <body id="kt_body" class="page-loading-enabled page-loading">
 @include("user.layout._loader")
 @include("user.layout.master")
-
+@yield("modal")
 <script>var hostUrl = "assets/";</script>
 <script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
 <script src="{{asset('assets/js/scripts.bundle.js')}}"></script>

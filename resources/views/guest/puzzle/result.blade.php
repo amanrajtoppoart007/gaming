@@ -1,4 +1,4 @@
-@extends("user.layout.app")
+@extends("guest.layout.app")
 @section("css")
     <link rel="stylesheet" type="text/css" href="{{asset('assets/library/jssocials/jssocials.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/library/jssocials/jssocials-theme-flat.css')}}" />

@@ -12,12 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/guest/result/{userId}', [App\Http\Controllers\WelcomeController::class, 'result'])->name('guest.result.view');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Route::prefix('puzzle')->as('puzzle.')->group(function () {
    Route::get('/view/{id}', [App\Http\Controllers\User\PuzzleController::class, 'view'])->name('view');

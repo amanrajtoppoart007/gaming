@@ -1,16 +1,15 @@
-		
+
 		<!--begin::Main-->
 		<!--begin::Root-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
 			<div class="page d-flex flex-row flex-column-fluid">
-
-<!--layout-partial:layout/aside/_default.html-->
-
 				<!--begin::Wrapper-->
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 
 <!--layout-partial:layout/_header.html-->
+
+                    @include("guest.layout._header")
 
 					<!--begin::Main-->
 					<div class="d-flex flex-column flex-column-fluid">
@@ -19,12 +18,15 @@
 
 <!--layout-partial:layout/_content.html-->
 
+                            @include("guest.layout._content")
+
 						</div>
 						<!--end::Content-->
 					</div>
 					<!--end::Main-->
 
 <!--layout-partial:layout/_footer.html-->
+                    @include("guest.layout._footer")
 
 				</div>
 				<!--end::Wrapper-->
@@ -38,8 +40,10 @@
 
 <!--layout-partial:layout/_mega-menu.html-->
 
+         @include("guest.layout._mega-menu")
+
 		<!--begin::Drawers-->
-		
+
 		<!--begin::Chat drawer-->
 		<div id="kt_drawer_chat" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle" data-kt-drawer-close="#kt_drawer_chat_close">
 			<!--begin::Messenger-->
@@ -68,7 +72,7 @@
 							<button class="btn btn-sm btn-icon btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
 								<i class="bi bi-three-dots fs-3"></i>
 							</button>
-							
+
 							<!--begin::Menu 3-->
 							<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
 								<!--begin::Heading-->
@@ -121,7 +125,7 @@
 								<!--end::Menu item-->
 							</div>
 							<!--end::Menu 3-->
-							
+
 						</div>
 						<!--end::Menu-->
 						<!--begin::Close-->
@@ -144,7 +148,7 @@
 				<div class="card-body" id="kt_drawer_chat_messenger_body">
 					<!--begin::Messages-->
 					<div class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer" data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">
-						
+
 						<!--begin::Message(in)-->
 						<div class="d-flex justify-content-start mb-10">
 							<!--begin::Wrapper-->
@@ -380,7 +384,7 @@
 							<!--end::Wrapper-->
 						</div>
 						<!--end::Message(template for in)-->
-						
+
 					</div>
 					<!--end::Messages-->
 				</div>
@@ -413,13 +417,16 @@
 			<!--end::Messenger-->
 		</div>
 		<!--end::Chat drawer-->
-		
+
 
 <!--layout-partial:layout/explore/_main.html-->
+
+        @include("guest.layout.explore._main")
 
 		<!--end::Drawers-->
 
 <!--layout-partial:layout/_scrolltop.html-->
+        @include("guest.layout._scrolltop")
 
 		<!--end::Main-->
-		
+

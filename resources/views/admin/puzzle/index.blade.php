@@ -54,7 +54,9 @@
              <th>#</th>
              <th>{{$puzzle->level}}</th>
              <th>
-                 <img style="width: 100px;height: 100px;" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}"/>
+                 @if($puzzle->getMedia('questions')->last())
+                      <img style="width: 100px;height: 100px;" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}"/>
+                     @endif
              </th>
              <th>
                  <img style="width: 100px;height: 100px;" src="{{$puzzle->getMedia('solutions')->last()->getUrl()}}"/>

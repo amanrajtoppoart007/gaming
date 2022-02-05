@@ -59,7 +59,9 @@
                      @endif
              </th>
              <th>
+                 @if($puzzle->getMedia('solutions')->last())
                  <img style="width: 100px;height: 100px;" src="{{$puzzle->getMedia('solutions')->last()->getUrl()}}"/>
+                     @endif
              </th>
              <th>{{$puzzle->created_at->format('d-m-Y')}}</th>
              <th>

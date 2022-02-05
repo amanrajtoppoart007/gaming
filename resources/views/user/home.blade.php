@@ -27,7 +27,9 @@
 														<div class="card-body p-0">
 															<div class="overlay rounded overflow-hidden">
 																<div class="overlay-wrapper rounded bg-light text-center">
-																	<img src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt="" class="mw-100 w-200px" />
+                                                                    @if($puzzle->getMedia('questions')->last())
+																	 <img src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt="" class="mw-100 w-200px" />
+                                                                    @endif
 																</div>
 																<div class="overlay-layer">
 																	<a href="{{route('puzzle.view',$puzzle->id)}}" class="btn fw-bolder btn-sm btn-primary me-2">Solve</a>

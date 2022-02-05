@@ -53,7 +53,7 @@ class PuzzleController extends Controller
                 $option['option'] = $value;
                 Option::create($option);
             }
-            $answer = Option::where(['key'=>$request->input('correct_answer')])->first();
+            $answer = Option::where(['puzzle_id'=>$puzzle->id,'key'=>$request->input('correct_answer')])->first();
             Solution::create(["puzzle_id"=>$puzzle->id,"option_id"=>$answer->id]);
 
              if ($request->input('question', false)) {

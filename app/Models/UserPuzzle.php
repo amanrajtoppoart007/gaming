@@ -13,6 +13,7 @@ class UserPuzzle extends Pivot
         "attempts",
         "started_at",
         "completed_at",
-        "time_taken"
+        "time_taken",
+        "is_solved"
     ];
 }

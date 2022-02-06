@@ -115,14 +115,16 @@
                                                     <div class="form-check form-check-custom form-check-solid">
                                                         <input class="form-check-input" type="radio"
                                                                name="correct_answer"
-                                                               value="{{$option->key}}" id="answer_option_{{$option->key}}" {{$option->id==$puzzle->solution->option_id?'checked':''}}/>
+                                                               value="{{$option->id}}" id="answer_option_{{$option->key}}" {{$option->id==$puzzle->solution->option_id?'checked':''}}/>
                                                         <label class="form-check-label" for="answer_option_{{$option->key}}">
                                                             Option {{$i+1}}
                                                         </label>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <input type="text" name="option[{{$i}}]"
+                                                    <input type="hidden" name="option[{{$i}}][id]" value="{{$option->id}}">
+                                                    <input type="hidden" name="option[{{$i}}][key]" value="{{$option->key}}">
+                                                    <input type="text" name="option[{{$i}}][option]"
                                                            class="form-control form-control-solid"
                                                            placeholder="Enter option" value="{{$option->option}}"/>
                                                 </td>
@@ -182,7 +184,14 @@
                 $('#puzzle_form').find('input[name="question"]').remove()
             },
             init: function () {
-
+                @if(isset($puzzle) && $puzzle->question)
+                let file = {!! json_encode($puzzle->question) !!}
+                this.options.addedfile.call(this, file)
+                this.options.thumbnail.call(this, file, file.preview)
+                file.previewElement.classList.add('dz-complete')
+                $('#puzzle_form').append('<input type="hidden" name="question" value="' + file.file_name + '">');
+                this.options.maxFiles = this.options.maxFiles - 1
+                @endif
             },
             error: function (file, response) {
                 let message;
@@ -233,7 +242,14 @@
                 $('#puzzle_form').find('input[name=solution]').remove();
             },
             init: function () {
-
+                @if(isset($puzzle) && $puzzle->solutions)
+                let file = {!! json_encode($puzzle->solutions) !!}
+                this.options.addedfile.call(this, file)
+                this.options.thumbnail.call(this, file, file.preview)
+                file.previewElement.classList.add('dz-complete')
+                $('#puzzle_form').append('<input type="hidden" name="solution" value="' + file.file_name + '">');
+                this.options.maxFiles = this.options.maxFiles - 1
+                @endif
             },
             error: function (file, response) {
                 let message;
@@ -284,9 +300,8 @@
                                 }
                             });
                         } else {
-                            if (result?.response === "validation_error") {
-                                Swal.fire({
-                                    title: 'Validation Error',
+                            Swal.fire({
+                                    title: 'Error',
                                     text: result?.message,
                                     icon: "error",
                                     buttonsStyling: false,
@@ -295,7 +310,6 @@
                                         confirmButton: "btn btn-primary"
                                     }
                                 });
-                            }
                         }
                     },
                     error: function (jqXHR, textStatus, errorThrown) {

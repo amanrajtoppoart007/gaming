@@ -279,11 +279,10 @@
                                     confirmButton: "btn btn-primary"
                                 }
                             });
-                            window.location.href = window.location.href;
+                            window.location.href = '{{route('admin.puzzle.index')}}';
                         } else {
-                            if (result?.response === "validation_error") {
-                                Swal.fire({
-                                    title: 'Validation Error',
+                            Swal.fire({
+                                    title: 'Error',
                                     text: result?.message,
                                     icon: "error",
                                     buttonsStyling: false,
@@ -292,7 +291,6 @@
                                         confirmButton: "btn btn-primary"
                                     }
                                 });
-                            }
                         }
                     },
                     error: function (jqXHR, textStatus, errorThrown) {

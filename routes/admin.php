@@ -5,3 +5,4 @@ Route::post('/file-upload', [App\Http\Controllers\Admin\FileUploadController::cl
 
  Route::resource('users','App\Http\Controllers\Admin\UserController');
  Route::resource('puzzle','App\Http\Controllers\Admin\PuzzleController');
+ Route::put('puzzle/{id}/destroy',[App\Http\Controllers\Admin\PuzzleController::class,'destroy'])->name('puzzle.destroy');

@@ -8,12 +8,12 @@
 
 					<div class="d-flex flex-row-fluid flex-center flex-column-auto flex-column text-center mb-5">
 
-						<a href="#" class="mb-6">
-							<img alt="Logo" src="{{asset('assets/media/logos/logo-default.svg')}}" class="h-50px h-lg-75px" />
+						<a href="{{route('admin.login')}}" class="mb-6">
+							<img alt="Logo" src="{{asset('assets/media/logos/logo.png')}}" class="h-50px h-lg-75px" />
 						</a>
 
-						<h3 class="fw-bolder fs-2x text-white lh-lg">Discover Start
-						<br />with great build tools</h3>
+						<h3 class="fw-bolder fs-2x text-white lh-lg">Welcome to the
+						<br />Admin Panel</h3>
 
 					</div>
 
@@ -43,7 +43,6 @@
 							<div class="fv-row mb-10">
 								<div class="d-flex justify-content-between mt-n5">
 									<label class="form-label fs-6 fw-bolder text-dark pt-5">Password</label>
-									<a href="#" class="text-primary fs-6 fw-bolder text-hover-primary pt-5" id="kt_login_signin_form_password_reset_button">Forgot Password ?</a>
 								</div>
 								<input class="form-control form-control-lg form-control-solid" type="password" name="password" autocomplete="off" value="" />
 							@if($errors->has('password'))
@@ -62,22 +61,6 @@
                                     </div>
                             @endif
 
-						</form>
-
-
-						<form class="form d-none w-100" novalidate="novalidate" id="kt_login_password_reset_form">
-							<div class="pb-5 pb-lg-10">
-								<h3 class="fw-bolder text-dark display-6">Forgotten Password ?</h3>
-								<p class="text-muted fw-bold fs-3">Enter your email to reset your password</p>
-							</div>
-							<div class="fv-row mb-10">
-								<label for="email" class="form-label fs-6 fw-bolder text-dark pt-5">Email</label>
-								<input class="form-control form-control-lg form-control-solid" id="email" type="email" placeholder="" name="email" autocomplete="off" />
-							</div>
-							<div class="d-flex flex-wrap pb-lg-0">
-								<button type="button" id="kt_login_password_reset_form_submit_button" class="btn btn-primary fw-bolder fs-6 px-8 py-4 my-3 me-4">Submit</button>
-								<button type="button" id="kt_login_password_reset_form_cancel_button" class="btn btn-light-primary fw-bolder fs-6 px-8 py-4 my-3">Cancel</button>
-							</div>
 						</form>
 					</div>
 				</div>

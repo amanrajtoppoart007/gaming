@@ -57,7 +57,7 @@
 </svg></span>
 <!--end::Svg Icon-->
                             </a>
-                            <a href="#"><!--begin::Svg Icon | path: assets/media/icons/duotune/general/gen027.svg-->
+                            <a class="delete-puzzle" data-delete_url="{{route('admin.puzzle.destroy',$puzzle->id)}}" data-id="{{$puzzle->id}}" href="#"><!--begin::Svg Icon | path: assets/media/icons/duotune/general/gen027.svg-->
 <span class="svg-icon svg-icon-danger svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black"/>
 <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black"/>
@@ -74,7 +74,107 @@
             {!! $puzzles->links() !!}
         </div>
     </div>
+@endsection
 
+@section("modal")
+
+
+    <form id="delete_puzzle_form"  method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" id="puzzle_id" value=""/>
+        <input type="hidden" name="puzzle_delete_url" id="puzzle_delete_url" value="" />
+      @csrf
+      @method("PUT")
+    <div class="modal fade" tabindex="-1" id="delete_puzzle_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title text-white">Are You Sure?</h5>
+
+                    <!--begin::Close-->
+                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal"
+                         aria-label="Close">
+                        <span class="svg-icon svg-icon-2x"></span>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <p>This action could not be reversed.</p>
+                    <p>It will delete all related data of this puzzle including images.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        </form>
+@endsection
+
+@section("script")
+    <script>
+        $(document).ready(function(){
+            $('.delete-puzzle').on('click',function(e){
+                e.preventDefault();
+                $("#puzzle_id").val($(this).attr('data-id'));
+                $("#puzzle_delete_url").val($(this).attr('data-delete_url'));
+                $("#delete_puzzle_modal").modal("show");
+            });
+            $("#delete_puzzle_form").on("submit",function(e){
+                e.preventDefault();
+                 const form = new FormData(document.getElementById('delete_puzzle_form'));
+                $.ajax({
+                    url: `${$("#puzzle_delete_url").val()}`,
+                    method: "POST",
+                    data: form,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function (result) {
+                          $("#delete_puzzle_modal").modal("hide");
+                        if (result?.status === 1) {
+
+                            Swal.fire({
+                                title: 'Success!',
+                                text: result?.message,
+                                icon: "success",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok,Got it",
+                                customClass: {
+                                    confirmButton: "btn btn-primary"
+                                }
+                            });
+                            window.location.href = '{{route('admin.puzzle.index')}}';
+                        } else {
+                            Swal.fire({
+                                    title: 'Error',
+                                    text: result?.message,
+                                    icon: "error",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Ok, got it!",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                });
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        Swal.fire({
+                            text: textStatus,
+                            icon: "error",
+                            buttonsStyling: false,
+                            confirmButtonText: "Ok, got it!",
+                            customClass: {
+                                confirmButton: "btn btn-primary"
+                            }
+                        });
+
+                    }
+                });
+            })
+        });
+    </script>
 @endsection
 
 

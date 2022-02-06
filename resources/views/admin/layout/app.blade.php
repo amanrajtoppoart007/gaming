@@ -33,7 +33,7 @@
 
 <!--layout-partial:layout/master.html-->
          @include("admin.layout.master")
-
+         @yield("modal")
 		<script>var hostUrl = "{{asset('/')}}";</script>
 		<!--begin::Javascript-->
 		<!--begin::Global Javascript Bundle(used by all pages)-->

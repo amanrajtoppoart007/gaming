@@ -7,9 +7,10 @@ use App\Http\Requests\Admin\StorePuzzleRequest;
 use App\Http\Requests\Admin\UpdatePuzzleRequest;
 use App\Models\Option;
 use App\Models\Puzzle;
+use App\Models\Score;
 use App\Models\Solution;
-use Illuminate\Http\Request;
-
+use App\Models\UserPuzzle;
+use Illuminate\Support\Facades\DB;
 class PuzzleController extends Controller
 {
     /**
@@ -41,6 +42,7 @@ class PuzzleController extends Controller
      */
     public function store(StorePuzzleRequest $request)
     {
+         DB::beginTransaction();
         try {
             $puzzle = Puzzle::create([
                 'level'=>$request->input('level'),
@@ -64,11 +66,13 @@ class PuzzleController extends Controller
              if ($request->input('solution', false)) {
                 $puzzle->addMedia(storage_path('tmp/uploads/' . $request->input('solution')))->toMediaCollection('solutions');
             }
+              DB::commit();
             $result = ["status"=>1,"response"=>"success","message"=>"Puzzle created successfully"];
 
         }
         catch (\Exception $exception)
         {
+            DB::rollBack();
            $result = ["status"=>0,"response"=>"exception_error","message"=>$exception->getMessage()];
         }
 
@@ -103,16 +107,47 @@ class PuzzleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(UpdatePuzzleRequest $request, $id)
+    public function update(UpdatePuzzleRequest $request, int $id): \Illuminate\Http\JsonResponse
     {
+        DB::beginTransaction();
         try {
+            $puzzle = Puzzle::find($id);
+            $puzzle->update([
+                'description'=>$request->input('description'),
+            ]);
+            foreach($request->input('option') as $option)
+            {
+                Option::where(['id'=>$option['id']])->update([
+                    'key'=>$option['key'],
+                    'option'=>$option['option']
+                ]);
+            }
+
+            $puzzle->solution()->update(['option_id'=>$request->input('correct_answer')]);
+
+
+            if ($request->has('question')) {
+                if (!$puzzle->question || $request->input('question') !== $puzzle->question->file_name) {
+                    $puzzle->question?->delete();
+                    $puzzle->addMedia(storage_path('tmp/uploads/' . $request->input('question')))->toMediaCollection('questions');
+                }
+            }
+
+            if ($request->has('solution')) {
+                if (!$puzzle->solutions || $request->input('solution') !== $puzzle->solutions->file_name) {
+                    $puzzle->solutions?->delete();
+                    $puzzle->addMedia(storage_path('tmp/uploads/' . $request->input('solution')))->toMediaCollection('solutions');
+                }
+            }
+               DB::commit();
             $result = ["status"=>1,"response"=>"success","message"=>"Puzzle updated successfully"];
         }
         catch (\Exception $exception)
         {
+             DB::rollBack();
             $result = ["status"=>0,"response"=>"exception_error","message"=>$exception->getMessage()];
         }
         return response()->json($result,200);
@@ -121,11 +156,29 @@ class PuzzleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function destroy($id)
+    public function destroy(int $id): \Illuminate\Http\JsonResponse
     {
-        //
+         DB::beginTransaction();
+        try {
+            $puzzle = Puzzle::find($id);
+            $puzzle->solution()->delete();
+            $puzzle->options()->delete();
+            $puzzle->solutions?->delete();
+            $puzzle->question?->delete();
+            Score::where(['puzzle_id'=>$puzzle->id])->delete();
+            UserPuzzle::where(['puzzle_id'=>$puzzle->id])->delete();
+            $puzzle->delete();
+            DB::commit();
+            $result = ["status" => 1, "response" => "success", "message" => "Puzzle deleted successfully"];
+        }
+        catch (\Exception $exception)
+        {
+             DB::rollBack();
+            $result = ["status"=>0,"response"=>"exception_error","message"=>$exception->getMessage()];
+        }
+        return response()->json($result,200);
     }
 }

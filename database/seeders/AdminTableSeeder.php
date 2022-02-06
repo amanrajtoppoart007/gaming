@@ -18,7 +18,7 @@ class AdminTableSeeder extends Seeder
             [
                 'id'                 => 1,
                 'name'               => 'Admin',
-                'email'              => 'admin@productsearch.com',
+                'email'              => 'admin@gaming.com',
                 'password'           =>'$2y$10$Phq5VMDVoliTezARpj9mD.PJy8NM2/13OFgIl7aKuVsQlOnMJMMDq',//password
                 'remember_token'     => null,
                 'approved'           => 1,
@@ -29,7 +29,7 @@ class AdminTableSeeder extends Seeder
             [
                 'id'                 => 2,
                 'name'               => 'Demo',
-                'email'              => 'demo@productsearch.com',
+                'email'              => 'demo@gaming.com',
                 'password'           =>  '$2y$10$Phq5VMDVoliTezARpj9mD.PJy8NM2/13OFgIl7aKuVsQlOnMJMMDq',//password
                 'remember_token'     => null,
                 'approved'           => 1,

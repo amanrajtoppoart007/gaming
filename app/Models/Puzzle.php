@@ -19,6 +19,11 @@ class Puzzle extends Model implements HasMedia
         'time_limit'
     ];
 
+    protected $appends = [
+        "question",
+        "solutions"// important or it will collide with solution model
+    ];
+
     public function options()
     {
         return $this->hasMany(Option::class);
@@ -38,5 +43,31 @@ class Puzzle extends Model implements HasMedia
     {
         $this->addMediaConversion('thumb')->fit('crop', 50, 50)->keepOriginalImageFormat();
         $this->addMediaConversion('preview')->keepOriginalImageFormat();
+    }
+
+    public function getQuestionAttribute()
+    {
+        $file = $this->getMedia('questions')->last();
+
+        if ($file) {
+            $file->url       = $file->getUrl();
+            $file->thumbnail = $file->getUrl('thumb');
+            $file->preview   = $file->getUrl('preview');
+        }
+
+        return $file;
+    }
+
+     public function getSolutionsAttribute()
+    {
+        $file = $this->getMedia('solutions')->last();
+
+        if ($file) {
+            $file->url       = $file->getUrl();
+            $file->thumbnail = $file->getUrl('thumb');
+            $file->preview   = $file->getUrl('preview');
+        }
+
+        return $file;
     }
 }

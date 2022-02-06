@@ -18,6 +18,7 @@ Route::get('/', [App\Http\Controllers\User\HomeController::class, 'index'])->nam
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('home');
+Route::get('/about', [App\Http\Controllers\WelcomeController::class, 'about'])->name('about');
 
 
 Route::prefix('puzzle')->as('puzzle.')->group(function () {

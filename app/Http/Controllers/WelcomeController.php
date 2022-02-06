@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Score;
 use App\Models\UserPuzzle;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\UserPuzzleTrait;
 class WelcomeController extends Controller
 {
@@ -33,5 +32,10 @@ class WelcomeController extends Controller
 
         //$ranking = Score::where('')->sum();
         return view("guest.puzzle.result",compact('rating','score','maxScore','user','ratingHtml','timeTaken'));
+    }
+
+    public function about()
+    {
+        return view("guest.about");
     }
 }

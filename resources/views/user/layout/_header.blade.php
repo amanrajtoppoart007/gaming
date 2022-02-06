@@ -1,19 +1,8 @@
 <div id="kt_header" class="header">
     <div class="container-xxl d-flex align-items-stretch justify-content-between">
         <div class="d-flex align-items-center">
-            <button class="btn btn-icon btn-accent me-2 me-lg-6" id="kt_mega_menu_toggle" data-bs-toggle="modal"
-                    data-bs-target="#kt_mega_menu_modal">
-									<span class="svg-icon svg-icon-3">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15"
-                                             viewBox="0 0 16 15" fill="none">
-											<rect y="6" width="16" height="3" rx="1.5" fill="black"/>
-											<rect opacity="0.3" y="12" width="8" height="3" rx="1.5" fill="black"/>
-											<rect opacity="0.3" width="12" height="3" rx="1.5" fill="black"/>
-										</svg>
-									</span>
-            </button>
-            <a href="?page=index">
-                <img alt="Logo" src="{{asset('assets/media/logos/logo-default.svg')}}" class="h-30px"/>
+            <a href="{{URL::to('/')}}">
+                <img alt="Logo" src="{{asset('assets/media/logos/logo.png')}}" class="h-30px"/>
             </a>
         </div>
         <div class="d-flex align-items-center">

@@ -14,4 +14,9 @@ class Score extends Model
         "puzzle_id",
         "score"
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

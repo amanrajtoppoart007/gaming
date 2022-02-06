@@ -43,6 +43,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    protected  $appends = [
+        'user_score'
+    ];
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
@@ -50,5 +54,15 @@ class User extends Authenticatable
      public function puzzles()
     {
         return $this->belongsToMany(Puzzle::class,'user_puzzle');
+    }
+
+    public function score()
+    {
+        return $this->hasOne(Score::class);
+    }
+
+    public function getUserScoreAttribute()
+    {
+        return ($this->score()->sum('score'))/(Puzzle::count()??1);
     }
 }

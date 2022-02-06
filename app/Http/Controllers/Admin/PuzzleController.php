@@ -16,7 +16,7 @@ class PuzzleController extends Controller
      */
     public function index()
     {
-        $puzzles = Puzzle::paginate(10);
+        $puzzles = Puzzle::cursorPaginate(10);
         return view("admin.puzzle.index",compact('puzzles'));
     }
 

@@ -43,8 +43,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function puzzles()
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+
+     public function puzzles()
     {
-        return $this->belongsToMany(Puzzle::class)->using(UserPuzzle::class);
+        return $this->belongsToMany(Puzzle::class,'user_puzzle');
     }
 }

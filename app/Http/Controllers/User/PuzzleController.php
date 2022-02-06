@@ -21,6 +21,16 @@ class PuzzleController extends Controller
     }
 
     /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+
+    public function index()
+    {
+         $puzzles = Puzzle::all();
+         return view("user.puzzle.index",compact('puzzles'));
+    }
+
+    /**
      * @param $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */

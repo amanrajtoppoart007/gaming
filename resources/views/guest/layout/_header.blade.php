@@ -8,11 +8,8 @@
         <div class="d-flex align-items-center">
             <div class="ms-1 ms-lg-6">
                 <div class="text-muted fw-bold fs-3">New Here?
-                    <a href="{{route('login')}}" class="text-primary fw-bolder" id="kt_login_signin_form_singup_button">Create
-                        Account</a></div>
-
-
-
+                    <a href="{{route('login')}}" class="text-primary fw-bolder" id="kt_login_signin_form_singup_button">Create Account</a>
+                </div>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
-use \DateTimeInterface;
+use DateTimeInterface;
 class UserPuzzle extends Pivot
 {
 
@@ -25,10 +25,8 @@ class UserPuzzle extends Pivot
         'updated_at',
     ];
 
-    protected function serializeDate(DateTimeInterface $date)
+    protected function serializeDate(DateTimeInterface $date): string
     {
         return $date->format('Y-m-d H:i:s');
     }
-
-
 }

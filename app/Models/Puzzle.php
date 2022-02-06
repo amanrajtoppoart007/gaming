@@ -31,7 +31,7 @@ class Puzzle extends Model implements HasMedia
 
      public function users()
     {
-        return $this->belongsToMany(User::class)->using(UserPuzzle::class);
+        return $this->belongsToMany(User::class,'user_puzzle');
     }
 
     public function registerMediaConversions(Media $media = null): void

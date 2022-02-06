@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/guest/result/{userId}', [App\Http\Controllers\WelcomeController::class, 'result'])->name('guest.result.view');
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\User\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('home');
 
 
 Route::prefix('puzzle')->as('puzzle.')->group(function () {

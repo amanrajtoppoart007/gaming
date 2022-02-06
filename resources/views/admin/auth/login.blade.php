@@ -28,7 +28,7 @@
 						<form action="{{route('admin.login.submit')}}" method="post" class="form w-100" novalidate="novalidate">
                             @csrf
 							<div class="pb-5 pb-lg-15">
-								<h3 class="fw-bolder text-dark display-6">Welcome to Start</h3>
+								<h3 class="fw-bolder text-dark display-6">Welcome to {{trans('common.game_title')}}</h3>
 
 							<div class="fv-row mb-10">
 								<label class="form-label fs-6 fw-bolder text-dark">Email</label>

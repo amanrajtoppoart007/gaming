@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\UserPuzzle;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
     /**
@@ -79,10 +80,24 @@ class UserController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy($id)
     {
-        //
+         DB::beginTransaction();
+        try {
+            $user = User::find($id);
+            UserPuzzle::where(['user_id'=>$id])->delete();
+            $user->score()->delete();
+            $user->delete();
+            DB::commit();
+            $result = ["status" => 1, "response" => "success", "message" => "User deleted successfully"];
+        }
+        catch (\Exception $exception)
+        {
+            DB::rollBack();
+            $result = ["status"=>0,"response"=>"exception_error","message"=>$exception->getMessage()];
+        }
+        return response()->json($result,200);
     }
 }

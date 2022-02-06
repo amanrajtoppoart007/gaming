@@ -145,7 +145,7 @@
                                     confirmButton: "btn btn-primary"
                                 }
                             });
-                            window.location.href = '{{route('admin.puzzle.index')}}';
+                            window.location.href = window.location.href;
                         } else {
                             Swal.fire({
                                     title: 'Error',

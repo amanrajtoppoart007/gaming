@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StorePuzzleRequest;
+use App\Http\Requests\Admin\UpdatePuzzleRequest;
 use App\Models\Option;
 use App\Models\Puzzle;
 use App\Models\Solution;
@@ -78,22 +79,24 @@ class PuzzleController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function show($id)
     {
-        //
+        $puzzle = Puzzle::find($id);
+        return view("admin.puzzle.show",compact('puzzle'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function edit($id)
     {
-        //
+        $puzzle = Puzzle::find($id);
+        return view("admin.puzzle.edit",compact('puzzle'));
     }
 
     /**
@@ -101,11 +104,18 @@ class PuzzleController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePuzzleRequest $request, $id)
     {
-        //
+        try {
+            $result = ["status"=>1,"response"=>"success","message"=>"Puzzle updated successfully"];
+        }
+        catch (\Exception $exception)
+        {
+            $result = ["status"=>0,"response"=>"exception_error","message"=>$exception->getMessage()];
+        }
+        return response()->json($result,200);
     }
 
     /**

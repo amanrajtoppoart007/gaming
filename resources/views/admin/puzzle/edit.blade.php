@@ -9,14 +9,16 @@
                 <div class="card mb-5 mb-xxl-8">
 
                     <div class="card-body bg-white p-12">
-                        <form action="{{route('admin.puzzle.store')}}" id="puzzle_form" method="post"
+                        <form action="{{route('admin.puzzle.update',$puzzle->id)}}" id="puzzle_form" method="post"
                               enctype="multipart/form-data">
+
+                            <input type="hidden" id="id" name="id" value="{{$puzzle->id}}"/>
 
                             <div class="row mb-5">
                                 <div class="col-md-6">
                                     <div>
                                          <label for="level" class="required form-label">Level</label>
-                                        <input type="text" class="form-control" id="level" name="level" value="{{$level}}" placeholder="" readonly/>
+                                        <input type="text" class="form-control" id="level" name="level" value="{{$puzzle->level}}" placeholder="" readonly/>
                                     </div>
                                 </div>
                             </div>
@@ -26,7 +28,7 @@
                                     <div>
                                         <label for="description" class="required form-label">Description</label>
                                         <textarea class="form-control" id="description" name="description"
-                                                  aria-label="With textarea"></textarea>
+                                                  aria-label="With textarea" rows="10">{{$puzzle->description}}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -105,22 +107,22 @@
                                         </thead>
                                         <tbody>
                                         @php  $i=0; @endphp
-                                        @foreach(App\Models\Option::OPTIONS as $key=>$value)
+                                        @foreach($puzzle->options as $option)
                                             <tr>
                                                 <td>
                                                     <div class="form-check form-check-custom form-check-solid">
                                                         <input class="form-check-input" type="radio"
                                                                name="correct_answer"
-                                                               value="{{$key}}" id="answer_option_{{$key}}"/>
-                                                        <label class="form-check-label" for="answer_option_{{$key}}">
-                                                            {{$value}}
+                                                               value="{{$option->key}}" id="answer_option_{{$option->key}}" {{$option->id==$puzzle->solution->option_id?'checked':''}}/>
+                                                        <label class="form-check-label" for="answer_option_{{$option->key}}">
+                                                            Option {{$i+1}}
                                                         </label>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <input type="text" name="option[{{$i}}]"
                                                            class="form-control form-control-solid"
-                                                           placeholder="Enter option"/>
+                                                           placeholder="Enter option" value="{{$option->option}}"/>
                                                 </td>
                                             </tr>
                                             @php $i++; @endphp
@@ -132,7 +134,7 @@
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <button type="submit" class="btn btn-primary">Create New Level</button>
+                                    <button type="submit" class="btn btn-primary">Update</button>
                                 </div>
                             </div>
 
@@ -261,7 +263,7 @@
                 e.preventDefault();
                 const form = new FormData(document.getElementById('puzzle_form'));
                 $.ajax({
-                    url: "{{route('admin.puzzle.store')}}",
+                    url: "{{route('admin.puzzle.update',$puzzle->id)}}",
                     method: "POST",
                     data: form,
                     cache: false,

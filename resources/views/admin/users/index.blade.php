@@ -25,7 +25,7 @@
                         <th>#{{$user->id}}</th>
                         <th>{{$user->name}}</th>
                         <th>{{$user->email}}</th>
-                        <th>{{$user->created_at->format('dd-mm-yy')}}</th>
+                        <th>{{$user->created_at->format('d M y')}}</th>
                         <th>
                             <a href="javascript:void(0)" class="btn btn-primary">
                                 @if($user->user_score===3)

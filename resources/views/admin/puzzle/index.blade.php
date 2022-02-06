@@ -38,7 +38,7 @@
                                 <img style="width: 100px;height: 100px;" src="{{$puzzle->getMedia('solutions')->last()->getUrl()}}" alt=""/>
                             @endif
                         </th>
-                        <th>{{$puzzle->created_at->format('d-m-Y')}}</th>
+                        <th>{{$puzzle->created_at->format('d M y')}}</th>
                         <th>
                             <a href="{{route('admin.puzzle.show',$puzzle->id)}}">
 <span class="svg-icon svg-icon-primary svg-icon-2hx"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

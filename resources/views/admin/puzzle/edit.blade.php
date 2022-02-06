@@ -11,6 +11,8 @@
                     <div class="card-body bg-white p-12">
                         <form action="{{route('admin.puzzle.update',$puzzle->id)}}" id="puzzle_form" method="post"
                               enctype="multipart/form-data">
+                            @csrf
+                            @method('PATCH')
 
                             <input type="hidden" id="id" name="id" value="{{$puzzle->id}}"/>
 
@@ -281,7 +283,6 @@
                                     confirmButton: "btn btn-primary"
                                 }
                             });
-                            window.location.href = window.location.href;
                         } else {
                             if (result?.response === "validation_error") {
                                 Swal.fire({

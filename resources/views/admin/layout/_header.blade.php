@@ -3,7 +3,7 @@
     <div class="container-xxl d-flex align-items-stretch justify-content-between">
         <div class="d-flex align-items-center">
             <a href="{{route('admin.dashboard')}}">
-                <img alt="Logo" src="{{asset('assets/media/logos/logo-default.svg')}}" class="h-30px"/>
+                <img alt="Logo" src="{{asset('assets/media/logos/logo.png')}}" class="h-50px"/>
             </a>
         </div>
         <div class="d-flex align-items-center">

@@ -9,6 +9,7 @@
                             <div class="d-flex flex-column flex-lg-row-auto p-10 p-md-20">
                                 <h1 class="fw-bolder text-dark">Guest It</h1>
                                 <div class="fs-3 mb-8">Guess the correct image and earn points</div>
+                                 <a href="{{route('puzzle.index')}}" class="btn btn-success btn-hover-rise mb-10">Levels</a>
                                 @if($type==='new')
                                     <a href="{{$route}}" class="btn btn-success btn-hover-rise">Start New Game</a>
                                 @elseif($type==='next')

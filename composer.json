@@ -6,16 +6,17 @@
     "license": "MIT",
     "require": {
         "php": "8.0",
-        "ext-gd":"*",
+        "ext-gd": "*",
+        "fakerphp/faker": "^1.9.1",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "jorenvanhocht/laravel-share": "^4.1",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
+        "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
-        "spatie/laravel-medialibrary": "9.0.0",
-        "fakerphp/faker": "^1.9.1"
+        "spatie/laravel-medialibrary": "9.0.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

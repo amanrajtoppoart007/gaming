@@ -23,19 +23,19 @@
   --bs-gray-900: #181C32;
   --bs-white: #ffffff;
   --bs-light: #F5F8FA;
-  --bs-primary: #20D489;
+  --bs-primary: #435B77;
   --bs-secondary: #E4E6EF;
-  --bs-success: #00B2FF;
-  --bs-info: #5710B2;
+  --bs-success: #7ea6c4;
+  --bs-info: #84924f;
   --bs-warning: #FFC700;
   --bs-danger: #F1416C;
   --bs-dark: #181C32;
   --bs-white-rgb: 255, 255, 255;
   --bs-light-rgb: 245, 248, 250;
-  --bs-primary-rgb: 32, 212, 137;
+  --bs-primary-rgb: 67, 91, 119;
   --bs-secondary-rgb: 228, 230, 239;
-  --bs-success-rgb: 0, 178, 255;
-  --bs-info-rgb: 87, 16, 178;
+  --bs-success-rgb: 126, 166, 196;
+  --bs-info-rgb: 132, 146, 79;
   --bs-warning-rgb: 255, 199, 0;
   --bs-danger-rgb: 241, 65, 108;
   --bs-dark-rgb: 24, 28, 50;
@@ -215,11 +215,11 @@ sup {
 }
 
 a {
-  color: #20D489;
+  color: #435B77;
   text-decoration: none;
 }
 a:hover {
-  color: #16925e;
+  color: #273646;
   text-decoration: underline;
 }
 
@@ -2307,15 +2307,15 @@ progress {
 }
 
 .table-primary {
-  --bs-table-bg: #d2f6e7;
-  --bs-table-striped-bg: #c8eadb;
+  --bs-table-bg: #d9dee4;
+  --bs-table-striped-bg: #ced3d9;
   --bs-table-striped-color: #000000;
-  --bs-table-active-bg: #bdddd0;
+  --bs-table-active-bg: #c3c8cd;
   --bs-table-active-color: #000000;
-  --bs-table-hover-bg: #c2e4d6;
+  --bs-table-hover-bg: #c9cdd3;
   --bs-table-hover-color: #000000;
   color: #000000;
-  border-color: #bdddd0;
+  border-color: #c3c8cd;
 }
 
 .table-secondary {
@@ -2331,27 +2331,27 @@ progress {
 }
 
 .table-success {
-  --bs-table-bg: #ccf0ff;
-  --bs-table-striped-bg: #c2e4f2;
+  --bs-table-bg: #e5edf3;
+  --bs-table-striped-bg: #dae1e7;
   --bs-table-striped-color: #000000;
-  --bs-table-active-bg: #b8d8e6;
+  --bs-table-active-bg: #ced5db;
   --bs-table-active-color: #000000;
-  --bs-table-hover-bg: #bddeec;
+  --bs-table-hover-bg: #d4dbe1;
   --bs-table-hover-color: #000000;
   color: #000000;
-  border-color: #b8d8e6;
+  border-color: #ced5db;
 }
 
 .table-info {
-  --bs-table-bg: #ddcff0;
-  --bs-table-striped-bg: #d2c5e4;
+  --bs-table-bg: #e6e9dc;
+  --bs-table-striped-bg: #dbddd1;
   --bs-table-striped-color: #000000;
-  --bs-table-active-bg: #c7bad8;
+  --bs-table-active-bg: #cfd2c6;
   --bs-table-active-color: #000000;
-  --bs-table-hover-bg: #ccbfde;
+  --bs-table-hover-bg: #d5d8cc;
   --bs-table-hover-color: #000000;
   color: #000000;
-  border-color: #c7bad8;
+  border-color: #cfd2c6;
 }
 
 .table-warning {
@@ -2506,7 +2506,7 @@ progress {
   background-color: #ffffff;
   border-color: #B5B5C3;
   outline: 0;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(32, 212, 137, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(67, 91, 119, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2722,7 +2722,7 @@ textarea.form-control-lg {
 .form-select:focus {
   border-color: #B5B5C3;
   outline: 0;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(32, 212, 137, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(67, 91, 119, 0.25);
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 1rem;
@@ -2800,8 +2800,8 @@ textarea.form-control-lg {
   box-shadow: none;
 }
 .form-check-input:checked {
-  background-color: #20D489;
-  border-color: #20D489;
+  background-color: #435B77;
+  border-color: #435B77;
 }
 .form-check-input:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 11' width='13' height='11' fill='none'%3e%3cpath d='M11.0426 1.02893C11.3258 0.695792 11.8254 0.655283 12.1585 0.938451C12.4917 1.22162 12.5322 1.72124 12.249 2.05437L5.51985 9.97104C5.23224 10.3094 4.72261 10.3451 4.3907 10.05L0.828197 6.88335C0.50141 6.59288 0.471975 6.09249 0.762452 5.7657C1.05293 5.43891 1.55332 5.40948 1.88011 5.69995L4.83765 8.32889L11.0426 1.02893Z' fill='%23FFFFFF'/%3e%3c/svg%3e");
@@ -2810,8 +2810,8 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23FFFFFF'/%3e%3c/svg%3e");
 }
 .form-check-input[type=checkbox]:indeterminate {
-  background-color: #20D489;
-  border-color: #20D489;
+  background-color: #435B77;
+  border-color: #435B77;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 .form-check-input:disabled {
@@ -2876,10 +2876,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.25rem rgba(32, 212, 137, 0.25);
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.25rem rgba(67, 91, 119, 0.25);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.25rem rgba(32, 212, 137, 0.25);
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.25rem rgba(67, 91, 119, 0.25);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -2888,7 +2888,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #20D489;
+  background-color: #435B77;
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
@@ -2904,7 +2904,7 @@ textarea.form-control-lg {
   }
 }
 .form-range::-webkit-slider-thumb:active {
-  background-color: #bcf2dc;
+  background-color: #c7ced6;
 }
 .form-range::-webkit-slider-runnable-track {
   width: 100%;
@@ -2919,7 +2919,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #20D489;
+  background-color: #435B77;
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
@@ -2935,7 +2935,7 @@ textarea.form-control-lg {
   }
 }
 .form-range::-moz-range-thumb:active {
-  background-color: #bcf2dc;
+  background-color: #c7ced6;
 }
 .form-range::-moz-range-track {
   width: 100%;
@@ -3117,7 +3117,7 @@ textarea.form-control-lg {
   width: 100%;
   margin-top: 0.5rem;
   font-size: 0.925rem;
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 
 .valid-tooltip {
@@ -3130,7 +3130,7 @@ textarea.form-control-lg {
   margin-top: 0.1rem;
   font-size: 0.925rem;
   color: #000000;
-  background-color: #00b2ff;
+  background-color: #7ea6c4;
   border-radius: 0.65rem;
 }
 
@@ -3142,16 +3142,16 @@ textarea.form-control-lg {
 }
 
 .was-validated .form-control:valid, .form-control.is-valid {
-  border-color: #00B2FF;
+  border-color: #7ea6c4;
   padding-right: calc(1.5em + 1.5rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2300B2FF' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%237ea6c4' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right calc(0.375em + 0.375rem) center;
   background-size: calc(0.75em + 0.75rem) calc(0.75em + 0.75rem);
 }
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus {
-  border-color: #00B2FF;
-  box-shadow: 0 0 0 0.25rem rgba(0, 178, 255, 0.25);
+  border-color: #7ea6c4;
+  box-shadow: 0 0 0 0.25rem rgba(126, 166, 196, 0.25);
 }
 
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
@@ -3160,30 +3160,30 @@ textarea.form-control-lg {
 }
 
 .was-validated .form-select:valid, .form-select.is-valid {
-  border-color: #00B2FF;
+  border-color: #7ea6c4;
 }
 .was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"] {
   padding-right: 5.5rem;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%237E8299' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2300B2FF' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%237E8299' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%237ea6c4' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 1rem center, center right 3rem;
   background-size: 16px 12px, calc(0.75em + 0.75rem) calc(0.75em + 0.75rem);
 }
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
-  border-color: #00B2FF;
-  box-shadow: 0 0 0 0.25rem rgba(0, 178, 255, 0.25);
+  border-color: #7ea6c4;
+  box-shadow: 0 0 0 0.25rem rgba(126, 166, 196, 0.25);
 }
 
 .was-validated .form-check-input:valid, .form-check-input.is-valid {
-  border-color: #00B2FF;
+  border-color: #7ea6c4;
 }
 .was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked {
-  background-color: #00B2FF;
+  background-color: #7ea6c4;
 }
 .was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
-  box-shadow: 0 0 0 0.25rem rgba(0, 178, 255, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(126, 166, 196, 0.25);
 }
 .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 
 .form-check-inline .form-check-input ~ .valid-feedback {
@@ -3320,13 +3320,13 @@ textarea.form-control-lg {
 }
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(32, 212, 137, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(67, 91, 119, 0.25);
 }
 .btn-check:checked + .btn, .btn-check:active + .btn, .btn:active, .btn.active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn-check:checked + .btn:focus, .btn-check:active + .btn:focus, .btn:active:focus, .btn.active:focus {
-  box-shadow: 0 0 0 0.25rem rgba(32, 212, 137, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 0 0 0.25rem rgba(67, 91, 119, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn:disabled, .btn.disabled, fieldset:disabled .btn {
   pointer-events: none;
@@ -3397,34 +3397,34 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #000000;
-  background-color: #20D489;
-  border-color: #20D489;
+  color: #ffffff;
+  background-color: #435B77;
+  border-color: #435B77;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .btn-primary:hover {
-  color: #000000;
-  background-color: #41da9b;
-  border-color: #36d895;
+  color: #ffffff;
+  background-color: #394d65;
+  border-color: #36495f;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
-  color: #000000;
-  background-color: #41da9b;
-  border-color: #36d895;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(27, 180, 116, 0.5);
+  color: #ffffff;
+  background-color: #394d65;
+  border-color: #36495f;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(95, 116, 139, 0.5);
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
-  color: #000000;
-  background-color: #4ddda1;
-  border-color: #36d895;
+  color: #ffffff;
+  background-color: #36495f;
+  border-color: #324459;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(27, 180, 116, 0.5);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(95, 116, 139, 0.5);
 }
 .btn-primary:disabled, .btn-primary.disabled {
-  color: #000000;
-  background-color: #20D489;
-  border-color: #20D489;
+  color: #ffffff;
+  background-color: #435B77;
+  border-color: #435B77;
 }
 
 .btn-secondary {
@@ -3460,64 +3460,64 @@ textarea.form-control-lg {
 
 .btn-success {
   color: #000000;
-  background-color: #00B2FF;
-  border-color: #00B2FF;
+  background-color: #7ea6c4;
+  border-color: #7ea6c4;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .btn-success:hover {
   color: #000000;
-  background-color: #26beff;
-  border-color: #1abaff;
+  background-color: #91b3cd;
+  border-color: #8bafca;
 }
 .btn-check:focus + .btn-success, .btn-success:focus {
   color: #000000;
-  background-color: #26beff;
-  border-color: #1abaff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(0, 151, 217, 0.5);
+  background-color: #91b3cd;
+  border-color: #8bafca;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(107, 141, 167, 0.5);
 }
 .btn-check:checked + .btn-success, .btn-check:active + .btn-success, .btn-success:active, .btn-success.active, .show > .btn-success.dropdown-toggle {
   color: #000000;
-  background-color: #33c1ff;
-  border-color: #1abaff;
+  background-color: #98b8d0;
+  border-color: #8bafca;
 }
 .btn-check:checked + .btn-success:focus, .btn-check:active + .btn-success:focus, .btn-success:active:focus, .btn-success.active:focus, .show > .btn-success.dropdown-toggle:focus {
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(0, 151, 217, 0.5);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(107, 141, 167, 0.5);
 }
 .btn-success:disabled, .btn-success.disabled {
   color: #000000;
-  background-color: #00B2FF;
-  border-color: #00B2FF;
+  background-color: #7ea6c4;
+  border-color: #7ea6c4;
 }
 
 .btn-info {
-  color: #ffffff;
-  background-color: #5710B2;
-  border-color: #5710B2;
+  color: #000000;
+  background-color: #84924f;
+  border-color: #84924f;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .btn-info:hover {
-  color: #ffffff;
-  background-color: #4a0e97;
-  border-color: #460d8e;
+  color: #000000;
+  background-color: #96a269;
+  border-color: #909d61;
 }
 .btn-check:focus + .btn-info, .btn-info:focus {
-  color: #ffffff;
-  background-color: #4a0e97;
-  border-color: #460d8e;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(112, 52, 190, 0.5);
+  color: #000000;
+  background-color: #96a269;
+  border-color: #909d61;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(112, 124, 67, 0.5);
 }
 .btn-check:checked + .btn-info, .btn-check:active + .btn-info, .btn-info:active, .btn-info.active, .show > .btn-info.dropdown-toggle {
-  color: #ffffff;
-  background-color: #460d8e;
-  border-color: #410c86;
+  color: #000000;
+  background-color: #9da872;
+  border-color: #909d61;
 }
 .btn-check:checked + .btn-info:focus, .btn-check:active + .btn-info:focus, .btn-info:active:focus, .btn-info.active:focus, .show > .btn-info.dropdown-toggle:focus {
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(112, 52, 190, 0.5);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(112, 124, 67, 0.5);
 }
 .btn-info:disabled, .btn-info.disabled {
-  color: #ffffff;
-  background-color: #5710B2;
-  border-color: #5710B2;
+  color: #000000;
+  background-color: #84924f;
+  border-color: #84924f;
 }
 
 .btn-warning {
@@ -3664,27 +3664,27 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary {
-  color: #20D489;
-  border-color: #20D489;
+  color: #435B77;
+  border-color: #435B77;
 }
 .btn-outline-primary:hover {
-  color: #000000;
-  background-color: #20D489;
-  border-color: #20D489;
+  color: #ffffff;
+  background-color: #435B77;
+  border-color: #435B77;
 }
 .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(32, 212, 137, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(67, 91, 119, 0.5);
 }
 .btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
-  color: #000000;
-  background-color: #20D489;
-  border-color: #20D489;
+  color: #ffffff;
+  background-color: #435B77;
+  border-color: #435B77;
 }
 .btn-check:checked + .btn-outline-primary:focus, .btn-check:active + .btn-outline-primary:focus, .btn-outline-primary:active:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus {
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(32, 212, 137, 0.5);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(67, 91, 119, 0.5);
 }
 .btn-outline-primary:disabled, .btn-outline-primary.disabled {
-  color: #20D489;
+  color: #435B77;
   background-color: transparent;
 }
 
@@ -3714,52 +3714,52 @@ textarea.form-control-lg {
 }
 
 .btn-outline-success {
-  color: #00B2FF;
-  border-color: #00B2FF;
+  color: #7ea6c4;
+  border-color: #7ea6c4;
 }
 .btn-outline-success:hover {
   color: #000000;
-  background-color: #00B2FF;
-  border-color: #00B2FF;
+  background-color: #7ea6c4;
+  border-color: #7ea6c4;
 }
 .btn-check:focus + .btn-outline-success, .btn-outline-success:focus {
-  box-shadow: 0 0 0 0.25rem rgba(0, 178, 255, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(126, 166, 196, 0.5);
 }
 .btn-check:checked + .btn-outline-success, .btn-check:active + .btn-outline-success, .btn-outline-success:active, .btn-outline-success.active, .btn-outline-success.dropdown-toggle.show {
   color: #000000;
-  background-color: #00B2FF;
-  border-color: #00B2FF;
+  background-color: #7ea6c4;
+  border-color: #7ea6c4;
 }
 .btn-check:checked + .btn-outline-success:focus, .btn-check:active + .btn-outline-success:focus, .btn-outline-success:active:focus, .btn-outline-success.active:focus, .btn-outline-success.dropdown-toggle.show:focus {
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(0, 178, 255, 0.5);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(126, 166, 196, 0.5);
 }
 .btn-outline-success:disabled, .btn-outline-success.disabled {
-  color: #00B2FF;
+  color: #7ea6c4;
   background-color: transparent;
 }
 
 .btn-outline-info {
-  color: #5710B2;
-  border-color: #5710B2;
+  color: #84924f;
+  border-color: #84924f;
 }
 .btn-outline-info:hover {
-  color: #ffffff;
-  background-color: #5710B2;
-  border-color: #5710B2;
+  color: #000000;
+  background-color: #84924f;
+  border-color: #84924f;
 }
 .btn-check:focus + .btn-outline-info, .btn-outline-info:focus {
-  box-shadow: 0 0 0 0.25rem rgba(87, 16, 178, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(132, 146, 79, 0.5);
 }
 .btn-check:checked + .btn-outline-info, .btn-check:active + .btn-outline-info, .btn-outline-info:active, .btn-outline-info.active, .btn-outline-info.dropdown-toggle.show {
-  color: #ffffff;
-  background-color: #5710B2;
-  border-color: #5710B2;
+  color: #000000;
+  background-color: #84924f;
+  border-color: #84924f;
 }
 .btn-check:checked + .btn-outline-info:focus, .btn-check:active + .btn-outline-info:focus, .btn-outline-info:active:focus, .btn-outline-info.active:focus, .btn-outline-info.dropdown-toggle.show:focus {
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(87, 16, 178, 0.5);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(132, 146, 79, 0.5);
 }
 .btn-outline-info:disabled, .btn-outline-info.disabled {
-  color: #5710B2;
+  color: #84924f;
   background-color: transparent;
 }
 
@@ -3840,11 +3840,11 @@ textarea.form-control-lg {
 
 .btn-link {
   font-weight: 400;
-  color: #20D489;
+  color: #435B77;
   text-decoration: none;
 }
 .btn-link:hover {
-  color: #16925e;
+  color: #273646;
   text-decoration: underline;
 }
 .btn-link:focus {
@@ -4154,7 +4154,7 @@ textarea.form-control-lg {
 .dropdown-item.active, .dropdown-item:active {
   color: #FFFFFF;
   text-decoration: none;
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #A1A5B7;
@@ -4195,7 +4195,7 @@ textarea.form-control-lg {
 }
 .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
   color: #FFFFFF;
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .dropdown-menu-dark .dropdown-item.disabled, .dropdown-menu-dark .dropdown-item:disabled {
   color: #A1A5B7;
@@ -4324,7 +4324,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #20D489;
+  color: #435B77;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4333,7 +4333,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #16925e;
+  color: #273646;
   text-decoration: none;
 }
 .nav-link.disabled {
@@ -4381,7 +4381,7 @@ textarea.form-control-lg {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #FFFFFF;
-  background-color: #20D489;
+  background-color: #435B77;
 }
 
 .nav-fill > .nav-link,
@@ -5074,12 +5074,12 @@ textarea.form-control-lg {
   }
 }
 .accordion-button:not(.collapsed) {
-  color: #20D489;
+  color: #435B77;
   background-color: #F5F8FA;
   box-shadow: inset 0 -1px 0 #EFF2F5;
 }
 .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2320D489'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23435B77'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   transform: rotate(-180deg);
 }
 .accordion-button::after {
@@ -5180,7 +5180,7 @@ textarea.form-control-lg {
   content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
 }
 .breadcrumb-item.active {
-  color: #20D489;
+  color: #435B77;
 }
 
 .pagination {
@@ -5204,14 +5204,14 @@ textarea.form-control-lg {
 }
 .page-link:hover {
   z-index: 2;
-  color: #20D489;
+  color: #435B77;
   text-decoration: none;
   background-color: #E4FFF4;
   border-color: transparent;
 }
 .page-link:focus {
   z-index: 3;
-  color: #20D489;
+  color: #435B77;
   background-color: #E4FFF4;
   outline: 0;
   box-shadow: none;
@@ -5223,7 +5223,7 @@ textarea.form-control-lg {
 .page-item.active .page-link {
   z-index: 3;
   color: #FFFFFF;
-  background-color: #20D489;
+  background-color: #435B77;
   border-color: transparent;
 }
 .page-item.disabled .page-link {
@@ -5339,12 +5339,12 @@ textarea.form-control-lg {
 }
 
 .alert-primary {
-  color: #0d5537;
-  background-color: #d2f6e7;
-  border-color: #bcf2dc;
+  color: #283747;
+  background-color: #d9dee4;
+  border-color: #c7ced6;
 }
 .alert-primary .alert-link {
-  color: #0a442c;
+  color: #202c39;
 }
 
 .alert-secondary {
@@ -5357,21 +5357,21 @@ textarea.form-control-lg {
 }
 
 .alert-success {
-  color: #006b99;
-  background-color: #ccf0ff;
-  border-color: #b3e8ff;
+  color: #4c6476;
+  background-color: #e5edf3;
+  border-color: #d8e4ed;
 }
 .alert-success .alert-link {
-  color: #00567a;
+  color: #3d505e;
 }
 
 .alert-info {
-  color: #340a6b;
-  background-color: #ddcff0;
-  border-color: #cdb7e8;
+  color: #4f582f;
+  background-color: #e6e9dc;
+  border-color: #dadeca;
 }
 .alert-info .alert-link {
-  color: #2a0856;
+  color: #3f4626;
 }
 
 .alert-warning {
@@ -5430,7 +5430,7 @@ textarea.form-control-lg {
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
-  background-color: #20D489;
+  background-color: #435B77;
   transition: width 0.6s ease;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -5512,8 +5512,8 @@ textarea.form-control-lg {
 .list-group-item.active {
   z-index: 2;
   color: #FFFFFF;
-  background-color: #20D489;
-  border-color: #20D489;
+  background-color: #435B77;
+  border-color: #435B77;
 }
 .list-group-item + .list-group-item {
   border-top-width: 0;
@@ -5705,17 +5705,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-primary {
-  color: #0d5537;
-  background-color: #d2f6e7;
+  color: #283747;
+  background-color: #d9dee4;
 }
 .list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
-  color: #0d5537;
-  background-color: #bdddd0;
+  color: #283747;
+  background-color: #c3c8cd;
 }
 .list-group-item-primary.list-group-item-action.active {
   color: #ffffff;
-  background-color: #0d5537;
-  border-color: #0d5537;
+  background-color: #283747;
+  border-color: #283747;
 }
 
 .list-group-item-secondary {
@@ -5733,31 +5733,31 @@ textarea.form-control-lg {
 }
 
 .list-group-item-success {
-  color: #006b99;
-  background-color: #ccf0ff;
+  color: #4c6476;
+  background-color: #e5edf3;
 }
 .list-group-item-success.list-group-item-action:hover, .list-group-item-success.list-group-item-action:focus {
-  color: #006b99;
-  background-color: #b8d8e6;
+  color: #4c6476;
+  background-color: #ced5db;
 }
 .list-group-item-success.list-group-item-action.active {
   color: #ffffff;
-  background-color: #006b99;
-  border-color: #006b99;
+  background-color: #4c6476;
+  border-color: #4c6476;
 }
 
 .list-group-item-info {
-  color: #340a6b;
-  background-color: #ddcff0;
+  color: #4f582f;
+  background-color: #e6e9dc;
 }
 .list-group-item-info.list-group-item-action:hover, .list-group-item-info.list-group-item-action:focus {
-  color: #340a6b;
-  background-color: #c7bad8;
+  color: #4f582f;
+  background-color: #cfd2c6;
 }
 .list-group-item-info.list-group-item-action.active {
   color: #ffffff;
-  background-color: #340a6b;
-  border-color: #340a6b;
+  background-color: #4f582f;
+  border-color: #4f582f;
 }
 
 .list-group-item-warning {
@@ -5820,7 +5820,7 @@ textarea.form-control-lg {
 }
 .btn-close:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(32, 212, 137, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(67, 91, 119, 0.25);
   opacity: 1;
 }
 .btn-close:disabled, .btn-close.disabled {
@@ -6705,10 +6705,10 @@ textarea.form-control-lg {
 }
 
 .link-primary {
-  color: #20D489;
+  color: #435B77;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #4ddda1;
+  color: #36495f;
 }
 
 .link-secondary {
@@ -6719,17 +6719,17 @@ textarea.form-control-lg {
 }
 
 .link-success {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .link-success:hover, .link-success:focus {
-  color: #33c1ff;
+  color: #98b8d0;
 }
 
 .link-info {
-  color: #5710B2;
+  color: #84924f;
 }
 .link-info:hover, .link-info:focus {
-  color: #460d8e;
+  color: #9da872;
 }
 
 .link-warning {
@@ -7207,7 +7207,7 @@ textarea.form-control-lg {
 }
 
 .border-primary {
-  border-color: #20D489 !important;
+  border-color: #435B77 !important;
 }
 
 .border-secondary {
@@ -7215,11 +7215,11 @@ textarea.form-control-lg {
 }
 
 .border-success {
-  border-color: #00B2FF !important;
+  border-color: #7ea6c4 !important;
 }
 
 .border-info {
-  border-color: #5710B2 !important;
+  border-color: #84924f !important;
 }
 
 .border-warning {
@@ -30822,11 +30822,11 @@ textarea.form-control-lg {
 }
 :root {
   --bs-light-primary:#E4FFF4;
-  --bs-active-primary:#19B674;
+  --bs-active-primary:#28405c;
   --bs-light-success:#F1FAFF;
-  --bs-active-success:#0098DA;
+  --bs-active-success:#5883a3;
   --bs-light-info:#F6F1FC;
-  --bs-active-info:#41058E;
+  --bs-active-info:#626e38;
   --bs-light-warning:#FFF8DD;
   --bs-active-warning:#F1BC00;
   --bs-light-danger:#FFEFF3;
@@ -30914,10 +30914,10 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  --bg-color: 32, 212, 137;
+  --bg-color: 67, 91, 119;
 }
 .bg-primary.hoverable:hover {
-  background-color: #19B674 !important;
+  background-color: #28405c !important;
 }
 
 .bg-hover-light-primary {
@@ -30938,21 +30938,21 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 .bg-hover-primary:hover {
-  --bg-color: 32, 212, 137;
-  background-color: #20D489 !important;
+  --bg-color: 67, 91, 119;
+  background-color: #435B77 !important;
 }
 
 .bg-active-primary.active {
-  --bg-color: 32, 212, 137;
-  background-color: #20D489 !important;
+  --bg-color: 67, 91, 119;
+  background-color: #435B77 !important;
 }
 
 .bg-state-primary {
   cursor: pointer;
 }
 .bg-state-primary.active, .bg-state-primary:hover {
-  --bg-color: 32, 212, 137;
-  background-color: #20D489 !important;
+  --bg-color: 67, 91, 119;
+  background-color: #435B77 !important;
 }
 
 .bg-secondary {
@@ -30991,10 +30991,10 @@ textarea.form-control-lg {
 }
 
 .bg-success {
-  --bg-color: 0, 178, 255;
+  --bg-color: 126, 166, 196;
 }
 .bg-success.hoverable:hover {
-  background-color: #0098DA !important;
+  background-color: #5883a3 !important;
 }
 
 .bg-hover-light-success {
@@ -31015,21 +31015,21 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 .bg-hover-success:hover {
-  --bg-color: 0, 178, 255;
-  background-color: #00B2FF !important;
+  --bg-color: 126, 166, 196;
+  background-color: #7ea6c4 !important;
 }
 
 .bg-active-success.active {
-  --bg-color: 0, 178, 255;
-  background-color: #00B2FF !important;
+  --bg-color: 126, 166, 196;
+  background-color: #7ea6c4 !important;
 }
 
 .bg-state-success {
   cursor: pointer;
 }
 .bg-state-success.active, .bg-state-success:hover {
-  --bg-color: 0, 178, 255;
-  background-color: #00B2FF !important;
+  --bg-color: 126, 166, 196;
+  background-color: #7ea6c4 !important;
 }
 
 .bg-light-info {
@@ -31040,10 +31040,10 @@ textarea.form-control-lg {
 }
 
 .bg-info {
-  --bg-color: 87, 16, 178;
+  --bg-color: 132, 146, 79;
 }
 .bg-info.hoverable:hover {
-  background-color: #41058E !important;
+  background-color: #626e38 !important;
 }
 
 .bg-hover-light-info {
@@ -31064,21 +31064,21 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 .bg-hover-info:hover {
-  --bg-color: 87, 16, 178;
-  background-color: #5710B2 !important;
+  --bg-color: 132, 146, 79;
+  background-color: #84924f !important;
 }
 
 .bg-active-info.active {
-  --bg-color: 87, 16, 178;
-  background-color: #5710B2 !important;
+  --bg-color: 132, 146, 79;
+  background-color: #84924f !important;
 }
 
 .bg-state-info {
   cursor: pointer;
 }
 .bg-state-info.active, .bg-state-info:hover {
-  --bg-color: 87, 16, 178;
-  background-color: #5710B2 !important;
+  --bg-color: 132, 146, 79;
+  background-color: #84924f !important;
 }
 
 .bg-light-warning {
@@ -31674,11 +31674,11 @@ textarea.form-control-lg {
 }
 
 .border-hover-primary:hover {
-  border-color: #20D489 !important;
+  border-color: #435B77 !important;
 }
 
 .border-active-primary.active {
-  border-color: #20D489 !important;
+  border-color: #435B77 !important;
 }
 
 .border-hover-secondary:hover {
@@ -31690,19 +31690,19 @@ textarea.form-control-lg {
 }
 
 .border-hover-success:hover {
-  border-color: #00B2FF !important;
+  border-color: #7ea6c4 !important;
 }
 
 .border-active-success.active {
-  border-color: #00B2FF !important;
+  border-color: #7ea6c4 !important;
 }
 
 .border-hover-info:hover {
-  border-color: #5710B2 !important;
+  border-color: #84924f !important;
 }
 
 .border-active-info.active {
-  border-color: #5710B2 !important;
+  border-color: #84924f !important;
 }
 
 .border-hover-warning:hover {
@@ -32100,7 +32100,7 @@ textarea.form-control-lg {
 }
 
 .text-primary {
-  color: #20D489 !important;
+  color: #435B77 !important;
 }
 
 .text-inverse-primary {
@@ -32119,15 +32119,15 @@ textarea.form-control-lg {
 }
 .text-hover-primary:hover {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489 !important;
+  color: #435B77 !important;
 }
 .text-hover-primary:hover i {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489 !important;
+  color: #435B77 !important;
 }
 .text-hover-primary:hover .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .text-hover-primary:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -32163,15 +32163,15 @@ textarea.form-control-lg {
 }
 .text-active-primary.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489 !important;
+  color: #435B77 !important;
 }
 .text-active-primary.active i {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489 !important;
+  color: #435B77 !important;
 }
 .text-active-primary.active .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .text-active-primary.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -32392,7 +32392,7 @@ textarea.form-control-lg {
 }
 
 .text-success {
-  color: #00B2FF !important;
+  color: #7ea6c4 !important;
 }
 
 .text-inverse-success {
@@ -32411,15 +32411,15 @@ textarea.form-control-lg {
 }
 .text-hover-success:hover {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #00B2FF !important;
+  color: #7ea6c4 !important;
 }
 .text-hover-success:hover i {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #00B2FF !important;
+  color: #7ea6c4 !important;
 }
 .text-hover-success:hover .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .text-hover-success:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -32455,15 +32455,15 @@ textarea.form-control-lg {
 }
 .text-active-success.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #00B2FF !important;
+  color: #7ea6c4 !important;
 }
 .text-active-success.active i {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #00B2FF !important;
+  color: #7ea6c4 !important;
 }
 .text-active-success.active .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .text-active-success.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -32492,7 +32492,7 @@ textarea.form-control-lg {
 }
 
 .text-info {
-  color: #5710B2 !important;
+  color: #84924f !important;
 }
 
 .text-inverse-info {
@@ -32511,15 +32511,15 @@ textarea.form-control-lg {
 }
 .text-hover-info:hover {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #5710B2 !important;
+  color: #84924f !important;
 }
 .text-hover-info:hover i {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #5710B2 !important;
+  color: #84924f !important;
 }
 .text-hover-info:hover .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .text-hover-info:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -32555,15 +32555,15 @@ textarea.form-control-lg {
 }
 .text-active-info.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #5710B2 !important;
+  color: #84924f !important;
 }
 .text-active-info.active i {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #5710B2 !important;
+  color: #84924f !important;
 }
 .text-active-info.active .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .text-active-info.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -33623,7 +33623,7 @@ a:hover {
 .nav-line-tabs .nav-item .nav-link:hover:not(.disabled) {
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid #20D489;
+  border-bottom: 1px solid #435B77;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .nav-line-tabs.nav-line-tabs-2x {
@@ -33760,11 +33760,11 @@ a:hover {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
 }
 .page-item:focus:not(.disabled) .page-link i {
-  color: #20D489;
+  color: #435B77;
 }
 .page-item:focus:not(.disabled) .page-link .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .page-item:focus:not(.disabled) .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -33773,20 +33773,20 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
 }
 .page-item:focus:not(.disabled) .page-link .next {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
 }
 .page-item:hover:not(.disabled) .page-link i {
-  color: #20D489;
+  color: #435B77;
 }
 .page-item:hover:not(.disabled) .page-link .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .page-item:hover:not(.disabled) .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -33795,13 +33795,13 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
 }
 .page-item:hover:not(.disabled) .page-link .next {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
 }
 .page-item.active .page-link i {
   color: #FFFFFF;
@@ -35053,69 +35053,69 @@ a:hover {
 }
 
 .menu-primary .menu-item .menu-link {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-primary .menu-item .menu-link .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-primary .menu-item .menu-link .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-primary .menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-primary .menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-primary .menu-item .menu-link .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-primary .menu-item .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-title-primary .menu-item .menu-link {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-title-primary .menu-item .menu-link .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 
 .menu-icon-primary .menu-item .menu-link .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-icon-primary .menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-icon-primary .menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 
 .menu-bullet-primary .menu-item .menu-link .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 
 .menu-arrow-primary .menu-item .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
@@ -35254,136 +35254,136 @@ a:hover {
 }
 
 .menu-success .menu-item .menu-link {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .menu-success .menu-item .menu-link .menu-title {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .menu-success .menu-item .menu-link .menu-icon i {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .menu-success .menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .menu-success .menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-success .menu-item .menu-link .menu-bullet .bullet {
-  background-color: #00B2FF;
+  background-color: #7ea6c4;
 }
 .menu-success .menu-item .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2300B2FF'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%237ea6c4'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2300B2FF'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%237ea6c4'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-title-success .menu-item .menu-link {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .menu-title-success .menu-item .menu-link .menu-title {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 
 .menu-icon-success .menu-item .menu-link .menu-icon i {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .menu-icon-success .menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .menu-icon-success .menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 
 .menu-bullet-success .menu-item .menu-link .menu-bullet .bullet {
-  background-color: #00B2FF;
+  background-color: #7ea6c4;
 }
 
 .menu-arrow-success .menu-item .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2300B2FF'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%237ea6c4'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2300B2FF'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%237ea6c4'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-info .menu-item .menu-link {
-  color: #5710B2;
+  color: #84924f;
 }
 .menu-info .menu-item .menu-link .menu-title {
-  color: #5710B2;
+  color: #84924f;
 }
 .menu-info .menu-item .menu-link .menu-icon i {
-  color: #5710B2;
+  color: #84924f;
 }
 .menu-info .menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .menu-info .menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-info .menu-item .menu-link .menu-bullet .bullet {
-  background-color: #5710B2;
+  background-color: #84924f;
 }
 .menu-info .menu-item .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235710B2'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2384924f'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235710B2'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2384924f'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-title-info .menu-item .menu-link {
-  color: #5710B2;
+  color: #84924f;
 }
 .menu-title-info .menu-item .menu-link .menu-title {
-  color: #5710B2;
+  color: #84924f;
 }
 
 .menu-icon-info .menu-item .menu-link .menu-icon i {
-  color: #5710B2;
+  color: #84924f;
 }
 .menu-icon-info .menu-item .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .menu-icon-info .menu-item .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 
 .menu-bullet-info .menu-item .menu-link .menu-bullet .bullet {
-  background-color: #5710B2;
+  background-color: #84924f;
 }
 
 .menu-arrow-info .menu-item .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235710B2'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2384924f'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235710B2'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2384924f'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
@@ -36291,20 +36291,20 @@ a:hover {
 .menu-hover-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
 .menu-hover-primary .menu-item .menu-link:hover:not(.disabled):not(.active) {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-hover-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-title,
 .menu-hover-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-hover-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon i,
 .menu-hover-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-hover-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-hover-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-hover-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
 .menu-hover-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -36312,105 +36312,105 @@ a:hover {
 }
 .menu-hover-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-bullet .bullet,
 .menu-hover-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-hover-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-arrow:after,
 .menu-hover-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-show-primary .menu-item.here > .menu-link, .menu-show-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-show-primary .menu-item.here > .menu-link .menu-title, .menu-show-primary .menu-item.show > .menu-link .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-show-primary .menu-item.here > .menu-link .menu-icon i, .menu-show-primary .menu-item.show > .menu-link .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-show-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g), .menu-show-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-show-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g), .menu-show-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-show-primary .menu-item.here > .menu-link .menu-bullet .bullet, .menu-show-primary .menu-item.show > .menu-link .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-show-primary .menu-item.here > .menu-link .menu-arrow:after, .menu-show-primary .menu-item.show > .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-active-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-active-primary .menu-item .menu-link.active .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-active-primary .menu-item .menu-link.active .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-active-primary .menu-item .menu-link.active .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-active-primary .menu-item .menu-link.active .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-active-primary .menu-item .menu-link.active .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-active-primary .menu-item .menu-link.active .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-state-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
 .menu-state-primary .menu-item .menu-link:hover:not(.disabled):not(.active) {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-title,
 .menu-state-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon i,
 .menu-state-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-state-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
 .menu-state-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -36418,90 +36418,90 @@ a:hover {
 }
 .menu-state-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-bullet .bullet,
 .menu-state-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-state-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-arrow:after,
 .menu-state-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 .menu-state-primary .menu-item.here > .menu-link, .menu-state-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item.here > .menu-link .menu-title, .menu-state-primary .menu-item.show > .menu-link .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item.here > .menu-link .menu-icon i, .menu-state-primary .menu-item.show > .menu-link .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g), .menu-state-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g), .menu-state-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-state-primary .menu-item.here > .menu-link .menu-bullet .bullet, .menu-state-primary .menu-item.show > .menu-link .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-state-primary .menu-item.here > .menu-link .menu-arrow:after, .menu-state-primary .menu-item.show > .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 .menu-state-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item .menu-link.active .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item .menu-link.active .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-primary .menu-item .menu-link.active .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-primary .menu-item .menu-link.active .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-state-primary .menu-item .menu-link.active .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-state-primary .menu-item .menu-link.active .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-hover-bg-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
 .menu-hover-bg-primary .menu-item .menu-link:hover:not(.disabled):not(.active) {
   transition: color 0.2s ease, background-color 0.2s ease;
-  background-color: #20D489;
+  background-color: #435B77;
   color: #FFFFFF;
 }
 .menu-hover-bg-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-title,
@@ -36541,7 +36541,7 @@ a:hover {
 
 .menu-show-bg-primary .menu-item.here > .menu-link, .menu-show-bg-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
-  background-color: #20D489;
+  background-color: #435B77;
   color: #FFFFFF;
 }
 .menu-show-bg-primary .menu-item.here > .menu-link .menu-title, .menu-show-bg-primary .menu-item.show > .menu-link .menu-title {
@@ -36575,7 +36575,7 @@ a:hover {
 
 .menu-active-bg-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  background-color: #20D489;
+  background-color: #435B77;
   color: #FFFFFF;
 }
 .menu-active-bg-primary .menu-item .menu-link.active .menu-title {
@@ -36610,7 +36610,7 @@ a:hover {
 .menu-state-bg-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
 .menu-state-bg-primary .menu-item .menu-link:hover:not(.disabled):not(.active) {
   transition: color 0.2s ease, background-color 0.2s ease;
-  background-color: #20D489;
+  background-color: #435B77;
   color: #FFFFFF;
 }
 .menu-state-bg-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-title,
@@ -36649,7 +36649,7 @@ a:hover {
 }
 .menu-state-bg-primary .menu-item.here > .menu-link, .menu-state-bg-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
-  background-color: #20D489;
+  background-color: #435B77;
   color: #FFFFFF;
 }
 .menu-state-bg-primary .menu-item.here > .menu-link .menu-title, .menu-state-bg-primary .menu-item.show > .menu-link .menu-title {
@@ -36682,7 +36682,7 @@ a:hover {
 }
 .menu-state-bg-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  background-color: #20D489;
+  background-color: #435B77;
   color: #FFFFFF;
 }
 .menu-state-bg-primary .menu-item .menu-link.active .menu-title {
@@ -36717,34 +36717,34 @@ a:hover {
 .menu-show-bg-light-primary .menu-item.here > .menu-link, .menu-show-bg-light-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
   background-color: #E4FFF4;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-show-bg-light-primary .menu-item.here > .menu-link .menu-title, .menu-show-bg-light-primary .menu-item.show > .menu-link .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-show-bg-light-primary .menu-item.here > .menu-link .menu-icon i, .menu-show-bg-light-primary .menu-item.show > .menu-link .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-show-bg-light-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g), .menu-show-bg-light-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-show-bg-light-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g), .menu-show-bg-light-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-show-bg-light-primary .menu-item.here > .menu-link .menu-bullet .bullet, .menu-show-bg-light-primary .menu-item.show > .menu-link .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-show-bg-light-primary .menu-item.here > .menu-link .menu-arrow:after, .menu-show-bg-light-primary .menu-item.show > .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
@@ -36752,20 +36752,20 @@ a:hover {
 .menu-hover-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) {
   transition: color 0.2s ease, background-color 0.2s ease;
   background-color: #E4FFF4;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-hover-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-title,
 .menu-hover-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-hover-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon i,
 .menu-hover-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-hover-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-hover-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-hover-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
 .menu-hover-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -36773,107 +36773,107 @@ a:hover {
 }
 .menu-hover-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-bullet .bullet,
 .menu-hover-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-hover-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-arrow:after,
 .menu-hover-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-active-bg-light-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
   background-color: #E4FFF4;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-active-bg-light-primary .menu-item .menu-link.active .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-active-bg-light-primary .menu-item .menu-link.active .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-active-bg-light-primary .menu-item .menu-link.active .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-active-bg-light-primary .menu-item .menu-link.active .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-active-bg-light-primary .menu-item .menu-link.active .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-active-bg-light-primary .menu-item .menu-link.active .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-state-bg-light-primary .menu-item.here > .menu-link, .menu-state-bg-light-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
   background-color: #E4FFF4;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.here > .menu-link .menu-title, .menu-state-bg-light-primary .menu-item.show > .menu-link .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.here > .menu-link .menu-icon i, .menu-state-bg-light-primary .menu-item.show > .menu-link .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g), .menu-state-bg-light-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g), .menu-state-bg-light-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-state-bg-light-primary .menu-item.here > .menu-link .menu-bullet .bullet, .menu-state-bg-light-primary .menu-item.show > .menu-link .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.here > .menu-link .menu-arrow:after, .menu-state-bg-light-primary .menu-item.show > .menu-link .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 .menu-state-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
 .menu-state-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) {
   transition: color 0.2s ease, background-color 0.2s ease;
   background-color: #E4FFF4;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-title,
 .menu-state-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon i,
 .menu-state-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-state-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
 .menu-state-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -36881,103 +36881,103 @@ a:hover {
 }
 .menu-state-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-bullet .bullet,
 .menu-state-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-arrow:after,
 .menu-state-bg-light-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 .menu-state-bg-light-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
   background-color: #E4FFF4;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item .menu-link.active .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item .menu-link.active .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item .menu-link.active .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-bg-light-primary .menu-item .menu-link.active .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .menu-state-bg-light-primary .menu-item .menu-link.active .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-state-bg-light-primary .menu-item .menu-link.active .menu-arrow:after {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
 .menu-hover-title-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
 .menu-hover-title-primary .menu-item .menu-link:hover:not(.disabled):not(.active) {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-hover-title-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-title,
 .menu-hover-title-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 
 .menu-show-title-primary .menu-item.here > .menu-link, .menu-show-title-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-show-title-primary .menu-item.here > .menu-link .menu-title, .menu-show-title-primary .menu-item.show > .menu-link .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 
 .menu-active-title-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-active-title-primary .menu-item .menu-link.active .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 
 .menu-state-title-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
 .menu-state-title-primary .menu-item .menu-link:hover:not(.disabled):not(.active) {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-title-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-title,
 .menu-state-title-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-title-primary .menu-item.here > .menu-link, .menu-state-title-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-title-primary .menu-item.here > .menu-link .menu-title, .menu-state-title-primary .menu-item.show > .menu-link .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-title-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-title-primary .menu-item .menu-link.active .menu-title {
-  color: #20D489;
+  color: #435B77;
 }
 
 .menu-hover-icon-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
@@ -36986,12 +36986,12 @@ a:hover {
 }
 .menu-hover-icon-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon i,
 .menu-hover-icon-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-hover-icon-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-hover-icon-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-hover-icon-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
 .menu-hover-icon-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -37002,11 +37002,11 @@ a:hover {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .menu-show-icon-primary .menu-item.here > .menu-link .menu-icon i, .menu-show-icon-primary .menu-item.show > .menu-link .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-show-icon-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g), .menu-show-icon-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-show-icon-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g), .menu-show-icon-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -37016,11 +37016,11 @@ a:hover {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .menu-active-icon-primary .menu-item .menu-link.active .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-active-icon-primary .menu-item .menu-link.active .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-active-icon-primary .menu-item .menu-link.active .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -37032,12 +37032,12 @@ a:hover {
 }
 .menu-state-icon-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon i,
 .menu-state-icon-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-icon-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g),
 .menu-state-icon-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-icon-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g),
 .menu-state-icon-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
@@ -37047,11 +37047,11 @@ a:hover {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .menu-state-icon-primary .menu-item.here > .menu-link .menu-icon i, .menu-state-icon-primary .menu-item.show > .menu-link .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-icon-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g), .menu-state-icon-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-icon-primary .menu-item.here > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g), .menu-state-icon-primary .menu-item.show > .menu-link .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -37060,11 +37060,11 @@ a:hover {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .menu-state-icon-primary .menu-item .menu-link.active .menu-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .menu-state-icon-primary .menu-item .menu-link.active .menu-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .menu-state-icon-primary .menu-item .menu-link.active .menu-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -37076,21 +37076,21 @@ a:hover {
 }
 .menu-hover-bullet-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-bullet .bullet,
 .menu-hover-bullet-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 
 .menu-show-bullet-primary .menu-item.here > .menu-link, .menu-show-bullet-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .menu-show-bullet-primary .menu-item.here > .menu-link .menu-bullet .bullet, .menu-show-bullet-primary .menu-item.show > .menu-link .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 
 .menu-active-bullet-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .menu-active-bullet-primary .menu-item .menu-link.active .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 
 .menu-state-bullet-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
@@ -37099,19 +37099,19 @@ a:hover {
 }
 .menu-state-bullet-primary .menu-item.hover > .menu-link:not(.disabled):not(.active) .menu-bullet .bullet,
 .menu-state-bullet-primary .menu-item .menu-link:hover:not(.disabled):not(.active) .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-state-bullet-primary .menu-item.here > .menu-link, .menu-state-bullet-primary .menu-item.show > .menu-link {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .menu-state-bullet-primary .menu-item.here > .menu-link .menu-bullet .bullet, .menu-state-bullet-primary .menu-item.show > .menu-link .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .menu-state-bullet-primary .menu-item .menu-link.active {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 .menu-state-bullet-primary .menu-item .menu-link.active .menu-bullet .bullet {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 
 .menu-hover-arrow-primary .menu-item.hover > .menu-link:not(.disabled):not(.active),
@@ -37123,12 +37123,12 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
@@ -37139,12 +37139,12 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
@@ -37155,12 +37155,12 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
@@ -37173,12 +37173,12 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 .menu-state-arrow-primary .menu-item.here > .menu-link, .menu-state-arrow-primary .menu-item.show > .menu-link {
@@ -37188,12 +37188,12 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 .menu-state-arrow-primary .menu-item .menu-link.active {
@@ -37203,12 +37203,12 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
   /*rtl:begin:remove*/
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%2320D489'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23435B77'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
   /*rtl:end:remove*/
 }
 
@@ -37236,7 +37236,7 @@ a:hover {
   display: flex;
 }
 .anchor:hover a:hover {
-  color: #20D489;
+  color: #435B77;
   transition: all 0.2s ease;
 }
 
@@ -37849,8 +37849,8 @@ a:hover {
 
 .btn.btn-primary {
   color: #FFFFFF;
-  border-color: #20D489;
-  background-color: #20D489;
+  border-color: #435B77;
+  background-color: #435B77;
 }
 .btn.btn-primary i {
   color: #FFFFFF;
@@ -37867,8 +37867,8 @@ a:hover {
 }
 .btn-check:checked + .btn.btn-primary, .btn-check:active + .btn.btn-primary, .btn.btn-primary:focus:not(.btn-active), .btn.btn-primary:hover:not(.btn-active), .btn.btn-primary:active:not(.btn-active), .btn.btn-primary.active, .btn.btn-primary.show, .show > .btn.btn-primary {
   color: #FFFFFF;
-  border-color: #19B674;
-  background-color: #19B674 !important;
+  border-color: #28405c;
+  background-color: #28405c !important;
 }
 .btn-check:checked + .btn.btn-primary i, .btn-check:active + .btn.btn-primary i, .btn.btn-primary:focus:not(.btn-active) i, .btn.btn-primary:hover:not(.btn-active) i, .btn.btn-primary:active:not(.btn-active) i, .btn.btn-primary.active i, .btn.btn-primary.show i, .show > .btn.btn-primary i {
   color: #FFFFFF;
@@ -37885,27 +37885,27 @@ a:hover {
 }
 
 .btn.btn-light-primary {
-  color: #20D489;
+  color: #435B77;
   border-color: #E4FFF4;
   background-color: #E4FFF4;
 }
 .btn.btn-light-primary i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn.btn-light-primary .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn.btn-light-primary .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-light-primary.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-light-primary, .btn-check:active + .btn.btn-light-primary, .btn.btn-light-primary:focus:not(.btn-active), .btn.btn-light-primary:hover:not(.btn-active), .btn.btn-light-primary:active:not(.btn-active), .btn.btn-light-primary.active, .btn.btn-light-primary.show, .show > .btn.btn-light-primary {
   color: #FFFFFF;
-  border-color: #20D489;
-  background-color: #20D489 !important;
+  border-color: #435B77;
+  background-color: #435B77 !important;
 }
 .btn-check:checked + .btn.btn-light-primary i, .btn-check:active + .btn.btn-light-primary i, .btn.btn-light-primary:focus:not(.btn-active) i, .btn.btn-light-primary:hover:not(.btn-active) i, .btn.btn-light-primary:active:not(.btn-active) i, .btn.btn-light-primary.active i, .btn.btn-light-primary.show i, .show > .btn.btn-light-primary i {
   color: #FFFFFF;
@@ -37922,13 +37922,13 @@ a:hover {
 }
 
 .btn.btn-bg-primary {
-  border-color: #20D489;
-  background-color: #20D489;
+  border-color: #435B77;
+  background-color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-primary, .btn-check:active + .btn.btn-active-primary, .btn.btn-active-primary:focus:not(.btn-active), .btn.btn-active-primary:hover:not(.btn-active), .btn.btn-active-primary:active:not(.btn-active), .btn.btn-active-primary.active, .btn.btn-active-primary.show, .show > .btn.btn-active-primary {
   color: #FFFFFF;
-  border-color: #20D489;
-  background-color: #20D489 !important;
+  border-color: #435B77;
+  background-color: #435B77 !important;
 }
 .btn-check:checked + .btn.btn-active-primary i, .btn-check:active + .btn.btn-active-primary i, .btn.btn-active-primary:focus:not(.btn-active) i, .btn.btn-active-primary:hover:not(.btn-active) i, .btn.btn-active-primary:active:not(.btn-active) i, .btn.btn-active-primary.active i, .btn.btn-active-primary.show i, .show > .btn.btn-active-primary i {
   color: #FFFFFF;
@@ -37945,25 +37945,25 @@ a:hover {
 }
 
 .btn-check:checked + .btn.btn-active-light-primary, .btn-check:active + .btn.btn-active-light-primary, .btn.btn-active-light-primary:focus:not(.btn-active), .btn.btn-active-light-primary:hover:not(.btn-active), .btn.btn-active-light-primary:active:not(.btn-active), .btn.btn-active-light-primary.active, .btn.btn-active-light-primary.show, .show > .btn.btn-active-light-primary {
-  color: #20D489;
+  color: #435B77;
   border-color: #E4FFF4;
   background-color: #E4FFF4 !important;
 }
 .btn-check:checked + .btn.btn-active-light-primary i, .btn-check:active + .btn.btn-active-light-primary i, .btn.btn-active-light-primary:focus:not(.btn-active) i, .btn.btn-active-light-primary:hover:not(.btn-active) i, .btn.btn-active-light-primary:active:not(.btn-active) i, .btn.btn-active-light-primary.active i, .btn.btn-active-light-primary.show i, .show > .btn.btn-active-light-primary i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-light-primary .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-light-primary .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-primary:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-primary:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-primary:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-primary.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-primary.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-light-primary .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn-check:checked + .btn.btn-active-light-primary .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-light-primary .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-primary:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-primary:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-primary:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-primary.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-primary.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-light-primary .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-light-primary.dropdown-toggle:after, .btn-check:active + .btn.btn-active-light-primary.dropdown-toggle:after, .btn.btn-active-light-primary:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-primary:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-primary:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-primary.active.dropdown-toggle:after, .btn.btn-active-light-primary.show.dropdown-toggle:after, .show > .btn.btn-active-light-primary.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 .btn.btn-active-light-primary.btn-outline:not(.btn-outline-default) {
-  border-color: #20D489 !important;
+  border-color: #435B77 !important;
 }
 
 .btn.btn-secondary {
@@ -38028,8 +38028,8 @@ a:hover {
 
 .btn.btn-success {
   color: #FFFFFF;
-  border-color: #00B2FF;
-  background-color: #00B2FF;
+  border-color: #7ea6c4;
+  background-color: #7ea6c4;
 }
 .btn.btn-success i {
   color: #FFFFFF;
@@ -38046,8 +38046,8 @@ a:hover {
 }
 .btn-check:checked + .btn.btn-success, .btn-check:active + .btn.btn-success, .btn.btn-success:focus:not(.btn-active), .btn.btn-success:hover:not(.btn-active), .btn.btn-success:active:not(.btn-active), .btn.btn-success.active, .btn.btn-success.show, .show > .btn.btn-success {
   color: #FFFFFF;
-  border-color: #0098DA;
-  background-color: #0098DA !important;
+  border-color: #5883a3;
+  background-color: #5883a3 !important;
 }
 .btn-check:checked + .btn.btn-success i, .btn-check:active + .btn.btn-success i, .btn.btn-success:focus:not(.btn-active) i, .btn.btn-success:hover:not(.btn-active) i, .btn.btn-success:active:not(.btn-active) i, .btn.btn-success.active i, .btn.btn-success.show i, .show > .btn.btn-success i {
   color: #FFFFFF;
@@ -38064,27 +38064,27 @@ a:hover {
 }
 
 .btn.btn-light-success {
-  color: #00B2FF;
+  color: #7ea6c4;
   border-color: #F1FAFF;
   background-color: #F1FAFF;
 }
 .btn.btn-light-success i {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn.btn-light-success .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .btn.btn-light-success .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-light-success.dropdown-toggle:after {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-light-success, .btn-check:active + .btn.btn-light-success, .btn.btn-light-success:focus:not(.btn-active), .btn.btn-light-success:hover:not(.btn-active), .btn.btn-light-success:active:not(.btn-active), .btn.btn-light-success.active, .btn.btn-light-success.show, .show > .btn.btn-light-success {
   color: #FFFFFF;
-  border-color: #00B2FF;
-  background-color: #00B2FF !important;
+  border-color: #7ea6c4;
+  background-color: #7ea6c4 !important;
 }
 .btn-check:checked + .btn.btn-light-success i, .btn-check:active + .btn.btn-light-success i, .btn.btn-light-success:focus:not(.btn-active) i, .btn.btn-light-success:hover:not(.btn-active) i, .btn.btn-light-success:active:not(.btn-active) i, .btn.btn-light-success.active i, .btn.btn-light-success.show i, .show > .btn.btn-light-success i {
   color: #FFFFFF;
@@ -38101,13 +38101,13 @@ a:hover {
 }
 
 .btn.btn-bg-success {
-  border-color: #00B2FF;
-  background-color: #00B2FF;
+  border-color: #7ea6c4;
+  background-color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-success, .btn-check:active + .btn.btn-active-success, .btn.btn-active-success:focus:not(.btn-active), .btn.btn-active-success:hover:not(.btn-active), .btn.btn-active-success:active:not(.btn-active), .btn.btn-active-success.active, .btn.btn-active-success.show, .show > .btn.btn-active-success {
   color: #FFFFFF;
-  border-color: #00B2FF;
-  background-color: #00B2FF !important;
+  border-color: #7ea6c4;
+  background-color: #7ea6c4 !important;
 }
 .btn-check:checked + .btn.btn-active-success i, .btn-check:active + .btn.btn-active-success i, .btn.btn-active-success:focus:not(.btn-active) i, .btn.btn-active-success:hover:not(.btn-active) i, .btn.btn-active-success:active:not(.btn-active) i, .btn.btn-active-success.active i, .btn.btn-active-success.show i, .show > .btn.btn-active-success i {
   color: #FFFFFF;
@@ -38124,31 +38124,31 @@ a:hover {
 }
 
 .btn-check:checked + .btn.btn-active-light-success, .btn-check:active + .btn.btn-active-light-success, .btn.btn-active-light-success:focus:not(.btn-active), .btn.btn-active-light-success:hover:not(.btn-active), .btn.btn-active-light-success:active:not(.btn-active), .btn.btn-active-light-success.active, .btn.btn-active-light-success.show, .show > .btn.btn-active-light-success {
-  color: #00B2FF;
+  color: #7ea6c4;
   border-color: #F1FAFF;
   background-color: #F1FAFF !important;
 }
 .btn-check:checked + .btn.btn-active-light-success i, .btn-check:active + .btn.btn-active-light-success i, .btn.btn-active-light-success:focus:not(.btn-active) i, .btn.btn-active-light-success:hover:not(.btn-active) i, .btn.btn-active-light-success:active:not(.btn-active) i, .btn.btn-active-light-success.active i, .btn.btn-active-light-success.show i, .show > .btn.btn-active-light-success i {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-light-success .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-light-success .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-success:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-success:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-success:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-success.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-success.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-light-success .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-light-success .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-light-success .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-success:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-success:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-success:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-success.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-success.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-light-success .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-light-success.dropdown-toggle:after, .btn-check:active + .btn.btn-active-light-success.dropdown-toggle:after, .btn.btn-active-light-success:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-success:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-success:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-success.active.dropdown-toggle:after, .btn.btn-active-light-success.show.dropdown-toggle:after, .show > .btn.btn-active-light-success.dropdown-toggle:after {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn.btn-active-light-success.btn-outline:not(.btn-outline-default) {
-  border-color: #00B2FF !important;
+  border-color: #7ea6c4 !important;
 }
 
 .btn.btn-info {
   color: #FFFFFF;
-  border-color: #5710B2;
-  background-color: #5710B2;
+  border-color: #84924f;
+  background-color: #84924f;
 }
 .btn.btn-info i {
   color: #FFFFFF;
@@ -38165,8 +38165,8 @@ a:hover {
 }
 .btn-check:checked + .btn.btn-info, .btn-check:active + .btn.btn-info, .btn.btn-info:focus:not(.btn-active), .btn.btn-info:hover:not(.btn-active), .btn.btn-info:active:not(.btn-active), .btn.btn-info.active, .btn.btn-info.show, .show > .btn.btn-info {
   color: #FFFFFF;
-  border-color: #41058E;
-  background-color: #41058E !important;
+  border-color: #626e38;
+  background-color: #626e38 !important;
 }
 .btn-check:checked + .btn.btn-info i, .btn-check:active + .btn.btn-info i, .btn.btn-info:focus:not(.btn-active) i, .btn.btn-info:hover:not(.btn-active) i, .btn.btn-info:active:not(.btn-active) i, .btn.btn-info.active i, .btn.btn-info.show i, .show > .btn.btn-info i {
   color: #FFFFFF;
@@ -38183,27 +38183,27 @@ a:hover {
 }
 
 .btn.btn-light-info {
-  color: #5710B2;
+  color: #84924f;
   border-color: #F6F1FC;
   background-color: #F6F1FC;
 }
 .btn.btn-light-info i {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn.btn-light-info .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .btn.btn-light-info .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-light-info.dropdown-toggle:after {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn-check:checked + .btn.btn-light-info, .btn-check:active + .btn.btn-light-info, .btn.btn-light-info:focus:not(.btn-active), .btn.btn-light-info:hover:not(.btn-active), .btn.btn-light-info:active:not(.btn-active), .btn.btn-light-info.active, .btn.btn-light-info.show, .show > .btn.btn-light-info {
   color: #FFFFFF;
-  border-color: #5710B2;
-  background-color: #5710B2 !important;
+  border-color: #84924f;
+  background-color: #84924f !important;
 }
 .btn-check:checked + .btn.btn-light-info i, .btn-check:active + .btn.btn-light-info i, .btn.btn-light-info:focus:not(.btn-active) i, .btn.btn-light-info:hover:not(.btn-active) i, .btn.btn-light-info:active:not(.btn-active) i, .btn.btn-light-info.active i, .btn.btn-light-info.show i, .show > .btn.btn-light-info i {
   color: #FFFFFF;
@@ -38220,13 +38220,13 @@ a:hover {
 }
 
 .btn.btn-bg-info {
-  border-color: #5710B2;
-  background-color: #5710B2;
+  border-color: #84924f;
+  background-color: #84924f;
 }
 .btn-check:checked + .btn.btn-active-info, .btn-check:active + .btn.btn-active-info, .btn.btn-active-info:focus:not(.btn-active), .btn.btn-active-info:hover:not(.btn-active), .btn.btn-active-info:active:not(.btn-active), .btn.btn-active-info.active, .btn.btn-active-info.show, .show > .btn.btn-active-info {
   color: #FFFFFF;
-  border-color: #5710B2;
-  background-color: #5710B2 !important;
+  border-color: #84924f;
+  background-color: #84924f !important;
 }
 .btn-check:checked + .btn.btn-active-info i, .btn-check:active + .btn.btn-active-info i, .btn.btn-active-info:focus:not(.btn-active) i, .btn.btn-active-info:hover:not(.btn-active) i, .btn.btn-active-info:active:not(.btn-active) i, .btn.btn-active-info.active i, .btn.btn-active-info.show i, .show > .btn.btn-active-info i {
   color: #FFFFFF;
@@ -38243,25 +38243,25 @@ a:hover {
 }
 
 .btn-check:checked + .btn.btn-active-light-info, .btn-check:active + .btn.btn-active-light-info, .btn.btn-active-light-info:focus:not(.btn-active), .btn.btn-active-light-info:hover:not(.btn-active), .btn.btn-active-light-info:active:not(.btn-active), .btn.btn-active-light-info.active, .btn.btn-active-light-info.show, .show > .btn.btn-active-light-info {
-  color: #5710B2;
+  color: #84924f;
   border-color: #F6F1FC;
   background-color: #F6F1FC !important;
 }
 .btn-check:checked + .btn.btn-active-light-info i, .btn-check:active + .btn.btn-active-light-info i, .btn.btn-active-light-info:focus:not(.btn-active) i, .btn.btn-active-light-info:hover:not(.btn-active) i, .btn.btn-active-light-info:active:not(.btn-active) i, .btn.btn-active-light-info.active i, .btn.btn-active-light-info.show i, .show > .btn.btn-active-light-info i {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn-check:checked + .btn.btn-active-light-info .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-light-info .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-info:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-info:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-info:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-info.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-light-info.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-light-info .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .btn-check:checked + .btn.btn-active-light-info .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-light-info .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-info:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-info:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-info:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-info.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-light-info.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-light-info .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-light-info.dropdown-toggle:after, .btn-check:active + .btn.btn-active-light-info.dropdown-toggle:after, .btn.btn-active-light-info:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-info:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-info:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-light-info.active.dropdown-toggle:after, .btn.btn-active-light-info.show.dropdown-toggle:after, .show > .btn.btn-active-light-info.dropdown-toggle:after {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn.btn-active-light-info.btn-outline:not(.btn-outline-default) {
-  border-color: #5710B2 !important;
+  border-color: #84924f !important;
 }
 
 .btn.btn-warning {
@@ -38689,70 +38689,70 @@ a:hover {
 }
 
 .btn.btn-color-primary {
-  color: #20D489;
+  color: #435B77;
 }
 .btn.btn-color-primary i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn.btn-color-primary .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn.btn-color-primary .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-color-primary.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-color-primary, .btn-check:active + .btn.btn-active-color-primary, .btn.btn-active-color-primary:focus:not(.btn-active), .btn.btn-active-color-primary:hover:not(.btn-active), .btn.btn-active-color-primary:active:not(.btn-active), .btn.btn-active-color-primary.active, .btn.btn-active-color-primary.show, .show > .btn.btn-active-color-primary {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-color-primary i, .btn-check:active + .btn.btn-active-color-primary i, .btn.btn-active-color-primary:focus:not(.btn-active) i, .btn.btn-active-color-primary:hover:not(.btn-active) i, .btn.btn-active-color-primary:active:not(.btn-active) i, .btn.btn-active-color-primary.active i, .btn.btn-active-color-primary.show i, .show > .btn.btn-active-color-primary i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-color-primary .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-color-primary .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-primary:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-primary:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-primary:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-primary.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-primary.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-color-primary .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn-check:checked + .btn.btn-active-color-primary .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-color-primary .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-primary:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-primary:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-primary:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-primary.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-primary.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-color-primary .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-color-primary.dropdown-toggle:after, .btn-check:active + .btn.btn-active-color-primary.dropdown-toggle:after, .btn.btn-active-color-primary:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-primary:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-primary:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-primary.active.dropdown-toggle:after, .btn.btn-active-color-primary.show.dropdown-toggle:after, .show > .btn.btn-active-color-primary.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 
 .btn.btn-icon-primary i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn.btn-icon-primary .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn.btn-icon-primary .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-icon-primary.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-icon-primary i, .btn-check:active + .btn.btn-active-icon-primary i, .btn.btn-active-icon-primary:focus:not(.btn-active) i, .btn.btn-active-icon-primary:hover:not(.btn-active) i, .btn.btn-active-icon-primary:active:not(.btn-active) i, .btn.btn-active-icon-primary.active i, .btn.btn-active-icon-primary.show i, .show > .btn.btn-active-icon-primary i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-icon-primary .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-icon-primary .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-icon-primary .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn-check:checked + .btn.btn-active-icon-primary .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-icon-primary .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-primary.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-icon-primary .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-icon-primary.dropdown-toggle:after, .btn-check:active + .btn.btn-active-icon-primary.dropdown-toggle:after, .btn.btn-active-icon-primary:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-primary:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-primary:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-primary.active.dropdown-toggle:after, .btn.btn-active-icon-primary.show.dropdown-toggle:after, .show > .btn.btn-active-icon-primary.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 
 .btn.btn-text-primary {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-text-primary, .btn-check:active + .btn.btn-active-text-primary, .btn.btn-active-text-primary:focus:not(.btn-active), .btn.btn-active-text-primary:hover:not(.btn-active), .btn.btn-active-text-primary:active:not(.btn-active), .btn.btn-active-text-primary.active, .btn.btn-active-text-primary.show, .show > .btn.btn-active-text-primary {
-  color: #20D489;
+  color: #435B77;
 }
 
 .btn.btn-color-secondary {
@@ -38890,137 +38890,137 @@ a:hover {
 }
 
 .btn.btn-color-success {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn.btn-color-success i {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn.btn-color-success .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .btn.btn-color-success .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-color-success.dropdown-toggle:after {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-color-success, .btn-check:active + .btn.btn-active-color-success, .btn.btn-active-color-success:focus:not(.btn-active), .btn.btn-active-color-success:hover:not(.btn-active), .btn.btn-active-color-success:active:not(.btn-active), .btn.btn-active-color-success.active, .btn.btn-active-color-success.show, .show > .btn.btn-active-color-success {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-color-success i, .btn-check:active + .btn.btn-active-color-success i, .btn.btn-active-color-success:focus:not(.btn-active) i, .btn.btn-active-color-success:hover:not(.btn-active) i, .btn.btn-active-color-success:active:not(.btn-active) i, .btn.btn-active-color-success.active i, .btn.btn-active-color-success.show i, .show > .btn.btn-active-color-success i {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-color-success .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-color-success .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-success:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-success:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-success:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-success.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-success.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-color-success .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-color-success .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-color-success .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-success:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-success:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-success:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-success.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-success.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-color-success .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-color-success.dropdown-toggle:after, .btn-check:active + .btn.btn-active-color-success.dropdown-toggle:after, .btn.btn-active-color-success:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-success:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-success:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-success.active.dropdown-toggle:after, .btn.btn-active-color-success.show.dropdown-toggle:after, .show > .btn.btn-active-color-success.dropdown-toggle:after {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 
 .btn.btn-icon-success i {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn.btn-icon-success .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .btn.btn-icon-success .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-icon-success.dropdown-toggle:after {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-icon-success i, .btn-check:active + .btn.btn-active-icon-success i, .btn.btn-active-icon-success:focus:not(.btn-active) i, .btn.btn-active-icon-success:hover:not(.btn-active) i, .btn.btn-active-icon-success:active:not(.btn-active) i, .btn.btn-active-icon-success.active i, .btn.btn-active-icon-success.show i, .show > .btn.btn-active-icon-success i {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-icon-success .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-icon-success .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-success:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-success:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-success:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-success.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-success.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-icon-success .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-icon-success .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-icon-success .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-success:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-success:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-success:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-success.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-success.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-icon-success .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-icon-success.dropdown-toggle:after, .btn-check:active + .btn.btn-active-icon-success.dropdown-toggle:after, .btn.btn-active-icon-success:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-success:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-success:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-success.active.dropdown-toggle:after, .btn.btn-active-icon-success.show.dropdown-toggle:after, .show > .btn.btn-active-icon-success.dropdown-toggle:after {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 
 .btn.btn-text-success {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 .btn-check:checked + .btn.btn-active-text-success, .btn-check:active + .btn.btn-active-text-success, .btn.btn-active-text-success:focus:not(.btn-active), .btn.btn-active-text-success:hover:not(.btn-active), .btn.btn-active-text-success:active:not(.btn-active), .btn.btn-active-text-success.active, .btn.btn-active-text-success.show, .show > .btn.btn-active-text-success {
-  color: #00B2FF;
+  color: #7ea6c4;
 }
 
 .btn.btn-color-info {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn.btn-color-info i {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn.btn-color-info .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .btn.btn-color-info .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-color-info.dropdown-toggle:after {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn-check:checked + .btn.btn-active-color-info, .btn-check:active + .btn.btn-active-color-info, .btn.btn-active-color-info:focus:not(.btn-active), .btn.btn-active-color-info:hover:not(.btn-active), .btn.btn-active-color-info:active:not(.btn-active), .btn.btn-active-color-info.active, .btn.btn-active-color-info.show, .show > .btn.btn-active-color-info {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn-check:checked + .btn.btn-active-color-info i, .btn-check:active + .btn.btn-active-color-info i, .btn.btn-active-color-info:focus:not(.btn-active) i, .btn.btn-active-color-info:hover:not(.btn-active) i, .btn.btn-active-color-info:active:not(.btn-active) i, .btn.btn-active-color-info.active i, .btn.btn-active-color-info.show i, .show > .btn.btn-active-color-info i {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn-check:checked + .btn.btn-active-color-info .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-color-info .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-info:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-info:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-info:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-info.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-color-info.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-color-info .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .btn-check:checked + .btn.btn-active-color-info .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-color-info .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-info:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-info:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-info:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-info.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-color-info.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-color-info .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-color-info.dropdown-toggle:after, .btn-check:active + .btn.btn-active-color-info.dropdown-toggle:after, .btn.btn-active-color-info:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-info:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-info:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-color-info.active.dropdown-toggle:after, .btn.btn-active-color-info.show.dropdown-toggle:after, .show > .btn.btn-active-color-info.dropdown-toggle:after {
-  color: #5710B2;
+  color: #84924f;
 }
 
 .btn.btn-icon-info i {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn.btn-icon-info .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .btn.btn-icon-info .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-icon-info.dropdown-toggle:after {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn-check:checked + .btn.btn-active-icon-info i, .btn-check:active + .btn.btn-active-icon-info i, .btn.btn-active-icon-info:focus:not(.btn-active) i, .btn.btn-active-icon-info:hover:not(.btn-active) i, .btn.btn-active-icon-info:active:not(.btn-active) i, .btn.btn-active-icon-info.active i, .btn.btn-active-icon-info.show i, .show > .btn.btn-active-icon-info i {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn-check:checked + .btn.btn-active-icon-info .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-icon-info .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-info:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-info:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-info:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-info.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-icon-info.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-icon-info .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .btn-check:checked + .btn.btn-active-icon-info .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-icon-info .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-info:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-info:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-info:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-info.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-icon-info.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-icon-info .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-icon-info.dropdown-toggle:after, .btn-check:active + .btn.btn-active-icon-info.dropdown-toggle:after, .btn.btn-active-icon-info:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-info:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-info:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-icon-info.active.dropdown-toggle:after, .btn.btn-active-icon-info.show.dropdown-toggle:after, .show > .btn.btn-active-icon-info.dropdown-toggle:after {
-  color: #5710B2;
+  color: #84924f;
 }
 
 .btn.btn-text-info {
-  color: #5710B2;
+  color: #84924f;
 }
 .btn-check:checked + .btn.btn-active-text-info, .btn-check:active + .btn.btn-active-text-info, .btn.btn-active-text-info:focus:not(.btn-active), .btn.btn-active-text-info:hover:not(.btn-active), .btn.btn-active-text-info:active:not(.btn-active), .btn.btn-active-text-info.active, .btn.btn-active-text-info.show, .show > .btn.btn-active-text-info {
-  color: #5710B2;
+  color: #84924f;
 }
 
 .btn.btn-color-warning {
@@ -40259,7 +40259,7 @@ a:hover {
   border-style: dashed;
 }
 .btn-check:checked + .btn.btn-outline.btn-outline-dashed, .btn-check:active + .btn.btn-outline.btn-outline-dashed, .btn.btn-outline.btn-outline-dashed:focus:not(.btn-active), .btn.btn-outline.btn-outline-dashed:hover:not(.btn-active), .btn.btn-outline.btn-outline-dashed:active:not(.btn-active), .btn.btn-outline.btn-outline-dashed.active, .btn.btn-outline.btn-outline-dashed.show, .show > .btn.btn-outline.btn-outline-dashed {
-  border-color: #20D489;
+  border-color: #435B77;
 }
 
 .btn.btn-outline.btn-outline-dashed.btn-outline-default {
@@ -40282,22 +40282,22 @@ a:hover {
   color: #7E8299;
 }
 .btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default, .btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default, .btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active), .btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active), .btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active), .btn.btn-outline.btn-outline-dashed.btn-outline-default.active, .btn.btn-outline.btn-outline-dashed.btn-outline-default.show, .show > .btn.btn-outline.btn-outline-dashed.btn-outline-default {
-  color: #20D489;
-  border-color: #20D489;
+  color: #435B77;
+  border-color: #435B77;
   background-color: #E4FFF4 !important;
 }
 .btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default i, .btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default i, .btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active) i, .btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active) i, .btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active) i, .btn.btn-outline.btn-outline-dashed.btn-outline-default.active i, .btn.btn-outline.btn-outline-dashed.btn-outline-default.show i, .show > .btn.btn-outline.btn-outline-dashed.btn-outline-default i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-outline.btn-outline-dashed.btn-outline-default.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default.dropdown-toggle:after, .btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default.dropdown-toggle:after, .btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active).dropdown-toggle:after, .btn.btn-outline.btn-outline-dashed.btn-outline-default.active.dropdown-toggle:after, .btn.btn-outline.btn-outline-dashed.btn-outline-default.show.dropdown-toggle:after, .show > .btn.btn-outline.btn-outline-dashed.btn-outline-default.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 
 code:not([class*=language-]) {
@@ -40487,10 +40487,10 @@ code:not([class*=language-]) {
   background-color: #EFF2F5;
 }
 .form-check.form-check-solid .form-check-input:checked {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .form-check.form-check-success .form-check-input:checked {
-  background-color: #00B2FF;
+  background-color: #7ea6c4;
 }
 .form-check.form-check-danger .form-check-input:checked {
   background-color: #F1416C;
@@ -42132,7 +42132,7 @@ code:not([class*=language-]) {
   color: #A1A5B7;
 }
 .popover .popover-dismiss:hover i {
-  color: #20D489;
+  color: #435B77;
 }
 .popover .popover-dismiss + .popover-header {
   padding-right: 2.75rem;
@@ -42214,11 +42214,11 @@ code:not([class*=language-]) {
   justify-content: center;
 }
 .accordion.accordion-icon-toggle .accordion-icon i {
-  color: #20D489;
+  color: #435B77;
 }
 .accordion.accordion-icon-toggle .accordion-icon .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .accordion.accordion-icon-toggle .accordion-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -45263,16 +45263,16 @@ code:not([class*=language-]) {
   border-color: #F5F8FA;
 }
 .pulse.pulse-primary .pulse-ring {
-  border-color: #20D489;
+  border-color: #435B77;
 }
 .pulse.pulse-secondary .pulse-ring {
   border-color: #E4E6EF;
 }
 .pulse.pulse-success .pulse-ring {
-  border-color: #00B2FF;
+  border-color: #7ea6c4;
 }
 .pulse.pulse-info .pulse-ring {
-  border-color: #5710B2;
+  border-color: #84924f;
 }
 .pulse.pulse-warning .pulse-ring {
   border-color: #FFC700;
@@ -45366,7 +45366,7 @@ code:not([class*=language-]) {
   right: 20px;
   cursor: pointer;
   z-index: 100;
-  background-color: #20D489;
+  background-color: #435B77;
   box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075);
   opacity: 0;
   transition: color 0.2s ease, background-color 0.2s ease;
@@ -45456,7 +45456,7 @@ code:not([class*=language-]) {
 }
 .svg-icon.svg-icon-primary svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .svg-icon.svg-icon-primary svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -45477,14 +45477,14 @@ code:not([class*=language-]) {
 }
 .svg-icon.svg-icon-success svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #00B2FF;
+  fill: #7ea6c4;
 }
 .svg-icon.svg-icon-success svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .svg-icon.svg-icon-info svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #5710B2;
+  fill: #84924f;
 }
 .svg-icon.svg-icon-info svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
@@ -46471,11 +46471,11 @@ code:not([class*=language-]) {
 
 .badge-primary {
   color: #FFFFFF;
-  background-color: #20D489;
+  background-color: #435B77;
 }
 
 .badge-light-primary {
-  color: #20D489;
+  color: #435B77;
   background-color: #E4FFF4;
 }
 
@@ -46490,21 +46490,21 @@ code:not([class*=language-]) {
 
 .badge-success {
   color: #FFFFFF;
-  background-color: #00B2FF;
+  background-color: #7ea6c4;
 }
 
 .badge-light-success {
-  color: #00B2FF;
+  color: #7ea6c4;
   background-color: #F1FAFF;
 }
 
 .badge-info {
   color: #FFFFFF;
-  background-color: #5710B2;
+  background-color: #84924f;
 }
 
 .badge-light-info {
-  color: #5710B2;
+  color: #84924f;
   background-color: #F6F1FC;
 }
 
@@ -46989,7 +46989,7 @@ label.rating-label:hover ~ .rating-label > .svg-icon svg:hover [fill]:not(.perma
 }
 .stepper.stepper-pills .stepper-item .stepper-icon .stepper-number {
   font-weight: 600;
-  color: #20D489 !important;
+  color: #435B77 !important;
   font-size: 1.25rem;
 }
 .stepper.stepper-pills .stepper-item .stepper-label {
@@ -47011,10 +47011,10 @@ label.rating-label:hover ~ .rating-label > .svg-icon svg:hover [fill]:not(.perma
 }
 .stepper.stepper-pills .stepper-item.current .stepper-icon {
   transition: color 0.2s ease, background-color 0.2s ease;
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .stepper.stepper-pills .stepper-item.current .stepper-icon .stepper-check {
-  color: #20D489;
+  color: #435B77;
   display: none;
 }
 .stepper.stepper-pills .stepper-item.current .stepper-icon .stepper-number {
@@ -47032,7 +47032,7 @@ label.rating-label:hover ~ .rating-label > .svg-icon svg:hover [fill]:not(.perma
   background-color: #E4FFF4;
 }
 .stepper.stepper-pills .stepper-item.current:last-child .stepper-icon .stepper-check, .stepper.stepper-pills .stepper-item.completed .stepper-icon .stepper-check {
-  color: #20D489 !important;
+  color: #435B77 !important;
   display: inline-block;
 }
 .stepper.stepper-pills .stepper-item.current:last-child .stepper-icon .stepper-number, .stepper.stepper-pills .stepper-item.completed .stepper-icon .stepper-number {
@@ -47105,7 +47105,7 @@ label.rating-label:hover ~ .rating-label > .svg-icon svg:hover [fill]:not(.perma
   padding: 5px 10px;
   position: absolute;
   z-index: 1;
-  background-color: #20D489;
+  background-color: #435B77;
   box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.1);
   color: #FFFFFF;
   top: 50%;
@@ -47122,7 +47122,7 @@ label.rating-label:hover ~ .rating-label > .svg-icon svg:hover [fill]:not(.perma
   left: 0;
 }
 .ribbon .ribbon-label:after {
-  border-color: #0c4f33;
+  border-color: #0c1015;
 }
 .ribbon-vertical .ribbon-label {
   padding: 5px 10px;
@@ -47420,11 +47420,11 @@ label.rating-label:hover ~ .rating-label > .svg-icon svg:hover [fill]:not(.perma
   background-color: #E4FFF4;
 }
 .stepper.stepper-1 .stepper-nav .stepper-item.current .stepper-icon .stepper-check {
-  color: #20D489;
+  color: #435B77;
   display: none;
 }
 .stepper.stepper-1 .stepper-nav .stepper-item.current .stepper-icon .stepper-number {
-  color: #20D489;
+  color: #435B77;
 }
 .stepper.stepper-1 .stepper-nav .stepper-item.current .stepper-label .stepper-title {
   color: #181C32;
@@ -47437,7 +47437,7 @@ label.rating-label:hover ~ .rating-label > .svg-icon svg:hover [fill]:not(.perma
   background-color: #E4FFF4;
 }
 .stepper.stepper-1 .stepper-nav .stepper-item.current:last-child .stepper-icon .stepper-check, .stepper.stepper-1 .stepper-nav .stepper-item.completed .stepper-icon .stepper-check {
-  color: #20D489;
+  color: #435B77;
   display: inline-block;
 }
 .stepper.stepper-1 .stepper-nav .stepper-item.current:last-child .stepper-icon .stepper-number, .stepper.stepper-1 .stepper-nav .stepper-item.completed .stepper-icon .stepper-number {
@@ -47563,58 +47563,58 @@ label.rating-label:hover ~ .rating-label > .svg-icon svg:hover [fill]:not(.perma
 }
 
 .btn.btn-accent {
-  color: #20D489;
+  color: #435B77;
   border-color: #F9F2E7;
   background-color: #F9F2E7;
 }
 .btn.btn-accent i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn.btn-accent .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn.btn-accent .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn.btn-accent.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-accent, .btn-check:active + .btn.btn-accent, .btn.btn-accent:focus:not(.btn-active), .btn.btn-accent:hover:not(.btn-active), .btn.btn-accent:active:not(.btn-active), .btn.btn-accent.active, .btn.btn-accent.show, .show > .btn.btn-accent {
-  color: #20D489;
+  color: #435B77;
   border-color: #f3e5cf;
   background-color: #f3e5cf !important;
 }
 .btn-check:checked + .btn.btn-accent i, .btn-check:active + .btn.btn-accent i, .btn.btn-accent:focus:not(.btn-active) i, .btn.btn-accent:hover:not(.btn-active) i, .btn.btn-accent:active:not(.btn-active) i, .btn.btn-accent.active i, .btn.btn-accent.show i, .show > .btn.btn-accent i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-accent .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-accent .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-accent:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-accent:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-accent:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-accent.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-accent.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-accent .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn-check:checked + .btn.btn-accent .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-accent .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-accent:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-accent:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-accent:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-accent.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-accent.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-accent .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-accent.dropdown-toggle:after, .btn-check:active + .btn.btn-accent.dropdown-toggle:after, .btn.btn-accent:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-accent:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-accent:active:not(.btn-active).dropdown-toggle:after, .btn.btn-accent.active.dropdown-toggle:after, .btn.btn-accent.show.dropdown-toggle:after, .show > .btn.btn-accent.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-accent, .btn-check:active + .btn.btn-active-accent, .btn.btn-active-accent:focus:not(.btn-active), .btn.btn-active-accent:hover:not(.btn-active), .btn.btn-active-accent:active:not(.btn-active), .btn.btn-active-accent.active, .btn.btn-active-accent.show, .show > .btn.btn-active-accent {
-  color: #20D489;
+  color: #435B77;
   border-color: #F9F2E7;
   background-color: #F9F2E7 !important;
 }
 .btn-check:checked + .btn.btn-active-accent i, .btn-check:active + .btn.btn-active-accent i, .btn.btn-active-accent:focus:not(.btn-active) i, .btn.btn-active-accent:hover:not(.btn-active) i, .btn.btn-active-accent:active:not(.btn-active) i, .btn.btn-active-accent.active i, .btn.btn-active-accent.show i, .show > .btn.btn-active-accent i {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-accent .svg-icon svg [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-accent .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-accent:focus:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-accent:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-accent:active:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-accent.active .svg-icon svg [fill]:not(.permanent):not(g), .btn.btn-active-accent.show .svg-icon svg [fill]:not(.permanent):not(g), .show > .btn.btn-active-accent .svg-icon svg [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
-  fill: #20D489;
+  fill: #435B77;
 }
 .btn-check:checked + .btn.btn-active-accent .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn-check:active + .btn.btn-active-accent .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-accent:focus:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-accent:hover:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-accent:active:not(.btn-active) .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-accent.active .svg-icon svg:hover [fill]:not(.permanent):not(g), .btn.btn-active-accent.show .svg-icon svg:hover [fill]:not(.permanent):not(g), .show > .btn.btn-active-accent .svg-icon svg:hover [fill]:not(.permanent):not(g) {
   transition: fill 0.3s ease;
 }
 .btn-check:checked + .btn.btn-active-accent.dropdown-toggle:after, .btn-check:active + .btn.btn-active-accent.dropdown-toggle:after, .btn.btn-active-accent:focus:not(.btn-active).dropdown-toggle:after, .btn.btn-active-accent:hover:not(.btn-active).dropdown-toggle:after, .btn.btn-active-accent:active:not(.btn-active).dropdown-toggle:after, .btn.btn-active-accent.active.dropdown-toggle:after, .btn.btn-active-accent.show.dropdown-toggle:after, .show > .btn.btn-active-accent.dropdown-toggle:after {
-  color: #20D489;
+  color: #435B77;
 }
 .btn-check:checked + .btn.btn-active-bg-accent, .btn-check:active + .btn.btn-active-bg-accent, .btn.btn-active-bg-accent:focus:not(.btn-active), .btn.btn-active-bg-accent:hover:not(.btn-active), .btn.btn-active-bg-accent:active:not(.btn-active), .btn.btn-active-bg-accent.active, .btn.btn-active-bg-accent.show, .show > .btn.btn-active-bg-accent {
   border-color: #F9F2E7;
@@ -47973,7 +47973,7 @@ body {
   display: none;
 }
 .sidebar .sidebar-nav .nav-link.active {
-  background-color: #20D489;
+  background-color: #435B77;
   height: 85px;
   width: 70px;
   transition: color 0.2s ease, background-color 0.2s ease;
@@ -47995,7 +47995,7 @@ body {
   color: #A06BE7;
 }
 .sidebar .sidebar-toolbar .btn:focus, .sidebar .sidebar-toolbar .btn:hover {
-  background-color: #20D489;
+  background-color: #435B77;
 }
 .sidebar .sidebar-toolbar .btn:focus span, .sidebar .sidebar-toolbar .btn:hover span {
   color: #FFFFFF;

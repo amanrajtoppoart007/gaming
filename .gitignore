@@ -16,3 +16,5 @@ storage/*.key
 Homestead.yaml
 Homestead.json
 /.vagrant
+.idea/laravel-plugin.xml
+.idea/watcherTasks.xml

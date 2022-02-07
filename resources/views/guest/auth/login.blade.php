@@ -54,8 +54,9 @@
 							<!--begin::Action-->
 							<div class="pb-lg-0 pb-5">
 								<button type="submit" id="kt_login_signin_form_submit_button" class="btn btn-primary fw-bolder fs-6 px-8 py-4 my-3 me-3">Sign In</button>
-								<button type="button" class="btn btn-light-primary fw-bolder px-8 py-4 my-3 fs-6">
-								<img src="assets/media/svg/brand-logos/google-icon.svg" class="w-20px h-20px me-3" alt="" />Sign in with Google</button>
+								{{--<button type="button" class="btn btn-light-primary fw-bolder px-8 py-4 my-3 fs-6">
+								<img src="{{asset('assets/media/svg/brand-logos/google-icon.svg')}}" class="w-20px h-20px me-3" alt="" />Sign in with Google
+                                </button>--}}
 							</div>
 							<!--end::Action-->
 						</form>

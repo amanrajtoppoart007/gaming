@@ -4,8 +4,6 @@ namespace App\Http\Controllers\User;
 
 use App\Models\Puzzle;
 use App\Models\User;
-use App\Models\UserPuzzle;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
@@ -35,7 +33,7 @@ class HomeController extends Controller
         $isExist = Puzzle::orderBy('level','ASC')->first();
         if(!$isExist)
         {
-            abort(404);
+            abort(404,"No puzzle in the game yet,please stay tune");
         }
 
         $userPuzzle = User::where(['id'=>auth()->user()->id])->first()->puzzles()->orderBy('level','DESC')->first();

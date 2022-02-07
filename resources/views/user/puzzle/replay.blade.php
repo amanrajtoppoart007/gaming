@@ -18,9 +18,10 @@
                             <div class="col-md-6">
                                 <img src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
                                      class="mw-500 w-500px"/>
-                                <span>
+                                <br/>
+                                 <div class="mt-10 text-dark fw-bold">
                                     {{$puzzle->description}}
-                                </span>
+                                 </div>
                             </div>
 
                             <div class="card shadow-none w-auto  w-lg-auto ml-auto">
@@ -73,6 +74,7 @@
                                 <button id="check_answer" class="btn btn-lg btn-primary btn-hover-scale me-5">Check
                                     Answer
                                 </button>
+                                 <a href="{{route('home')}}"  class="btn btn-lg btn-info btn-hover-scale me-5">Home</a>
                             </div>
                             <div class="col-md-4">
                                 <div id="timerProgressBar" class="timer-progress-bar">

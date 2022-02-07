@@ -26,6 +26,7 @@ class PuzzleController extends Controller
 
     public function index()
     {
+
          $list = Puzzle::all();
          $i=0;
          $puzzles = [];
@@ -47,9 +48,10 @@ class PuzzleController extends Controller
             {
                  $puzzles[$i]['is_locked'] = 'locked';
             }
+             $puzzles[$i]['user_score'] = auth()->user()->user_score;
 
-            $puzzles[$i]['solutions'] = $puzzle->solutions;
-            $puzzles[$i]['question'] = $puzzle->question;
+            $puzzles[$i]['solutions'] = $puzzle->solutions?->preview;
+            $puzzles[$i]['question'] = $puzzle->question?->preview;
             $i++;
          }
          return view("user.puzzle.index",compact('puzzles'));
@@ -86,6 +88,37 @@ class PuzzleController extends Controller
 
 
         return view("user.puzzle.view",compact('puzzle'));
+    }
+
+     /**
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+
+    public function replay($id):\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+    {
+        $puzzle = Puzzle::with('options')->find($id);
+
+        $check = UserPuzzle::where([
+            'user_id'=>auth()->user()->id,
+            'puzzle_id'=>$id
+        ])->first();
+
+        if ($check) {
+            $check->update([
+                'started_at' => now(),
+                'attempts' => $check->attempts + 1,
+            ]);
+        } else {
+            UserPuzzle::create([
+                'user_id' => auth()->user()->id,
+                'puzzle_id' => $id,
+                'attempts' => 1,
+                'started_at' => now(),
+                'is_solved' => '1'
+            ]);
+        }
+        return view("user.puzzle.replay",compact('puzzle'));
     }
 
     /**

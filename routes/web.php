@@ -26,6 +26,7 @@ Route::prefix('puzzle')->as('puzzle.')->group(function () {
    Route::get('/view/{id}', [App\Http\Controllers\User\PuzzleController::class, 'view'])->name('view');
    Route::post('/check', [App\Http\Controllers\User\PuzzleController::class, 'check'])->name('check');
    Route::get('/result', [App\Http\Controllers\User\PuzzleController::class, 'result'])->name('result');
+   Route::get('/replay/{id}', [App\Http\Controllers\User\PuzzleController::class, 'replay'])->name('replay');
 });
 
 

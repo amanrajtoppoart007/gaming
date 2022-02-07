@@ -209,7 +209,7 @@ class PuzzleController extends Controller
             'user_id'=>auth()->user()->id,
             'is_solved'=>1,
         ])->sum('time_taken');
-        $rating = $score/$count;
+        $rating = $score/($count?:1);
         $maxScore = $count * 3;
         $user = auth()->user();
         $ratingHtml = $this->formatScore($rating);

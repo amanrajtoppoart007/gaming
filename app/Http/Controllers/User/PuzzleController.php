@@ -26,7 +26,32 @@ class PuzzleController extends Controller
 
     public function index()
     {
-         $puzzles = Puzzle::all();
+         $list = Puzzle::all();
+         $i=0;
+         $puzzles = [];
+         foreach($list as $puzzle)
+         {
+            $puzzles[$i]['id'] = $puzzle->id;
+            $puzzles[$i]['level'] = $puzzle->level;
+            $userPuzzle = UserPuzzle::where(['user_id'=>auth()->user()->id])->get()->pluck('puzzle_id')->toArray();
+
+            if($userPuzzle)
+            {
+               $puzzles[$i]['is_locked'] = in_array($puzzle->id,$userPuzzle)?'unlocked':'locked';
+            }
+            else if($puzzle->level=='1')
+            {
+                  $puzzles[$i]['is_locked'] = 'unlocked';
+            }
+            else
+            {
+                 $puzzles[$i]['is_locked'] = 'locked';
+            }
+
+            $puzzles[$i]['solutions'] = $puzzle->solutions;
+            $puzzles[$i]['question'] = $puzzle->question;
+            $i++;
+         }
          return view("user.puzzle.index",compact('puzzles'));
     }
 

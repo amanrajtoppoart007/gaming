@@ -15,8 +15,8 @@
 
                         <div class="d-flex  flex-column flex-md-row flex-lg-column flex-xxl-row">
                             <div class="col-md-6">
-                                @if($puzzle->questions->preview)
-                                    <img src="{{$puzzle->questions->preview}}" alt=""
+                                @if($puzzle->question->preview)
+                                    <img src="{{$puzzle->question->preview}}" alt=""
                                          class="mw-500 w-500px"/>
                                 @endif
                                  <br/>

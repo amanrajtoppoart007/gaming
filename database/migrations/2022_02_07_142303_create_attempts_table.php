@@ -15,6 +15,10 @@ class CreateAttemptsTable extends Migration
     {
         Schema::create('attempts', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("user_id");
+            $table->unsignedBigInteger("puzzle_id");
+            $table->integer("attempt")->nullable();
+            $table->string("token")->nullable();
             $table->timestamps();
         });
     }

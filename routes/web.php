@@ -22,6 +22,7 @@ Route::get('/about', [App\Http\Controllers\WelcomeController::class, 'about'])->
 
 
 Route::prefix('puzzle')->as('puzzle.')->group(function () {
+   Route::get('/list', [App\Http\Controllers\User\PuzzleController::class, 'index'])->name('index');
    Route::get('/view/{id}', [App\Http\Controllers\User\PuzzleController::class, 'view'])->name('view');
    Route::post('/check', [App\Http\Controllers\User\PuzzleController::class, 'check'])->name('check');
    Route::get('/result', [App\Http\Controllers\User\PuzzleController::class, 'result'])->name('result');

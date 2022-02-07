@@ -21,7 +21,8 @@ class Puzzle extends Model implements HasMedia
 
     protected $appends = [
         "question",
-        "solutions"// important or it will collide with solution model
+        "solutions",
+        // important or it will collide with solution model
     ];
 
     public function options()

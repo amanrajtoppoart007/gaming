@@ -1,37 +1,21 @@
 @extends("user.layout.app")
 @section("content")
-
-    <div class="mb-10">
-        <div class="d-flex justify-content-between align-items-center mb-7">
-            <h2 class="fw-bolder text-dark fs-2 mb-0">Puzzles</h2>
-            <a href="#" class="btn btn-light-primary btn-sm fw-bolder">View All</a>
-        </div>
-    </div>
-    <div class="row g-5 g-xxl-8">
-        @foreach($puzzles as $puzzle)
-            <div class="col-md-4 col-xxl-4 col-lg-12">
-                <div class="card shadow-none">
-                    <div class="card-body p-0">
-                        <div class="overlay rounded overflow-hidden">
-                            <div class="overlay-wrapper rounded bg-light text-center">
-                                @if($puzzle->getMedia('questions')->last())
-                                    <img src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
-                                         class="mw-100 w-200px"/>
-                                @endif
-                            </div>
-                            <div class="overlay-layer">
-                                <a href="{{route('puzzle.view',$puzzle->id)}}"
-                                   class="btn fw-bolder btn-sm btn-primary me-2">Solve</a>
-                            </div>
-                        </div>
-                        <div class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                            <a href="{{route('puzzle.view',$puzzle->id)}}"
-                               class="fs-4 fw-bolder text-gray-800 text-hover-primary mb-1">Level {{$puzzle->level}}</a>
-                        </div>
+    <div class="card card-stretch mb-5 mb-xxl-8">
+        <div class="card-body">
+            <div class="pt-9">
+                <div class="row">
+                    @foreach($puzzles as $puzzle)
+                    <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 me-n2 mb-5 text-center justify-content-center">
+                        <button type="button"
+                                class="btn btn-outline btn-bg-primary btn-color-info-600  border-dashed border-active border-primary px-6 py-7 text-start w-100 min-w-150px text-center">
+                                 <span class="text-white fw-boldest">Level {{$puzzle->level}}</span>
+                                 <br/>
+                                 <span class="text-white fw-boldest"></span>
+                        </button>
                     </div>
+                    @endforeach
                 </div>
-
             </div>
-        @endforeach
+        </div>
     </div>
 @endsection

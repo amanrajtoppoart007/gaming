@@ -63,6 +63,13 @@ class User extends Authenticatable
 
     public function getUserScoreAttribute()
     {
-        return ($this->score()->sum('score'))/(Puzzle::count()??1);
+        $sum = $this->score()->sum('score');
+        if($sum)
+        {
+            $count = Puzzle::count();
+            $dividend = $count?$count:1;
+            return $sum/$dividend;
+        }
+
     }
 }

@@ -70,6 +70,6 @@ class User extends Authenticatable
             $dividend = $count?$count:1;
             return $sum/$dividend;
         }
-
+        return 0;
     }
 }

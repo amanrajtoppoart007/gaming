@@ -15,8 +15,10 @@
 
                         <div class="d-flex  flex-column flex-md-row flex-lg-column flex-xxl-row">
                             <div class="col-md-6">
-                                <img src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
-                                     class="mw-500 w-500px"/>
+                                @if($puzzle->questions->preview)
+                                    <img src="{{$puzzle->questions->preview}}" alt=""
+                                         class="mw-500 w-500px"/>
+                                @endif
                                  <br/>
                                 <div class="mt-10 text-dark fw-bold">
                                     {{$puzzle->description}}

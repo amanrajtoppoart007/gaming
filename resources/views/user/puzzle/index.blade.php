@@ -12,6 +12,9 @@
                                  <span class="text-white fw-boldest">
                                      {{$puzzle['is_locked']=='locked'?'Locked':"Unlocked"}}
                                  </span>
+                            <span class="text-white fw-boldest">
+                                     {{$puzzle['question']}}
+                                 </span>
                         </button>
                     </div>
                     @endforeach

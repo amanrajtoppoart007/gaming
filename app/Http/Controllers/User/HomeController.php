@@ -32,6 +32,12 @@ class HomeController extends Controller
     public function index()
     {
 
+        $isExist = Puzzle::orderBy('level','ASC')->first();
+        if(!$isExist)
+        {
+            abort(404);
+        }
+
         $userPuzzle = User::where(['id'=>auth()->user()->id])->first()->puzzles()->orderBy('level','DESC')->first();
 
         if($userPuzzle)

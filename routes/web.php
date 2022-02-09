@@ -37,8 +37,10 @@ Route::post('/login', [App\Http\Controllers\AdminAuth\LoginController::class, 'l
 Route::post('/logout', [App\Http\Controllers\AdminAuth\LoginController::class, 'logout'])->name('logout');
 });
 
-Route::prefix('social')->as('admin.')->group(function(){
-Route::get('/{platform}/login', [App\Http\Controllers\Auth\SocialLoginController::class, 'index'])->name('social.login');
+//social login routes
+Route::prefix('auth')->as('auth.')->group(function(){
+Route::get('auth/redirect/{platform}', [App\Http\Controllers\Auth\SocialLoginController::class, 'index'])->name('login.redirect');
+Route::get('auth/callback/{platform}', [App\Http\Controllers\Auth\SocialLoginController::class, 'callback'])->name('login.callback');
 
 });
 

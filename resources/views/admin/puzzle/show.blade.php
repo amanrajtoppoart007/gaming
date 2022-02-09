@@ -45,7 +45,7 @@
                      <tr>
                          <td>{{$option->key+1}}</td>
                          <td>{{$option->option}}</td>
-                         <td>{{$puzzle->solution->option_id===$option->id?'Yes':'No'}}</td>
+                         <td>{{$puzzle->solution->option_id==$option->id?'Yes':'No'}}</td>
                      </tr>
                  @endforeach
                 </tbody>

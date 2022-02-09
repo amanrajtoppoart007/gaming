@@ -174,38 +174,39 @@
                     processData: false,
                     contentType: false,
                     success: function (result) {
-                        if (result?.status === 1) {
+                        if(result?.response==="success"||result?.response==='limit_crossed')
+                        {
                             const {data} = result;
-
-
                             $("#answer_message_view").text(result?.message);
 
-                            $("#nextPuzzleUrl").attr({href: data?.nextPuzzleUrl});
-                            $("#solutionImageView").attr({src: data?.image});
+                            $("#nextPuzzleUrl").attr({href:result?.response==='limit_crossed' ? window.location.href:data?.nextPuzzleUrl});
+                            $("#solutionImageView").attr({src:data?.image});
 
                             $("#user_score").html(data?.rating);
                             $("#started_at").text(data?.startedAt)
                             $("#completed_at").text(data?.completedAt);
                             $("#time_taken").text(data?.timeTaken);
                             $("#over_all_attempts").text(data?.overallAttempts);
+                            $("#nextPuzzleUrl").text(result?.response==='limit_crossed' ? 'Retry':'Next');
                             $("#nextPuzzleUrl").show();
                             $("#solutionImageView").show();
                             $("#puzzle_answer_response_view").show();
                             $("#answer_view_modal").modal("show");
 
 
-                        } else {
+                        }
+                        else
+                        {
                             Swal.fire({
-                                title: 'Error',
-                                text: result?.message,
-                                icon: "error",
-                                buttonsStyling: false,
-                                confirmButtonText: "Ok, got it!",
-                                customClass: {
-                                    confirmButton: "btn btn-primary"
-                                }
-                            });
-
+                                    title:'Error',
+                                     text: result?.message,
+                                     icon: "error",
+                                     buttonsStyling: false,
+                                     confirmButtonText: "Ok, got it!",
+                                     customClass: {
+                                         confirmButton: "btn btn-primary"
+                                     }
+                                 });
                         }
                     },
                     error: function (jqXHR, textStatus, errorThrown) {

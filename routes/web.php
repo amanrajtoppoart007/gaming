@@ -37,4 +37,9 @@ Route::post('/login', [App\Http\Controllers\AdminAuth\LoginController::class, 'l
 Route::post('/logout', [App\Http\Controllers\AdminAuth\LoginController::class, 'logout'])->name('logout');
 });
 
+Route::prefix('social')->as('admin.')->group(function(){
+Route::get('/{platform}/login', [App\Http\Controllers\Auth\SocialLoginController::class, 'index'])->name('social.login');
+
+});
+
 

@@ -165,6 +165,7 @@
                 const form = new FormData();
                 form.append('puzzle_id', {{$puzzle->id}});
                 form.append('option_id', $('input[name=answer]:checked').val());
+                 form.append("token",{{$token}});
                 $.ajax({
                     url: "{{route('puzzle.check')}}",
                     method: "POST",

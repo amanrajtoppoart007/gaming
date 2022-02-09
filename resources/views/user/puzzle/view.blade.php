@@ -168,6 +168,7 @@
                  const form = new FormData();
                  form.append('puzzle_id',{{$puzzle->id}});
                  form.append('option_id',$('input[name=answer]:checked').val());
+                 form.append("token",{{$token}});
                  $.ajax({
                      url: "{{route('puzzle.check')}}",
                      method:"POST",
@@ -177,15 +178,12 @@
                      contentType: false,
                      success:function(result)
                      {
-                        if(result?.status===1)
+                        if(result?.response==="success"||result?.response==='limit_crossed')
                         {
                                const {data} = result;
-
-
-
                             $("#answer_message_view").text(result?.message);
 
-                            $("#nextPuzzleUrl").attr({href:data?.nextPuzzleUrl});
+                            $("#nextPuzzleUrl").attr({href:result?.response==='limit_crossed' ? window.location.href:data?.nextPuzzleUrl});
                             $("#solutionImageView").attr({src:data?.image});
 
                             $("#user_score").html(data?.rating);
@@ -193,6 +191,7 @@
                             $("#completed_at").text(data?.completedAt);
                             $("#time_taken").text(data?.timeTaken);
                             $("#over_all_attempts").text(data?.overallAttempts);
+                            $("#nextPuzzleUrl").text(result?.response==='limit_crossed' ? 'Retry':'Next');
                             $("#nextPuzzleUrl").show();
                             $("#solutionImageView").show();
                             $("#puzzle_answer_response_view").show();
@@ -202,7 +201,7 @@
                         }
                         else
                         {
-                                Swal.fire({
+                            Swal.fire({
                                     title:'Error',
                                      text: result?.message,
                                      icon: "error",
@@ -212,7 +211,6 @@
                                          confirmButton: "btn btn-primary"
                                      }
                                  });
-
                         }
                      },
                      error:function(jqXHR, textStatus,errorThrown)

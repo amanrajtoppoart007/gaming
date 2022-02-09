@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Attempt;
 use App\Models\Puzzle;
 use App\Models\Score;
 use App\Models\Solution;
@@ -71,11 +72,27 @@ class PuzzleController extends Controller
             'puzzle_id'=>$id
         ])->first();
 
+
+        $token = now()->timestamp;
+
         if ($check) {
             $check->update([
                 'started_at' => now(),
                 'attempts' => $check->attempts + 1,
             ]);
+
+
+
+            Attempt::where([
+                'user_id' => auth()->user()->id,
+                'puzzle_id' => $id,
+                ])->update([
+                'user_id' => auth()->user()->id,
+                'puzzle_id' => $id,
+                'attempt'=>0,
+                'token' => $token
+        ]);
+
         } else {
             UserPuzzle::create([
                 'user_id' => auth()->user()->id,
@@ -84,10 +101,15 @@ class PuzzleController extends Controller
                 'started_at' => now(),
                 'is_solved' => '0'
             ]);
+            Attempt::create([
+                'user_id' => auth()->user()->id,
+                'puzzle_id' => $id,
+                'attempt' => 0,
+                'token' => $token
+            ]);
         }
 
-
-        return view("user.puzzle.view",compact('puzzle'));
+        return view("user.puzzle.view",compact('puzzle','token'));
     }
 
      /**
@@ -98,6 +120,7 @@ class PuzzleController extends Controller
     public function replay($id):\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
     {
         $puzzle = Puzzle::with('options')->find($id);
+         $token = now()->timestamp;
 
         $check = UserPuzzle::where([
             'user_id'=>auth()->user()->id,
@@ -109,6 +132,15 @@ class PuzzleController extends Controller
                 'started_at' => now(),
                 'attempts' => $check->attempts + 1,
             ]);
+            Attempt::where([
+                'user_id' => auth()->user()->id,
+                'puzzle_id' => $id,
+                ])->update([
+                'user_id' => auth()->user()->id,
+                'puzzle_id' => $id,
+                'attempt'=>0,
+                'token' => $token
+        ]);
         } else {
             UserPuzzle::create([
                 'user_id' => auth()->user()->id,
@@ -117,8 +149,14 @@ class PuzzleController extends Controller
                 'started_at' => now(),
                 'is_solved' => '1'
             ]);
+             Attempt::create([
+                'user_id' => auth()->user()->id,
+                'puzzle_id' => $id,
+                'attempt' => 0,
+                'token' => $token
+            ]);
         }
-        return view("user.puzzle.replay",compact('puzzle'));
+        return view("user.puzzle.replay",compact('puzzle','token'));
     }
 
     /**
@@ -139,8 +177,27 @@ class PuzzleController extends Controller
                       'user_id'=>auth()->user()->id,
                       'puzzle_id'=>$request->input('puzzle_id'),
                   ])->first();
+
+
             if($userPuzzle)
             {
+                $attempt = Attempt::where([
+                    'user_id' => auth()->user()->id,
+                    'puzzle_id' => $request->input('puzzle_id'),
+                    'token' => $request->input('token'),
+                ])->first();
+                if ($attempt->attempt == 3) {
+                    Score::create([
+                        'user_id' => auth()->user()->id,
+                        'puzzle_id' => $request->input('puzzle_id'),
+                        'score' => '0',
+                    ]);
+
+                    $result = ["status" => 0, "response" => "limit_crossed","data"=>$this->formatResponse(), "message" => "Sorry! you exhausted all your tries,reload the puzzle and try again"];
+                     return response()->json($result,200);
+                } else {
+                    $attempt->update(['attempt'=>$attempt->attempt+1]);
+                  }
                 $userPuzzle->update([
                     'completed_at' => now(),
                     'option_id'=>$request->input('option_id')
@@ -176,6 +233,7 @@ class PuzzleController extends Controller
                     $result = ["status" => 1, "response" => "success","data"=>$this->formatResponse(), "message" => "Yah! It is correct answer"];
 
                 } else {
+
                     $result = ["status" => 0, "response" => "error", "message" => "Oops! Wrong answer, please try again"];
                 }
             }

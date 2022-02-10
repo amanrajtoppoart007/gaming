@@ -46,7 +46,7 @@
 							<div class="fv-row mb-10">
 								<div class="d-flex justify-content-between mt-n5">
 									<label class="form-label fs-6 fw-bolder text-dark pt-5">Password</label>
-									<a href="#" class="text-primary fs-6 fw-bolder text-hover-primary pt-5" id="kt_login_signin_form_password_reset_button">Forgot Password ?</a>
+									{{--<a href="#" class="text-primary fs-6 fw-bolder text-hover-primary pt-5" id="kt_login_signin_form_password_reset_button">Forgot Password ?</a>--}}
 								</div>
 								<input class="form-control form-control-lg form-control-solid" type="password" name="password" autocomplete="off" />
 							</div>

@@ -38,4 +38,14 @@ class WelcomeController extends Controller
     {
         return view("guest.about");
     }
+
+    public function privacy()
+    {
+        return view('privacy');
+    }
+
+    public function terms()
+    {
+        return view('terms');
+    }
 }

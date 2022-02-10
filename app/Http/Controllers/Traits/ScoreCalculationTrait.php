@@ -11,10 +11,11 @@ trait ScoreCalculationTrait
             $from = date_create($start_time);
             $to = date_create($end_time);
             $difference = date_diff($from, $to);
-            $minutes = $difference->days * 24 * 60;
-            $minutes += $difference->h * 60;
-            $minutes += $difference->i;
-            return $minutes;
+            $seconds = $difference->days * 24 * 60*60;
+            $seconds += $difference->h * 60*60;
+            $seconds += $difference->i*60;
+            $seconds += $difference->s;
+            return $seconds/60;
         }
         catch (\Exception $exception)
         {

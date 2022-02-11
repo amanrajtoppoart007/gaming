@@ -25,10 +25,13 @@ class SocialLoginController extends Controller
                        Auth::login($user);
                        return redirect()->route("home");
                    } else {
-                       $newUser = array_merge($authUser, [
-                           'password' => Hash::make('password')
-                       ]);
-                       $newUser = User::create($newUser);
+
+                       $addNew = [
+                           'email'=>$authUser->getEmail(),
+                           'password'=>Hash::make('password'),
+                           'name'=>$authUser->getName(),
+                       ];
+                       $newUser = User::create($addNew);
                        Auth::login($newUser);
                        return redirect()->route("home");
 

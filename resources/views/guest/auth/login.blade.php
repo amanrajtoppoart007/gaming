@@ -35,6 +35,12 @@
 								<div class="text-muted fw-bold fs-3">New Here?
 								<a href="#" class="text-primary fw-bolder" id="kt_login_signin_form_singup_button">Create Account</a></div>
 							</div>
+
+                            @if(session('message'))
+                                    <div class="alert alert-info" role="alert">
+                                        {{ session('message') }}
+                                    </div>
+                            @endif
 							<!--begin::Title-->
 							<!--begin::Form group-->
 							<div class="fv-row mb-10">

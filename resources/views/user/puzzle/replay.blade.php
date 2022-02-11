@@ -114,6 +114,8 @@
                             <img id="solutionImageView" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}"
                                  alt=""
                                  class="mw-250 w-250px"/>
+                            <br/>
+                             <div class="text-success fw-bold"  id="solution_description_view"></div>
                         </div>
                         <div class="col">
                             <table id="puzzle_answer_response_view" class="table table-row-dashed">
@@ -187,6 +189,7 @@
                             $("#completed_at").text(data?.completedAt);
                             $("#time_taken").text(data?.timeTaken);
                             $("#over_all_attempts").text(data?.overallAttempts);
+                            $("#solution_description_view").text(data?.solution_description);
                             $("#nextPuzzleUrl").text(result?.response==='limit_crossed' ? 'Retry':'Next');
                             $("#nextPuzzleUrl").show();
                             $("#solutionImageView").show();

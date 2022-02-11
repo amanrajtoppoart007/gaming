@@ -19,6 +19,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
     <link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css"/>
+    <style>
+        .rating-color {
+            color: #fbc634 !important
+        }
+
+        .review-count {
+            font-weight: 400;
+            margin-bottom: 2px;
+            font-size: 24px !important
+        }
+
+        .small-ratings i {
+            color: #cecece
+        }
+    </style>
     @yield("css")
 </head>
 <body id="kt_body" class="page-loading-enabled page-loading">

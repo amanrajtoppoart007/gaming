@@ -16,7 +16,8 @@ class Puzzle extends Model implements HasMedia
     protected $fillable = [
         'level',
         'description',
-        'time_limit'
+        'time_limit',
+        'solution_description'
     ];
 
     protected $appends = [

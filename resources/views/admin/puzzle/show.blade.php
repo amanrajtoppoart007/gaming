@@ -17,6 +17,11 @@
             <div class="mb-10">
                 <p class="bi-text-paragraph">{{$puzzle->description}}</p>
             </div>
+
+            <h4 class="card-title">Solution Description</h4>
+            <div class="mb-10">
+                <p class="bi-text-paragraph">{{$puzzle->solution_description}}</p>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <h4 class="card-title">Question Image</h4>

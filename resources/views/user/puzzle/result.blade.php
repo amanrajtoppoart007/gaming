@@ -112,7 +112,7 @@
                                                                     <span class="text-primary d-block mb-n1">Ranking</span>
                                                                      <span
                                                                         class="font-weight-light fs-1 text-gray-800">
-														               <span class="fw-bolder fs-1 text-gray-800">  {{$timeTaken}} Position</span>
+														               <span class="fw-bolder fs-1 text-gray-800">None</span>
                                                                     </span>
                                                                 </div>
                                                                 <!--end::Text-->

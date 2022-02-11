@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Puzzle;
 use App\Models\Score;
 use App\Models\UserPuzzle;
 use App\Http\Controllers\Traits\UserPuzzleTrait;
@@ -15,22 +16,31 @@ class WelcomeController extends Controller
      */
      public function result($userId)
     {
+        $puzzles = Puzzle::all()->pluck('id')->toArray();
+        if(empty($puzzles))
+        {
+            return view("user.empty");
+        }
+
+        //then check score of the user with respect to puzzles
         $score = Score::where([
             'user_id'=>$userId,
-        ])->sum('score');
-        $count = Score::where([
-            'user_id'=>$userId,
-        ])->count();
+        ])->whereIn('puzzle_id',$puzzles)->sum('score');
+
+        //total puzzle count
+        $count = Puzzle::count();
+           //total time taken by user
         $timeTaken = UserPuzzle::where([
             'user_id'=>$userId,
             'is_solved'=>1,
-        ])->sum('time_taken');
-        $rating = $score/$count;
+        ])->whereIn('puzzle_id',$puzzles)->sum('time_taken');
+
+        //user rating
+        $rating = $score/($count?:1);
+         //max score
         $maxScore = $count * 3;
         $user = auth()->user();
         $ratingHtml = $this->formatScore($rating);
-
-        //$ranking = Score::where('')->sum();
         return view("guest.puzzle.result",compact('rating','score','maxScore','user','ratingHtml','timeTaken'));
     }
 

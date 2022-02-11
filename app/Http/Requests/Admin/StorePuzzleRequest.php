@@ -29,6 +29,7 @@ class StorePuzzleRequest extends FormRequest
         return [
             'level'=>'required|numeric',
             'description'=>'required',
+            'solution_description'=>'required',
             'question'=>'required',
             'solution'=>'required',
             'option.*'=>'required',

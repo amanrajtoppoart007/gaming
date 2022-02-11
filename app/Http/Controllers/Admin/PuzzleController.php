@@ -47,6 +47,7 @@ class PuzzleController extends Controller
             $puzzle = Puzzle::create([
                 'level'=>$request->input('level'),
                 'description'=>$request->input('description'),
+                'solution_description'=>$request->input('solution_description'),
                 'time_limit'=>6
             ]);
             foreach($request->input('option') as $key=>$value)
@@ -117,6 +118,7 @@ class PuzzleController extends Controller
             $puzzle = Puzzle::find($id);
             $puzzle->update([
                 'description'=>$request->input('description'),
+                 'solution_description'=>$request->input('solution_description'),
             ]);
             foreach($request->input('option') as $option)
             {

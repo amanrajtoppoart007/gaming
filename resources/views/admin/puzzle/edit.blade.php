@@ -28,9 +28,19 @@
                             <div class="row mb-5">
                                 <div class="col-md-6">
                                     <div>
-                                        <label for="description" class="required form-label">Description</label>
+                                        <label for="description" class="required form-label">Question Description</label>
                                         <textarea class="form-control" id="description" name="description"
                                                   aria-label="With textarea" rows="10">{{$puzzle->description}}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-5">
+                                <div class="col-md-6">
+                                    <div>
+                                        <label for="solution_description" class="required form-label">Solution Description</label>
+                                        <textarea class="form-control" id="solution_description" name="solution_description"
+                                                  aria-label="With textarea">{{$puzzle->solution_description}}</textarea>
                                     </div>
                                 </div>
                             </div>

@@ -30,6 +30,7 @@ class UpdatePuzzleRequest extends FormRequest
             'id'=>'required|numeric',
             'level'=>'required|numeric',
             'description'=>'required',
+             'solution_description'=>'required',
             'question'=>'nullable',
             'solution'=>'nullable',
             'option.*'=>'required',

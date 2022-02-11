@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ChangePasswordRequest;
 use App\Models\Admin;
+use App\Models\Puzzle;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -12,7 +14,15 @@ class HomeController extends Controller
 {
     public function index()
     {
-      return view("admin.home");
+        $puzzles = Puzzle::all();
+        $puzzle_count = $puzzles->count();
+        $puzzle_user=0;
+        foreach($puzzles as $puzzle)
+        {
+            $puzzle_user += $puzzle->users()->count();
+        }
+        $user_count = User::count();
+        return view("admin.home",compact("puzzle_count",'puzzle_user','user_count'));
     }
     public function password()
     {

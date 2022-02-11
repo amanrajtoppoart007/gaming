@@ -39,9 +39,9 @@ Route::post('/logout', [App\Http\Controllers\AdminAuth\LoginController::class, '
 
 //social login routes
 Route::prefix('auth')->as('auth.')->group(function(){
-Route::get('auth/redirect/{platform}', [App\Http\Controllers\Auth\SocialLoginController::class, 'index'])->name('login.redirect');
-Route::get('auth/callback/{platform}', [App\Http\Controllers\Auth\SocialLoginController::class, 'callback'])->name('login.callback');
-Route::get('auth/de-authorize/{platform}', [App\Http\Controllers\Auth\SocialLoginController::class, 'deAuthorize'])->name('login.callback');
+Route::get('/redirect/{platform}', [App\Http\Controllers\Auth\SocialLoginController::class, 'index'])->name('login.redirect');
+Route::get('/callback/{platform}', [App\Http\Controllers\Auth\SocialLoginController::class, 'callback'])->name('login.callback');
+Route::get('/de-authorize/{platform}', [App\Http\Controllers\Auth\SocialLoginController::class, 'deAuthorize'])->name('login.callback');
 
 });
 

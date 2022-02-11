@@ -1,5 +1,5 @@
 <!--begin::Aside-->
-<div id="kt_aside" class="aside bg-info" data-kt-drawer="true" data-kt-drawer-name="aside"
+<div id="kt_aside" class="aside bg-primary" data-kt-drawer="true" data-kt-drawer-name="aside"
      data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="70px"
      data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_toggler">
     <!--begin::Primary-->
@@ -7,8 +7,10 @@
         <!--begin::Logo-->
         <div class="aside-logo d-flex flex-column align-items-center flex-column-auto py-4 pt-lg-10 pb-lg-7"
              id="kt_aside_logo">
-            <a href="?page=index">
-                <img alt="Logo" src="{{asset('assets/media/logos/logo-compact.svg')}}" class="mh-50px"/>
+            <a class="text-center" href="{{route('admin.dashboard')}}">
+                <span class="text-white fw-boldest">Admin Panel</span>
+                 <br/>
+                <small class="text-white">v1.0.0</small>
             </a>
         </div>
         <!--end::Logo-->

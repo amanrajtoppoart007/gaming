@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\SocialLogin;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -32,6 +33,11 @@ class SocialLoginController extends Controller
                            'name'=>$authUser->getName(),
                        ];
                        $newUser = User::create($addNew);
+                       SocialLogin::updateOrCreate([
+                           'user_id'=>$newUser->id,
+                           'platform'=>$platform,
+                           'platform_id'=>$authUser->getId()
+                       ]);
                        Auth::login($newUser);
                        return redirect()->route("home");
 

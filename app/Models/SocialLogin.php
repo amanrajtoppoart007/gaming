@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class SocialLogin extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'platform',
+        'platform_id'
+    ];
 }

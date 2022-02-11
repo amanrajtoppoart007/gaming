@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
     <link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('assets/library/introjs/css/hopscotch.min.css')}}" rel="stylesheet" type="text/css"/>
     <style>
         .rating-color {
             color: #fbc634 !important
@@ -48,6 +49,7 @@
 <script src="{{asset('assets/js/custom/modals/select-location.js')}}"></script>
 <script src="{{asset('assets/js/custom/apps/chat/chat.js')}}"></script>
 <script src="{{asset('assets/js/custom/intro.js')}}"></script>
+<script src="{{asset('assets/library/introjs/js/hopscotch.min.js')}}"></script>
 @yield("script")
 </body>
 </html>

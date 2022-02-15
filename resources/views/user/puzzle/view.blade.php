@@ -94,7 +94,7 @@
 <div class="modal fade" tabindex="-1" id="answer_view_modal" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
-            <div class="modal-header bg-primary">
+            <div class="modal-header" style="background-color:#0bb56b;">
                 <h5 id="answer_title_view" class="modal-title text-white fw-bold">Success !</h5>
 
                 <!--begin::Close-->
@@ -106,7 +106,7 @@
 
             <div class="modal-body">
 
-                <div class="text-center fw-bold text-success mb-10" id="answer_message_view">Modal body text goes here.</div>
+                <div class="text-center fw-bold  mb-10" style="color:#0bb56b;" id="answer_message_view">#</div>
                 <div class="row">
                     <div class="col text-center">
                         <div class="row">
@@ -114,7 +114,13 @@
                                 <img id="solutionImageView" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
                                      class="mw-250 w-250px"/>
                             </div>
-                            <div class="col"><div class="text-success fw-boldest"  id="solution_description_view"></div></div>
+                            <div class="col">
+                                <div class="text-success fw-boldest"  id="solution_description_view"></div>
+                                <div class="mt-10">
+                                    <a class="fw-boldest" style="color:#0bb56b;" href="#" target="_blank"
+                                       id="solution_link">Click Here for more knowledge</a>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -198,6 +204,7 @@
                             $("#time_taken").text(data?.timeTaken);
                             $("#over_all_attempts").text(data?.overallAttempts);
                             $("#solution_description_view").text(data?.solution_description);
+                            $("#solution_link").attr({'href':data?.link});
                             $("#nextPuzzleUrl").text(result?.response==='limit_crossed' ? 'Retry':'Next');
                             $("#nextPuzzleUrl").show();
                             $("#solutionImageView").show();
@@ -237,8 +244,5 @@
              });
              progress(360, 360, $('#timerProgressBar'));
          });
-
-
-
     </script>
 @endsection

@@ -30,6 +30,7 @@ class StorePuzzleRequest extends FormRequest
             'level'=>'required|numeric',
             'description'=>'required',
             'solution_description'=>'required',
+             'link'=>'required',
             'question'=>'required',
             'solution'=>'required',
             'option.*'=>'required',

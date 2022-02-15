@@ -45,6 +45,15 @@
                                 </div>
                             </div>
 
+                             <div class="row mb-5">
+                                <div class="col-md-6">
+                                    <div>
+                                        <label for="link" class="required form-label">Explanation link</label>
+                                         <input type="text" class="form-control" id="link" name="link" value="{{$puzzle->link}}" placeholder=""/>
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <div class="row mb-5">
                                 <div class="col-md-6">

@@ -48,6 +48,7 @@ class PuzzleController extends Controller
                 'level'=>$request->input('level'),
                 'description'=>$request->input('description'),
                 'solution_description'=>$request->input('solution_description'),
+                'link'=>$request->input('link'),
                 'time_limit'=>6
             ]);
             foreach($request->input('option') as $key=>$value)
@@ -119,6 +120,7 @@ class PuzzleController extends Controller
             $puzzle->update([
                 'description'=>$request->input('description'),
                  'solution_description'=>$request->input('solution_description'),
+                 'link'=>$request->input('link'),
             ]);
             foreach($request->input('option') as $option)
             {

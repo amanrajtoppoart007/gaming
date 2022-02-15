@@ -9,7 +9,7 @@
 					<div class="d-flex flex-row-fluid flex-center flex-column-auto flex-column text-center mb-5">
 						<!--begin::Aside Logo-->
 						<a href="{{URL::to('/')}}" class="mb-6">
-							<img alt="Logo" src="{{asset('assets/media/logos/logo.png')}}" class="h-50px h-lg-75px" />
+							<img alt="Logo" src="{{asset('assets/media/logos/logo.png')}}" class="h-250px h-lg-150px" />
 						</a>
 						<!--end::Aside Logo-->
 						<!--begin::Aside Subtitle-->

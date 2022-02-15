@@ -29,6 +29,7 @@ trait UserPuzzleTrait
 
         return [
             "puzzleId" => $puzzle->id,
+            "link" => $puzzle->link,
             "solution_description" => $puzzle->solution_description,
             "nextPuzzleUrl" => $next_url,
             "score" => $score->score,

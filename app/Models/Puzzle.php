@@ -17,7 +17,8 @@ class Puzzle extends Model implements HasMedia
         'level',
         'description',
         'time_limit',
-        'solution_description'
+        'solution_description',
+        'link'
     ];
 
     protected $appends = [

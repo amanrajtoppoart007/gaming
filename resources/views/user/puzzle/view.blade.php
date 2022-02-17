@@ -16,7 +16,7 @@
                         <div class="d-flex  flex-column flex-md-row flex-lg-column flex-xxl-row">
                             <div class="col-md-6">
                                 @if($puzzle->question->preview)
-                                    <img src="{{$puzzle->question->preview}}" alt=""
+                                    <img id="questionImage" src="{{$puzzle->question->preview}}" alt=""
                                          class="mw-500 w-500px"/>
                                 @endif
                                  <br/>
@@ -107,15 +107,18 @@
             <div class="modal-body">
 
                 <div class="text-center fw-bold  mb-10" style="color:#0bb56b;" id="answer_message_view">#</div>
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="row">
-                            <div class="col">
-                                <img id="solutionImageView" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
+
+                  <div class="row">
+                            <div class="col-6">
+                                <img title="click on image to zoom" id="solutionImageView" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt="click on image to zoom"
                                      class="mw-250 w-250px"/>
+                                <p>
+
+                                <small>click on image to zoom</small>
+                                </p>
                             </div>
-                            <div class="col">
-                                <div class="text-success fw-boldest"  id="solution_description_view"></div>
+                            <div class="col-6">
+                                <p  id="solution_description_view"></p>
                                 <div class="mt-10">
                                     <a class="fw-boldest" style="color:#0bb56b;" href="#" target="_blank"
                                        id="solution_link">Click Here for more knowledge</a>
@@ -123,34 +126,13 @@
                             </div>
                         </div>
 
-                    </div>
-                    <div class="col">
-                         <table id="puzzle_answer_response_view" class="table table-row-dashed">
-                    <tbody>
-                      <tr>
-                          <th>Score</th>
-                          <td id="user_score">0</td>
-                      </tr>
-                    <tr>
-                          <th>Started At</th>
-                          <td id="started_at">0</td>
-                      </tr>
-                    <tr>
-                          <th>Completed At</th>
-                          <td id="completed_at">0</td>
-                      </tr>
-                        <tr>
-                          <th>Time Taken</th>
-                          <td id="time_taken">0</td>
-                      </tr>
-                    <tr>
-                          <th>Over All Attempts</th>
-                          <td id="over_all_attempts">0</td>
-                      </tr>
-                    </tbody>
-                </table>
+                <div class="row mt-10">
+                    <div class="col-12 text-center inline">
+                        <span>Score</span>
+                        <div id="user_score"></div>
                     </div>
                 </div>
+
 
 
             </div>
@@ -164,9 +146,16 @@
 @endsection
 @section("script")
     <script src="{{asset('assets/library/stepbar-timer-loader/stepbar-timer-loader.js')}}"></script>
+    <script src="{{asset('assets/library/zoom/zoom.min.js')}}"></script>
+    <script src="{{asset('assets/library/zoom/ezoom.js')}}"></script>
     <script>
 
             $(document).ready(function(){
+
+                $("#questionImage").elevateZoom({
+                    zoomWindowWidth: 800,
+                    zoomWindowHeight: 500,
+                });
              $.ajaxSetup({
                  headers: {
                      'X-CSRF-TOKEN': "{{ csrf_token() }}"
@@ -194,20 +183,17 @@
                         {
                                const {data} = result;
                             $("#answer_message_view").text(result?.message);
+                             $("#user_score").html(data?.rating);
 
                             $("#nextPuzzleUrl").attr({href:result?.response==='limit_crossed' ? window.location.href:data?.nextPuzzleUrl});
                             $("#solutionImageView").attr({src:data?.image});
-
-                            $("#user_score").html(data?.rating);
-                            $("#started_at").text(data?.startedAt)
-                            $("#completed_at").text(data?.completedAt);
-                            $("#time_taken").text(data?.timeTaken);
-                            $("#over_all_attempts").text(data?.overallAttempts);
-                            $("#solution_description_view").text(data?.solution_description);
                             $("#solution_link").attr({'href':data?.link});
                             $("#nextPuzzleUrl").text(result?.response==='limit_crossed' ? 'Retry':'Next');
+                             $("#solution_description_view").text(data?.solution_description);
                             $("#nextPuzzleUrl").show();
                             $("#solutionImageView").show();
+                             ezoom.onInit($('#solutionImageView'));
+
                             $("#puzzle_answer_response_view").show();
                             $("#answer_view_modal").modal("show");
 

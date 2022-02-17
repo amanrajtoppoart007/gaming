@@ -1,8 +1,5 @@
 @extends("user.layout.app")
-@section("css")
-    <link href="{{asset('assets/library/stepbar-timer-loader/stepbar-timer-loader.css')}}" rel="stylesheet"
-          type="text/css"/>
-@endsection
+
 @section("content")
     <div class="content fs-6 d-flex flex-column-fluid" id="kt_content">
 
@@ -16,7 +13,7 @@
 
                         <div class="d-flex  flex-column flex-md-row flex-lg-column flex-xxl-row">
                             <div class="col-md-6">
-                                <img src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
+                                <img id="questionImage" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt=""
                                      class="mw-500 w-500px"/>
                                 <br/>
                                  <div class="mt-10 text-dark fw-bold">
@@ -92,73 +89,70 @@
     </div>
 @endsection
 @section("modal")
-    <div class="modal fade" tabindex="-1" id="answer_view_modal" data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color:#0bb56b;">
-                    <h5 id="answer_title_view" class="modal-title text-white fw-bold">Success !</h5>
+<div class="modal fade" tabindex="-1" id="answer_view_modal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#0bb56b;">
+                <h5 id="answer_title_view" class="modal-title text-white fw-bold">Success !</h5>
 
-                    <!--begin::Close-->
-                    <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal"
-                         aria-label="Close">
-                        <span class="svg-icon svg-icon-2x"></span>
-                    </div>
-                    <!--end::Close-->
+                <!--begin::Close-->
+                <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="svg-icon svg-icon-2x"></span>
                 </div>
+                <!--end::Close-->
+            </div>
 
-                <div class="modal-body">
+            <div class="modal-body">
 
-                     <div class="text-center fw-bold  mb-10" style="color:#0bb56b;" id="answer_message_view">#</div>
-                    <div class="row">
-                        <div class="col text-center">
-                            <img id="solutionImageView" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}"
-                                 alt=""
-                                 class="mw-250 w-250px"/>
-                            <br/>
-                             <div class="text-success fw-bold"  id="solution_description_view"></div>
+                <div class="text-center fw-bold  mb-10" style="color:#0bb56b;" id="answer_message_view">#</div>
 
-                            <div class="mt-10">
+                  <div class="row">
+                            <div class="col-6">
+                                <img title="click on image to zoom" id="solutionImageView" src="{{$puzzle->getMedia('questions')->last()->getUrl()}}" alt="click on image to zoom"
+                                     class="mw-250 w-250px"/>
+                                <p>
 
-                            <a class="fw-boldest" style="color:#0bb56b;" href="#"  target="_blank" id="solution_link">Click Here for more knowledge</a>
+                                 <small>click on image to zoom</small>
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p  id="solution_description_view"></p>
+                                <div class="mt-10">
+                                    <a class="fw-boldest" style="color:#0bb56b;" href="#" target="_blank"
+                                       id="solution_link">Click Here for more knowledge</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <table id="puzzle_answer_response_view" class="table table-row-dashed">
-                                <tbody>
-                                <tr>
-                                    <th>Score</th>
-                                    <td id="user_score">0</td>
-                                </tr>
-                                <tr>
-                                    <th>Started At</th>
-                                    <td id="started_at">0</td>
-                                </tr>
-                                <tr>
-                                    <th>Completed At</th>
-                                    <td id="completed_at">0</td>
-                                </tr>
-                                <tr>
-                                    <th>Time Taken</th>
-                                    <td id="time_taken">0</td>
-                                </tr>
-                                <tr>
-                                    <th>Over All Attempts</th>
-                                    <td id="over_all_attempts">0</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+
+                <div class="row mt-10">
+                    <div class="col-12 text-center inline">
+                        <span>Score</span>
+                        <div id="user_score"></div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
+</div>
+@endsection
+@section("css")
+<link href="{{asset('assets/library/stepbar-timer-loader/stepbar-timer-loader.css')}}" rel="stylesheet" type="text/css"/>
 @endsection
 @section("script")
     <script src="{{asset('assets/library/stepbar-timer-loader/stepbar-timer-loader.js')}}"></script>
+        <script src="{{asset('assets/library/zoom/zoom.min.js')}}"></script>
+    <script src="{{asset('assets/library/zoom/ezoom.js')}}"></script>
     <script>
 
         $(document).ready(function () {
+
+             $("#questionImage").elevateZoom({
+                    zoomWindowWidth: 800,
+                    zoomWindowHeight: 500,
+                });
+
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': "{{ csrf_token() }}"
@@ -185,23 +179,15 @@
                         {
                             const {data} = result;
                             $("#answer_message_view").text(result?.message);
-
-                            $("#nextPuzzleUrl").attr({href:result?.response==='limit_crossed' ? window.location.href:data?.nextPuzzleUrl});
+                             $("#user_score").html(data?.rating);
                             $("#solutionImageView").attr({src:data?.image});
-
-                            $("#user_score").html(data?.rating);
-                            $("#started_at").text(data?.startedAt)
-                            $("#completed_at").text(data?.completedAt);
-                            $("#time_taken").text(data?.timeTaken);
-                            $("#over_all_attempts").text(data?.overallAttempts);
-                            $("#solution_description_view").text(data?.solution_description);
-                             $("#solution_link").attr({'href':data?.link});
-                            $("#nextPuzzleUrl").text(result?.response==='limit_crossed' ? 'Retry':'Next');
-                            $("#nextPuzzleUrl").show();
+                            $("#solution_link").attr({'href':data?.link});
+                             $("#solution_description_view").text(data?.solution_description);
                             $("#solutionImageView").show();
+                            ezoom.onInit($('#solutionImageView'));
+
                             $("#puzzle_answer_response_view").show();
                             $("#answer_view_modal").modal("show");
-
 
                         }
                         else
